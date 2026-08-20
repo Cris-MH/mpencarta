@@ -13,7 +13,7 @@ export default function Documentacion() {
             <span className="logo-badge__symbol">π</span>
           </div>
           <h1 className="titlebar__title">
-            Matemática <span>Interactiva</span>
+            Chalk<span>App</span>
           </h1>
         </div>
         <div className="titlebar__controls">
@@ -30,9 +30,9 @@ export default function Documentacion() {
 
         {/* Qué es */}
         <section className="doc-section">
-          <h3 className="doc-section__title">📖 ¿Qué es Matemática Interactiva?</h3>
+          <h3 className="doc-section__title">📖 ¿Qué es ChalkApp?</h3>
           <p>
-            Matemática Interactiva es una enciclopedia digital de conocimiento matemático, diseñada
+            ChalkApp es una enciclopedia digital de conocimiento matemático, diseñada
             para acompañar a los estudiantes de grado 6° a 11° en su proceso de aprendizaje.
           </p>
           <p>
@@ -103,7 +103,7 @@ export default function Documentacion() {
             disponibles en cualquier momento.
           </p>
           <p>
-            Matemática Interactiva es el primer paso de una serie de proyectos educativos que
+            ChalkApp es el primer paso de una serie de proyectos educativos que
             aprovecharán la IA para hacer la educación más accesible, personalizada y efectiva.
           </p>
         </section>
@@ -138,7 +138,7 @@ export default function Documentacion() {
             resolver en ese espacio.
           </p>
           <p>
-            <strong>Matemática Interactiva existe para cubrir ese vacío.</strong> Es un apoyo
+            <strong>ChalkApp existe para cubrir ese vacío.</strong> Es un apoyo
             adicional y un refuerzo a los temas matemáticos que se ven en clase. El estudiante
             puede tomarse el tiempo que necesite para entender un concepto, repetir los ejemplos,
             practicar con ejercicios y avanzar a su propio ritmo.

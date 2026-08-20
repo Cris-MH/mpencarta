@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Matemática Interactiva",
+  title: "ChalkApp",
   description:
     "Enciclopedia interactiva de matemáticas. Explora aritmética, álgebra, geometría, trigonometría, cálculo, estadística, probabilidad, matemática discreta y teoría de números.",
 };

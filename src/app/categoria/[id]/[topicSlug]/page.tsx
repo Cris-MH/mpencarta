@@ -618,7 +618,7 @@ export default function ArticuloPage() {
   );
 
   return (
-    <main className="console" role="application" aria-label={`${topic.title} — ${category.label} — Matemática Interactiva`}>
+    <main className="console" role="application" aria-label={`${topic.title} — ${category.label} — ChalkApp`}>
       {/* Titlebar */}
       <header className="titlebar">
         <div className="titlebar__brand">

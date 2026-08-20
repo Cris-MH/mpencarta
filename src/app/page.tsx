@@ -99,7 +99,7 @@ export default function Home() {
   }, [playClick]);
 
   return (
-    <main className="console" role="application" aria-label="Matemática Interactiva, pantalla principal">
+    <main className="console" role="application" aria-label="ChalkApp, pantalla principal">
       {/* Barra de título */}
       <header className="titlebar">
         <div className="titlebar__brand">
@@ -110,7 +110,7 @@ export default function Home() {
             <span className="logo-badge__symbol">π</span>
           </div>
           <h1 className="titlebar__title">
-            Matemática <span>Interactiva</span>
+            Chalk<span>App</span>
           </h1>
         </div>
         <div className="titlebar__controls">
