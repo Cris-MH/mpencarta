@@ -397,7 +397,7 @@ html, body {
 
 /* ---- Footer de autor ---- */
 .console-footer {
-  padding: 10px 24px;
+  padding: 14px 24px 16px;
   text-align: center;
   font-family: var(--font-body);
   font-weight: 600;
@@ -405,4 +405,5 @@ html, body {
   color: var(--color-navy-soft);
   border-top: 2px solid rgba(27,58,75,0.15);
   background: rgba(27,58,75,0.03);
+  margin-top: 12px;
 }
