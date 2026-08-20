@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Mundo Explorador — Pantalla principal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Fondo tipo "escritorio" -->
+  <div class="desk-bg" aria-hidden="true"></div>
+
+  <!-- Contenedor tipo "caja de CD-ROM abierta" -->
+  <main class="console" role="application" aria-label="Mi Mundo Explorador, pantalla principal">
+
+    <!-- Barra de título tipo portada de libro -->
+    <header class="titlebar">
+      <div class="titlebar__brand">
+        <div class="logo-badge" aria-hidden="true">
+          <svg viewBox="0 0 64 64" class="logo-badge__star">
+            <path d="M32 4 L39 24 L60 24 L43 37 L49 58 L32 46 L15 58 L21 37 L4 24 L25 24 Z"/>
+          </svg>
+        </div>
+        <h1 class="titlebar__title">Mi Mundo <span>Explorador</span></h1>
+      </div>
+      <div class="titlebar__controls">
+        <button class="chip-btn" id="btn-sound" type="button" aria-pressed="true">
+          <span class="chip-btn__icon" id="sound-icon">🔊</span>
+          <span class="chip-btn__label">Sonido</span>
+        </button>
+        <button class="chip-btn" id="btn-help" type="button">
+          <span class="chip-btn__icon">❓</span>
+          <span class="chip-btn__label">Ayuda</span>
+        </button>
+        <button class="chip-btn chip-btn--exit" id="btn-exit" type="button">
+          <span class="chip-btn__icon">🚪</span>
+          <span class="chip-btn__label">Salir</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="stage">
+
+      <!-- Estantería de categorías -->
+      <section class="shelf" aria-label="Categorías para explorar">
+        <p class="shelf__eyebrow">¿Qué quieres descubrir hoy?</p>
+        <div class="shelf__grid" id="shelf-grid">
+          <!-- Los tiles se inyectan con JS desde CATEGORIES -->
+        </div>
+      </section>
+
+      <!-- Barra de búsqueda -->
+      <form class="searchbar" id="search-form">
+        <label for="search-input" class="searchbar__label">Buscar un tema</label>
+        <div class="searchbar__field">
+          <input type="text" id="search-input" placeholder="Escribe algo, como &quot;dinosaurios&quot;…" autocomplete="off">
+          <button type="submit" class="searchbar__btn" aria-label="Buscar">
+            <span>🔍</span>
+          </button>
+        </div>
+      </form>
+
+      <!-- Mascota guía -->
+      <div class="mascot" id="mascot">
+        <div class="mascot__bubble" id="mascot-bubble">
+          ¡Hola! Soy Sabio. Toca un libro del estante para empezar a explorar 🦉
+        </div>
+        <svg class="mascot__figure" viewBox="0 0 200 220" aria-hidden="true">
+          <ellipse cx="100" cy="200" rx="70" ry="14" fill="rgba(27,58,75,0.12)"/>
+          <path d="M40 110 C40 50 70 15 100 15 C130 15 160 50 160 110 C160 165 135 200 100 200 C65 200 40 165 40 110 Z" fill="#F2A65A"/>
+          <path d="M40 110 C40 50 70 15 100 15 C112 15 123 20 132 28 C108 24 78 45 68 90 C60 122 68 155 90 180 C68 172 40 150 40 110 Z" fill="#EC934B"/>
+          <circle cx="76" cy="98" r="26" fill="#FFF8E7"/>
+          <circle cx="124" cy="98" r="26" fill="#FFF8E7"/>
+          <circle cx="76" cy="98" r="24" fill="none" stroke="#1B3A4B" stroke-width="5"/>
+          <circle cx="124" cy="98" r="24" fill="none" stroke="#1B3A4B" stroke-width="5"/>
+          <line x1="100" y1="98" x2="100" y2="98" stroke="#1B3A4B" stroke-width="5"/>
+          <line x1="52" y1="92" x2="40" y2="86" stroke="#1B3A4B" stroke-width="5" stroke-linecap="round"/>
+          <line x1="148" y1="92" x2="160" y2="86" stroke="#1B3A4B" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="76" cy="98" r="9" fill="#1B3A4B"/>
+          <circle cx="124" cy="98" r="9" fill="#1B3A4B"/>
+          <circle cx="79" cy="95" r="3" fill="#fff"/>
+          <circle cx="127" cy="95" r="3" fill="#fff"/>
+          <path d="M92 118 L108 118 L100 130 Z" fill="#FF6B35"/>
+          <path d="M100 130 Q80 150 70 148 Q88 165 100 152 Q112 165 130 148 Q120 150 100 130Z" fill="#1B3A4B" opacity="0.85"/>
+          <path d="M20 130 Q45 150 55 190" fill="none" stroke="#EC934B" stroke-width="26" stroke-linecap="round"/>
+          <path d="M180 130 Q155 150 145 190" fill="none" stroke="#EC934B" stroke-width="26" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+    </div>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

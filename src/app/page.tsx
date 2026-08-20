@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useCallback, useRef } from "react";
+import { useRouter } from "next/navigation";
 
 const CATEGORIES = [
   { id: "aritmetica", label: "Aritmética", sub: "45 temas", icon: "🔢", variant: "orange" },
@@ -22,6 +23,7 @@ const MASCOT_TIPS = [
 ];
 
 export default function Home() {
+  const router = useRouter();
   const [soundOn, setSoundOn] = useState(true);
   const [toastMessage, setToastMessage] = useState("");
   const [toastVisible, setToastVisible] = useState(false);
@@ -48,9 +50,9 @@ export default function Home() {
       setMascotMessage(
         `¡Buena elección! Vamos a descubrir todo sobre ${cat.label.toLowerCase()} 🔎`
       );
-      // TODO: navigate to /categoria/{cat.id}
+      router.push(`/categoria/${cat.id}`);
     },
-    [playClick, showToast]
+    [playClick, showToast, router]
   );
 
   const handleSoundToggle = useCallback(() => {
