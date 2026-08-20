@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mi Mundo Explorador — Categoría</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="categoria.css">
+</head>
+<body>
+
+  <div class="desk-bg" aria-hidden="true"></div>
+
+  <main class="console" role="application" aria-label="Página de categoría">
+
+    <header class="titlebar">
+      <div class="titlebar__brand">
+        <a href="index.html" class="chip-btn chip-btn--back" id="btn-back">
+          <span class="chip-btn__icon">⬅️</span>
+          <span class="chip-btn__label">Estante</span>
+        </a>
+        <h1 class="titlebar__title" id="page-title">Mi Mundo <span>Explorador</span></h1>
+      </div>
+      <div class="titlebar__controls">
+        <button class="chip-btn" id="btn-sound" type="button" aria-pressed="true">
+          <span class="chip-btn__icon" id="sound-icon">🔊</span>
+          <span class="chip-btn__label">Sonido</span>
+        </button>
+        <button class="chip-btn" id="btn-help" type="button">
+          <span class="chip-btn__icon">❓</span>
+          <span class="chip-btn__label">Ayuda</span>
+        </button>
+      </div>
+    </header>
+
+    <div class="cat-stage" id="cat-stage">
+      <!-- Todo el contenido se genera dinámicamente en categoria.js
+           a partir de CATEGORIES (data.js) según ?cat= en la URL -->
+    </div>
+
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="categoria.js"></script>
+</body>
+</html>

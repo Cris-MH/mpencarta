@@ -5,14 +5,25 @@ import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 
 /* =========================================================
-   CATEGORY DATA — 9 math categories
+   CATEGORY DATA (shared structure)
    ========================================================= */
+
+interface TopicDetail {
+  intro: string;
+  stats: { icon: string; label: string; value: string }[];
+  explanation: string;
+  videoId: string;
+  videoTitle: string;
+  facts: string[];
+  mascotLine: string;
+}
 
 interface Topic {
   title: string;
   slug: string;
   icon: string;
   blurb: string;
+  detail?: TopicDetail;
 }
 
 interface Category {
@@ -20,8 +31,6 @@ interface Category {
   label: string;
   icon: string;
   variant: string;
-  tagline: string;
-  description: string;
   mascotCostume: string;
   mascotMessages: string[];
   topics: Topic[];
@@ -33,8 +42,6 @@ const CATEGORIES: Category[] = [
     label: "Aritmética",
     icon: "🔢",
     variant: "orange",
-    tagline: "La base de todo: números y operaciones",
-    description: "Explora los números naturales, enteros, racionales y las operaciones fundamentales que construyen toda la matemática.",
     mascotCostume: "abaco",
     mascotMessages: [
       "¡Números por todas partes! Elige un tema para empezar a contar 🔢",
@@ -55,8 +62,6 @@ const CATEGORIES: Category[] = [
     label: "Álgebra",
     icon: "𝑥",
     variant: "purple",
-    tagline: "Variables, ecuaciones y el lenguaje de las matemáticas",
-    description: "Domina las expresiones algebraicas, ecuaciones y sistemas que te permiten resolver cualquier problema.",
     mascotCostume: "profesor",
     mascotMessages: [
       "¡Pizarra lista! Vamos a despejar la incógnita 🧮",
@@ -77,8 +82,6 @@ const CATEGORIES: Category[] = [
     label: "Geometría",
     icon: "📐",
     variant: "green",
-    tagline: "Formas, espacio y la belleza de las figuras",
-    description: "Desde triángulos hasta círculos, descubre las propiedades de las figuras y cómo medir el mundo.",
     mascotCostume: "compas",
     mascotMessages: [
       "¡Compás y regla listos! Vamos a construir figuras perfectas 📐",
@@ -99,8 +102,6 @@ const CATEGORIES: Category[] = [
     label: "Trigonometría",
     icon: "📈",
     variant: "pink",
-    tagline: "Ángulos, triángulos y funciones trigonométricas",
-    description: "Explora seno, coseno y tangente — las herramientas para medir ángulos y resolver triángulos.",
     mascotCostume: "transportador",
     mascotMessages: [
       "¡Transportador en mano! Vamos a medir ángulos 📐",
@@ -121,8 +122,6 @@ const CATEGORIES: Category[] = [
     label: "Cálculo",
     icon: "∫",
     variant: "",
-    tagline: "Límites, derivadas e integrales",
-    description: "La matemática del cambio y la acumulación. Comprende cómo varían las funciones y cómo calcular áreas bajo curvas.",
     mascotCostume: "birrete",
     mascotMessages: [
       "¡Nivel avanzado! Vamos a explorar el infinito 🎓",
@@ -143,8 +142,6 @@ const CATEGORIES: Category[] = [
     label: "Estadística",
     icon: "📊",
     variant: "yellow",
-    tagline: "Datos, análisis y decisiones informadas",
-    description: "Aprende a recoger, organizar, analizar e interpretar datos para entender el mundo que te rodea.",
     mascotCostume: "grafico",
     mascotMessages: [
       "¡Datos por analizar! Vamos a encontrar patrones 📊",
@@ -165,8 +162,6 @@ const CATEGORIES: Category[] = [
     label: "Probabilidad",
     icon: "🎲",
     variant: "orange",
-    tagline: "El azar, los eventos y sus chances",
-    description: "Comprende cómo calcular las posibilidades de que algo suceda y tomar decisiones ante la incertidumbre.",
     mascotCostume: "mago",
     mascotMessages: [
       "¡Abracadabra! ¿Cuál es la probabilidad de sacar un as? 🎩",
@@ -175,7 +170,29 @@ const CATEGORIES: Category[] = [
     ],
     topics: [
       { title: "Eventos y Espacio Muestral", slug: "eventos-espacio-muestral", icon: "🎯", blurb: "Los posibles resultados de un experimento." },
-      { title: "Probabilidad Clásica", slug: "probabilidad-clasica", icon: "🎲", blurb: "Casos favorables sobre casos posibles." },
+      {
+        title: "Probabilidad Clásica",
+        slug: "probabilidad-clasica",
+        icon: "🎲",
+        blurb: "Casos favorables sobre casos posibles.",
+        detail: {
+          intro: "La probabilidad clásica es la forma más básica de medir las posibilidades de que un evento ocurra. Se calcula dividiendo el número de resultados favorables entre el número total de resultados posibles en un experimento donde todos los resultados son igualmente probables.",
+          stats: [
+            { icon: "📐", label: "Fórmula", value: "P(A) = n(A) / n(S)" },
+            { icon: "📏", label: "Rango", value: "0 ≤ P(A) ≤ 1" },
+            { icon: "🎯", label: "Condición", value: "Equiprobable" },
+          ],
+          explanation: `La fórmula fundamental de la probabilidad clásica es:\n\nP(A) = Casos favorables / Casos posibles\n\nDonde:\n• P(A) es la probabilidad del evento A\n• n(A) es el número de resultados favorables al evento A\n• n(S) es el número total de resultados en el espacio muestral S\n\nEjemplo: Al lanzar un dado justo de 6 caras, la probabilidad de obtener un número par es:\nP(par) = 3/6 = 1/2 = 0.5 = 50%\n\nLos resultados favorables son {2, 4, 6} (3 resultados) de un total de {1, 2, 3, 4, 5, 6} (6 resultados posibles).`,
+          videoId: "8sViQZCKC9g",
+          videoTitle: "Introducción a la Probabilidad",
+          facts: [
+            "Si lanzas una moneda al aire, la probabilidad de obtener cara es exactamente 1/2, pero en la práctica necesitas miles de lanzamientos para acercarte a ese valor.",
+            "El estudio formal de la probabilidad nació en el siglo XVII cuando dos matemáticos franceses (Pascal y Fermat) discutieron un problema de juegos de azar por carta.",
+            "La probabilidad de que dos personas en un grupo de 23 compartan cumpleaños es mayor al 50% — esto se conoce como la Paradoja del Cumpleaños.",
+          ],
+          mascotLine: "¡Cada vez que lanzas un dado, las matemáticas están trabajando! La probabilidad nos ayuda a predecir el futuro... al menos un poquito 🎲",
+        },
+      },
       { title: "Probabilidad Condicional", slug: "probabilidad-condicional", icon: "🔗", blurb: "Cuando un evento depende de otro." },
       { title: "Combinatoria", slug: "combinatoria", icon: "🔢", blurb: "Permutaciones, combinaciones y variaciones." },
       { title: "Distribuciones", slug: "distribuciones", icon: "📊", blurb: "Binomial, Poisson y otras distribuciones." },
@@ -187,8 +204,6 @@ const CATEGORIES: Category[] = [
     label: "M. Discreta",
     icon: "🔗",
     variant: "purple",
-    tagline: "Estructuras, lógica y algoritmos",
-    description: "La matemática de las computadoras: grafos, conjuntos, lógica y estructuras discretas.",
     mascotCostume: "circuito",
     mascotMessages: [
       "¡Nodos y conexiones! Vamos a pensar como una computadora 🖥️",
@@ -209,8 +224,6 @@ const CATEGORIES: Category[] = [
     label: "T. Números",
     icon: "∞",
     variant: "green",
-    tagline: "Patrones, primos y propiedades de los números",
-    description: "La rama más pura de las matemáticas: descubre los secretos escondidos en los números.",
     mascotCostume: "lupa",
     mascotMessages: [
       "¡Lupa lista! Vamos a buscar patrones en los números 🔍",
@@ -229,7 +242,7 @@ const CATEGORIES: Category[] = [
 ];
 
 /* =========================================================
-   MASCOT COSTUMES — SVG accessories per category
+   MASCOT COSTUMES
    ========================================================= */
 
 const COSTUMES: Record<string, string> = {
@@ -293,35 +306,38 @@ const COSTUMES: Record<string, string> = {
    COMPONENT
    ========================================================= */
 
-export default function CategoriaPage() {
+export default function ArticuloPage() {
   const params = useParams();
   const router = useRouter();
-  const id = params.id as string;
+  const catId = params.id as string;
+  const topicSlug = params.topicSlug as string;
 
-  const category = CATEGORIES.find((c) => c.id === id);
+  const category = CATEGORIES.find((c) => c.id === catId);
+  const topic = category?.topics.find((t) => t.slug === topicSlug);
 
   const [soundOn, setSoundOn] = useState(true);
   const [toastMessage, setToastMessage] = useState("");
   const [toastVisible, setToastVisible] = useState(false);
-  const [mascotMessage, setMascotMessage] = useState(category?.mascotMessages[0] ?? "");
-  const [mascotState, setMascotState] = useState<"entering" | "idle">("entering");
+  const [mascotMessage, setMascotMessage] = useState("");
+  const [showMascotBubble, setShowMascotBubble] = useState(true);
   const msgIndexRef = useRef(0);
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Redirect if category not found
+  // Set initial mascot message
   useEffect(() => {
-    if (!category) {
+    if (topic?.detail) {
+      setMascotMessage(topic.detail.mascotLine);
+    } else if (category) {
+      setMascotMessage(`Este tema todavía no tiene contenido — ¡pero pronto lo tendrá! ${category.icon}`);
+    }
+  }, [topic, category]);
+
+  // Redirect if not found
+  useEffect(() => {
+    if (!category || !topic) {
       router.replace("/");
     }
-  }, [category, router]);
-
-  // Mascot animation: entering → idle
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setMascotState("idle");
-    }, 900); // Match animation duration
-    return () => clearTimeout(timer);
-  }, []);
+  }, [category, topic, router]);
 
   const showToast = useCallback((message: string) => {
     setToastMessage(message);
@@ -332,7 +348,6 @@ export default function CategoriaPage() {
 
   const playClick = useCallback(() => {
     if (!soundOn) return;
-    // Placeholder for click sound
   }, [soundOn]);
 
   const handleSoundToggle = useCallback(() => {
@@ -345,32 +360,155 @@ export default function CategoriaPage() {
 
   const handleHelp = useCallback(() => {
     playClick();
-    showToast("Toca cualquier tema para explorarlo, o vuelve al estante con el botón de arriba");
+    showToast("Toca a Sabio para escuchar otro dato, o usa la ruta de arriba para volver");
   }, [playClick, showToast]);
 
-  const handleTopicClick = useCallback(
-    (topicSlug: string) => {
-      playClick();
-      router.push(`/categoria/${id}/${topicSlug}`);
-    },
-    [playClick, router, id]
-  );
-
   const handleMascotClick = useCallback(() => {
-    if (!category) return;
+    if (!category || !topic) return;
     playClick();
-    msgIndexRef.current = (msgIndexRef.current + 1) % category.mascotMessages.length;
-    setMascotMessage(category.mascotMessages[msgIndexRef.current]);
-  }, [category, playClick]);
+    setShowMascotBubble(true);
 
-  if (!category) {
-    return null; // Will redirect via useEffect
+    if (topic.detail) {
+      // Toggle between topic mascot line and category messages
+      msgIndexRef.current = (msgIndexRef.current + 1) % (category.mascotMessages.length + 1);
+      if (msgIndexRef.current === 0) {
+        setMascotMessage(topic.detail.mascotLine);
+      } else {
+        setMascotMessage(category.mascotMessages[msgIndexRef.current - 1]);
+      }
+    } else {
+      msgIndexRef.current = (msgIndexRef.current + 1) % category.mascotMessages.length;
+      setMascotMessage(category.mascotMessages[msgIndexRef.current]);
+    }
+  }, [category, topic, playClick]);
+
+  if (!category || !topic) {
+    return null;
   }
 
   const costumeMarkup = COSTUMES[category.mascotCostume] || "";
+  const heroVariant = category.variant ? ` art-hero--${category.variant}` : "";
+
+  // Render full article for topics with detail
+  const renderFullArticle = () => {
+    const d = topic.detail!;
+
+    // Parse explanation into paragraphs
+    const explanationParts = d.explanation.split("\n\n");
+
+    return (
+      <>
+        {/* Hero */}
+        <section className={`art-hero${heroVariant}`} aria-label={topic.title}>
+          <div className="art-hero__icon" aria-hidden="true">{topic.icon}</div>
+          <div className="art-hero__text">
+            <span className="art-hero__badge">{category.icon} {category.label}</span>
+            <h2 className="art-hero__title">{topic.title}</h2>
+            <p className="art-hero__intro">{d.intro}</p>
+          </div>
+        </section>
+
+        {/* Stats row */}
+        <section className="stats-row" aria-label="Datos rápidos">
+          {d.stats.map((s) => (
+            <div className="stat-chip" key={s.label}>
+              <span className="stat-chip__icon" aria-hidden="true">{s.icon}</span>
+              <span>
+                <span className="stat-chip__label">{s.label}</span>
+                <span className="stat-chip__value">{s.value}</span>
+              </span>
+            </div>
+          ))}
+        </section>
+
+        {/* Content / Explanation */}
+        <section className="content-section" aria-label="Explicación">
+          <h3>Explicación detallada</h3>
+          {explanationParts.map((part, i) => {
+            // Check if it's the formula line
+            if (part.includes("P(A) = Casos favorables / Casos posibles")) {
+              return (
+                <span className="formula-highlight" key={i}>
+                  P(A) = Casos favorables / Casos posibles
+                </span>
+              );
+            }
+            // Check if it contains bullet points
+            if (part.includes("• ")) {
+              const lines = part.split("\n");
+              const title = lines[0].endsWith(":") ? lines[0] : null;
+              const items = lines.filter((l) => l.startsWith("• "));
+              return (
+                <div key={i}>
+                  {title && <p>{title}</p>}
+                  <ul>
+                    {items.map((item, j) => (
+                      <li key={j}>{item.replace("• ", "")}</li>
+                    ))}
+                  </ul>
+                </div>
+              );
+            }
+            return <p key={i}>{part}</p>;
+          })}
+        </section>
+
+        {/* Video section */}
+        <section className="video-section" aria-label="Video educativo">
+          <div className="video-section__title">🎬 {d.videoTitle}</div>
+          <iframe
+            src={`https://www.youtube.com/embed/${d.videoId}`}
+            title={d.videoTitle}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </section>
+
+        {/* Facts */}
+        <section className="facts" aria-label="Datos curiosos">
+          <h3>Datos curiosos</h3>
+          <div className="facts-grid">
+            {d.facts.map((fact, i) => (
+              <div className="fact-card" key={i}>{fact}</div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA Banner */}
+        <section className="cta-banner" aria-label="Poner a prueba lo aprendido">
+          <span className="cta-banner__text">¿Listo para practicar? Pon a prueba lo que aprendiste sobre {topic.title}</span>
+          <button className="cta-banner__btn" type="button" onClick={() => showToast("¡Juegos próximamente!")}>
+            Ir a Juegos 🎉
+          </button>
+        </section>
+      </>
+    );
+  };
+
+  // Render empty state for topics without detail
+  const renderEmptyState = () => (
+    <>
+      <section className={`art-hero${heroVariant}`} aria-label={topic.title}>
+        <div className="art-hero__icon" aria-hidden="true">{topic.icon}</div>
+        <div className="art-hero__text">
+          <span className="art-hero__badge">{category.icon} {category.label}</span>
+          <h2 className="art-hero__title">{topic.title}</h2>
+          <p className="art-hero__intro">{topic.blurb}</p>
+        </div>
+      </section>
+
+      <div className="empty-state">
+        <span className="empty-state__icon" aria-hidden="true">🚧</span>
+        <p className="empty-state__title">Este tema todavía se está armando</p>
+        <p className="empty-state__text">
+          Pronto encontrarás aquí la explicación completa, datos curiosos y ejercicios.
+        </p>
+      </div>
+    </>
+  );
 
   return (
-    <main className="console" role="application" aria-label={`${category.label} — Matemática Interactiva`}>
+    <main className="console" role="application" aria-label={`${topic.title} — ${category.label} — Matemática Interactiva`}>
       {/* Titlebar */}
       <header className="titlebar">
         <div className="titlebar__brand">
@@ -378,7 +516,13 @@ export default function CategoriaPage() {
             <span className="chip-btn__icon">⬅️</span>
             <span className="chip-btn__label">Estante</span>
           </Link>
-          <h1 className="titlebar__title">{category.label}</h1>
+          <nav className="breadcrumb" aria-label="Ruta de navegación">
+            <Link href="/">Estante</Link>
+            <span aria-hidden="true">›</span>
+            <Link href={`/categoria/${category.id}`}>{category.label}</Link>
+            <span aria-hidden="true">›</span>
+            <span className="breadcrumb__current">{topic.title}</span>
+          </nav>
         </div>
         <div className="titlebar__controls">
           <button
@@ -397,75 +541,48 @@ export default function CategoriaPage() {
         </div>
       </header>
 
-      {/* Category stage */}
-      <div className="cat-stage">
-        {/* Hero section */}
-        <section
-          className={`hero${category.variant ? ` hero--${category.variant}` : ""}`}
-          aria-label={`Introducción a ${category.label}`}
-        >
-          {/* Mascot floating over hero */}
-          <div className="mascot-cat">
-            <div className={`mascot-cat__bubble ${mascotState === "entering" ? "is-entering" : ""}`}>
-              {mascotMessage}
-            </div>
-            {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
-            <svg
-              className={`mascot-cat__figure ${mascotState === "entering" ? "is-entering" : "is-idle"}`}
-              viewBox="0 0 200 220"
-              aria-hidden="true"
-              onClick={handleMascotClick}
-              dangerouslySetInnerHTML={{
-                __html: `
-                  <ellipse cx="100" cy="200" rx="70" ry="14" fill="rgba(27,58,75,0.12)"/>
-                  <path d="M40 110 C40 50 70 15 100 15 C130 15 160 50 160 110 C160 165 135 200 100 200 C65 200 40 165 40 110 Z" fill="#F2A65A"/>
-                  <path d="M40 110 C40 50 70 15 100 15 C112 15 123 20 132 28 C108 24 78 45 68 90 C60 122 68 155 90 180 C68 172 40 150 40 110 Z" fill="#EC934B"/>
-                  <circle cx="76" cy="98" r="26" fill="#FFF8E7"/>
-                  <circle cx="124" cy="98" r="26" fill="#FFF8E7"/>
-                  <circle cx="76" cy="98" r="24" fill="none" stroke="#1B3A4B" stroke-width="5"/>
-                  <circle cx="124" cy="98" r="24" fill="none" stroke="#1B3A4B" stroke-width="5"/>
-                  <line x1="52" y1="92" x2="40" y2="86" stroke="#1B3A4B" stroke-width="5" stroke-linecap="round"/>
-                  <line x1="148" y1="92" x2="160" y2="86" stroke="#1B3A4B" stroke-width="5" stroke-linecap="round"/>
-                  <circle cx="76" cy="98" r="9" fill="#1B3A4B"/>
-                  <circle cx="124" cy="98" r="9" fill="#1B3A4B"/>
-                  <circle cx="79" cy="95" r="3" fill="#fff"/>
-                  <circle cx="127" cy="95" r="3" fill="#fff"/>
-                  <path d="M92 118 L108 118 L100 130 Z" fill="#FF6B35"/>
-                  <path d="M100 130 Q80 150 70 148 Q88 165 100 152 Q112 165 130 148 Q120 150 100 130Z" fill="#1B3A4B" opacity="0.85"/>
-                  <path d="M20 130 Q45 150 55 190" fill="none" stroke="#EC934B" stroke-width="26" stroke-linecap="round"/>
-                  <path d="M180 130 Q155 150 145 190" fill="none" stroke="#EC934B" stroke-width="26" stroke-linecap="round"/>
-                  ${costumeMarkup}
-                `,
-              }}
-            />
-          </div>
-
-          <span className="hero__icon" aria-hidden="true">{category.icon}</span>
-          <h2 className="hero__title">{category.label}</h2>
-          <p className="hero__tagline">{category.tagline}</p>
-          <p className="hero__desc">{category.description}</p>
-        </section>
-
-        {/* Topics grid */}
-        <section aria-label={`Temas de ${category.label}`}>
-          <div className="topics-grid">
-            {category.topics.map((topic) => (
-              <button
-                key={topic.title}
-                type="button"
-                className="topic-card"
-                onClick={() => handleTopicClick(topic.slug)}
-              >
-                <span className="topic-card__icon" aria-hidden="true">{topic.icon}</span>
-                <span className="topic-card__title">{topic.title}</span>
-                <span className="topic-card__blurb">{topic.blurb}</span>
-              </button>
-            ))}
-          </div>
-        </section>
+      {/* Article stage */}
+      <div className="art-stage">
+        {topic.detail ? renderFullArticle() : renderEmptyState()}
       </div>
 
-      {/* Toast notification */}
+      {/* Mascot (fixed bottom-right) */}
+      <div className="mascot-art">
+        {showMascotBubble && (
+          <div className="mascot-art__bubble">{mascotMessage}</div>
+        )}
+        {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions */}
+        <svg
+          className="mascot-art__figure"
+          viewBox="0 0 200 220"
+          aria-hidden="true"
+          onClick={handleMascotClick}
+          dangerouslySetInnerHTML={{
+            __html: `
+              <ellipse cx="100" cy="200" rx="70" ry="14" fill="rgba(27,58,75,0.12)"/>
+              <path d="M40 110 C40 50 70 15 100 15 C130 15 160 50 160 110 C160 165 135 200 100 200 C65 200 40 165 40 110 Z" fill="#F2A65A"/>
+              <path d="M40 110 C40 50 70 15 100 15 C112 15 123 20 132 28 C108 24 78 45 68 90 C60 122 68 155 90 180 C68 172 40 150 40 110 Z" fill="#EC934B"/>
+              <circle cx="76" cy="98" r="26" fill="#FFF8E7"/>
+              <circle cx="124" cy="98" r="26" fill="#FFF8E7"/>
+              <circle cx="76" cy="98" r="24" fill="none" stroke="#1B3A4B" stroke-width="5"/>
+              <circle cx="124" cy="98" r="24" fill="none" stroke="#1B3A4B" stroke-width="5"/>
+              <line x1="52" y1="92" x2="40" y2="86" stroke="#1B3A4B" stroke-width="5" stroke-linecap="round"/>
+              <line x1="148" y1="92" x2="160" y2="86" stroke="#1B3A4B" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="76" cy="98" r="9" fill="#1B3A4B"/>
+              <circle cx="124" cy="98" r="9" fill="#1B3A4B"/>
+              <circle cx="79" cy="95" r="3" fill="#fff"/>
+              <circle cx="127" cy="95" r="3" fill="#fff"/>
+              <path d="M92 118 L108 118 L100 130 Z" fill="#FF6B35"/>
+              <path d="M100 130 Q80 150 70 148 Q88 165 100 152 Q112 165 130 148 Q120 150 100 130Z" fill="#1B3A4B" opacity="0.85"/>
+              <path d="M20 130 Q45 150 55 190" fill="none" stroke="#EC934B" stroke-width="26" stroke-linecap="round"/>
+              <path d="M180 130 Q155 150 145 190" fill="none" stroke="#EC934B" stroke-width="26" stroke-linecap="round"/>
+              ${costumeMarkup}
+            `,
+          }}
+        />
+      </div>
+
+      {/* Toast */}
       <div
         className={`toast${toastVisible ? " is-visible" : ""}`}
         role="status"

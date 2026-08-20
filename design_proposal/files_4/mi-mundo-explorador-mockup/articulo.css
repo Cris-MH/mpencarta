@@ -1,0 +1,253 @@
+/* =========================================================
+   ARTÍCULO — estilos específicos
+   Depende de las custom properties de styles.css y reutiliza
+   clases de categoria.css (.hero, variantes de color, etc.)
+   ========================================================= */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  color: rgba(255,246,229,0.75);
+  flex-wrap: wrap;
+}
+.breadcrumb a { color: var(--color-yellow); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb__current { color: var(--color-paper); }
+
+.art-stage {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* ---- Hero del artículo ---- */
+.art-hero {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 28px 32px;
+  background: var(--hero-color, var(--color-blue));
+  border: var(--line-thick) solid var(--color-navy);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-pop);
+}
+.art-hero__icon {
+  flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+  display: grid;
+  place-items: center;
+  font-size: 52px;
+  background: var(--color-paper);
+  border: var(--line) solid var(--color-navy);
+  border-radius: 50%;
+}
+.art-hero__text { display: flex; flex-direction: column; gap: 6px; }
+.art-hero__badge {
+  align-self: flex-start;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 4px 12px;
+  background: var(--color-paper);
+  border: 2px solid var(--color-navy);
+  border-radius: 999px;
+  color: var(--color-navy);
+}
+.art-hero__title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(26px, 4vw, 38px);
+  margin: 0;
+  color: var(--color-navy);
+}
+.art-hero__intro {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  max-width: 62ch;
+  margin: 4px 0 0;
+  color: var(--color-navy);
+}
+
+/* ---- Franja de datos rápidos ---- */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.stat-chip {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: var(--color-paper);
+  border: var(--line) solid var(--color-navy);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-pop-sm);
+}
+.stat-chip__icon { font-size: 26px; }
+.stat-chip__label {
+  display: block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-navy-soft);
+}
+.stat-chip__value {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-navy);
+}
+
+/* ---- Datos curiosos: notas tipo scrapbook ---- */
+.facts h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-navy-soft);
+  margin: 0 0 14px;
+}
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.fact-card {
+  padding: 16px;
+  background: var(--color-yellow);
+  border: var(--line) solid var(--color-navy);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-pop-sm);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--color-navy);
+  transform: rotate(var(--tilt, -1deg));
+}
+.fact-card:nth-child(2) { --tilt: 1deg; background: var(--color-pink); }
+.fact-card:nth-child(3) { --tilt: -0.5deg; background: var(--color-blue); }
+
+/* ---- CTA hacia Juegos ---- */
+.cta-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 20px 24px;
+  background: var(--color-purple);
+  border: var(--line-thick) solid var(--color-navy);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-pop);
+}
+.cta-banner__text {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--color-navy);
+}
+.cta-banner__btn {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 12px 22px;
+  background: var(--color-paper);
+  border: var(--line) solid var(--color-navy);
+  border-radius: 999px;
+  color: var(--color-navy);
+  text-decoration: none;
+  box-shadow: var(--shadow-pop-sm);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.cta-banner__btn:hover { transform: translateY(-2px); }
+.cta-banner__btn:active { transform: translateY(3px); box-shadow: 0 2px 0 rgba(27,58,75,0.9); }
+
+/* ---- Sabio narrador (versión artículo: fijo, más pequeño) ---- */
+.mascot-art {
+  position: fixed;
+  right: 28px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  z-index: 5;
+}
+.mascot-art__bubble {
+  max-width: 220px;
+  background: var(--color-paper);
+  border: var(--line) solid var(--color-navy);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1.3;
+  box-shadow: var(--shadow-pop-sm);
+  text-align: left;
+}
+.mascot-art__figure {
+  width: 96px;
+  height: auto;
+  cursor: pointer;
+  filter: drop-shadow(0 6px 0 rgba(27,58,75,0.18));
+  animation: mascot-float 2.8s ease-in-out infinite;
+}
+
+/* ---- Estado "en construcción" (temas sin detalle aún) ---- */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 48px 24px;
+  background: var(--color-paper);
+  border: var(--line-thick) dashed var(--color-navy);
+  border-radius: var(--radius-lg);
+}
+.empty-state__icon { font-size: 44px; }
+.empty-state__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-navy);
+  margin: 0;
+}
+.empty-state__text {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-navy-soft);
+  max-width: 46ch;
+  margin: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 860px) {
+  .stats-row, .facts-grid { grid-template-columns: repeat(2, 1fr); }
+  .art-hero { flex-direction: column; text-align: center; align-items: center; }
+  .mascot-art { position: static; align-items: center; margin-top: 8px; }
+}
+
+@media (max-width: 560px) {
+  .console { margin: 0; border-radius: 0; min-height: 100vh; }
+  .art-stage { padding: 18px; }
+  .stats-row, .facts-grid { grid-template-columns: 1fr; }
+  .cta-banner { flex-direction: column; align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mascot-art__figure { animation: none; }
+}
