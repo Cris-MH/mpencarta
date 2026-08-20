@@ -7,20 +7,20 @@
     "explicacion": "La derivada mide la tasa de cambio instantánea de una función. Geométricamente, es la pendiente de la recta tangente a la curva en un punto.\n\n**Definición formal:**\n$$f'(x) = \\lim_{h \\to 0} \\frac{f(x + h) - f(x)}{h}$$\n\n**Reglas de derivación:**\n\nRegla de la potencia:\n$$\\frac{d}{dx}[x^n] = n \\cdot x^{n-1}$$\n\nRegla de la suma:\n$$\\frac{d}{dx}[f(x) + g(x)] = f'(x) + g'(x)$$\n\nRegla del producto:\n$$\\frac{d}{dx}[f(x) \\cdot g(x)] = f'(x) \\cdot g(x) + f(x) \\cdot g'(x)$$\n\nRegla de la cadena:\n$$\\frac{d}{dx}[f(g(x))] = f'(g(x)) \\cdot g'(x)$$\n\nLas derivadas se usan para encontrar máximos, mínimos y puntos de inflexión de funciones.",
     "imagenes": [
       {
-        "src": "/images/temas/11/derivadas-tangente.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Derivadas",
         "alt": "Curva de una función con una recta tangente en un punto, mostrando que la derivada es la pendiente de la tangente",
         "caption": "La derivada como pendiente de la recta tangente a la curva"
       }
     ],
     "videos": [
       {
-        "youtubeId": "AwnMoVY0y5A",
+        "youtubeId": "oneC1gsSQaM",
         "titulo": "Derivadas - Reglas de derivación",
-        "urlDirecta": "https://www.youtube.com/watch?v=AwnMoVY0y5A"
+        "urlDirecta": "https://www.youtube.com/watch?v=oneC1gsSQaM"
       }
     ],
     "audio": {
-      "src": "/audio/temas/11/derivadas.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Derivadas",
       "duracionSegundos": 350
     }

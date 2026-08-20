@@ -7,20 +7,20 @@
     "explicacion": "La trigonometría estudia las relaciones entre los ángulos y los lados de los triángulos. Las razones trigonométricas fundamentales para un triángulo rectángulo son:\n\n$$\\sin(\\theta) = \\frac{\\text{cateto opuesto}}{\\text{hipotenusa}}$$\n\n$$\\cos(\\theta) = \\frac{\\text{cateto adyacente}}{\\text{hipotenusa}}$$\n\n$$\\tan(\\theta) = \\frac{\\text{cateto opuesto}}{\\text{cateto adyacente}} = \\frac{\\sin(\\theta)}{\\cos(\\theta)}$$\n\nIdentidad pitagórica fundamental:\n$$\\sin^2(\\theta) + \\cos^2(\\theta) = 1$$\n\nÁngulos notables y sus valores:\n- $\\sin(30°) = \\frac{1}{2}$, $\\cos(30°) = \\frac{\\sqrt{3}}{2}$\n- $\\sin(45°) = \\frac{\\sqrt{2}}{2}$, $\\cos(45°) = \\frac{\\sqrt{2}}{2}$\n- $\\sin(60°) = \\frac{\\sqrt{3}}{2}$, $\\cos(60°) = \\frac{1}{2}$",
     "imagenes": [
       {
-        "src": "/images/temas/10/trigonometria-triangulo.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Trigonometría",
         "alt": "Triángulo rectángulo con ángulo theta señalado, cateto opuesto, cateto adyacente e hipotenusa rotulados",
         "caption": "Razones trigonométricas en un triángulo rectángulo"
       }
     ],
     "videos": [
       {
-        "youtubeId": "Bkcbuc2YMzU",
+        "youtubeId": "d4j-YRYePs8",
         "titulo": "Razones Trigonométricas - Seno, Coseno y Tangente",
-        "urlDirecta": "https://www.youtube.com/watch?v=Bkcbuc2YMzU"
+        "urlDirecta": "https://www.youtube.com/watch?v=d4j-YRYePs8"
       }
     ],
     "audio": {
-      "src": "/audio/temas/10/trigonometria.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Trigonometría",
       "duracionSegundos": 320
     }

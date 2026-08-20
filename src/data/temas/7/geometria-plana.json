@@ -7,20 +7,20 @@
     "explicacion": "La geometría plana estudia las figuras bidimensionales, sus propiedades y relaciones. Los ángulos son fundamentales en esta rama.\n\nClasificación de ángulos según su medida:\n- Agudo: $0° < \\alpha < 90°$\n- Recto: $\\alpha = 90°$\n- Obtuso: $90° < \\alpha < 180°$\n\nLa suma de los ángulos internos de un triángulo siempre es:\n$$\\alpha + \\beta + \\gamma = 180°$$\n\nEl Teorema de Pitágoras para triángulos rectángulos:\n$$c^2 = a^2 + b^2$$\n\ndonde $c$ es la hipotenusa y $a$, $b$ son los catetos. Este teorema permite calcular distancias y es la base de muchos problemas geométricos.",
     "imagenes": [
       {
-        "src": "/images/temas/7/geometria-plana-angulos.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Geometría+Plana",
         "alt": "Tres ángulos clasificados: agudo (45°), recto (90°) y obtuso (120°) con sus arcos señalados",
         "caption": "Clasificación de ángulos según su medida"
       }
     ],
     "videos": [
       {
-        "youtubeId": "IH6Nk2YSVvA",
+        "youtubeId": "LVNSEhMdGLk",
         "titulo": "Ángulos y Triángulos - Geometría plana",
-        "urlDirecta": "https://www.youtube.com/watch?v=IH6Nk2YSVvA"
+        "urlDirecta": "https://www.youtube.com/watch?v=LVNSEhMdGLk"
       }
     ],
     "audio": {
-      "src": "/audio/temas/7/geometria-plana.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Geometría Plana",
       "duracionSegundos": 220
     }

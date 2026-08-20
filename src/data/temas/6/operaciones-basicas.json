@@ -7,20 +7,20 @@
     "explicacion": "Las operaciones básicas de la aritmética son suma, resta, multiplicación y división. Estas cuatro operaciones fundamentales permiten resolver problemas matemáticos cotidianos.\n\nLa suma combina dos cantidades:\n$$a + b = c \\quad \\text{donde } c \\text{ es la suma}$$\n\nLa multiplicación es una suma repetida:\n$$a \\times n = \\underbrace{a + a + \\cdots + a}_{n \\text{ veces}}$$\n\nLa división es la operación inversa de la multiplicación. Si $a \\div b = c$, entonces $b \\times c = a$. La jerarquía de operaciones establece que primero se resuelven multiplicaciones y divisiones, luego sumas y restas.",
     "imagenes": [
       {
-        "src": "/images/temas/6/operaciones-basicas-jerarquia.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Operaciones+Básicas",
         "alt": "Diagrama de jerarquía de operaciones matemáticas mostrando el orden de evaluación",
         "caption": "Jerarquía de operaciones: paréntesis, potencias, multiplicación/división, suma/resta"
       }
     ],
     "videos": [
       {
-        "youtubeId": "wScDBKFsqMI",
+        "youtubeId": "8sViQZCKC9g",
         "titulo": "Operaciones Básicas con Números Naturales",
-        "urlDirecta": "https://www.youtube.com/watch?v=wScDBKFsqMI"
+        "urlDirecta": "https://www.youtube.com/watch?v=8sViQZCKC9g"
       }
     ],
     "audio": {
-      "src": "/audio/temas/6/operaciones-basicas.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Operaciones Básicas",
       "duracionSegundos": 210
     }

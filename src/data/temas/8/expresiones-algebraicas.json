@@ -7,20 +7,20 @@
     "explicacion": "Las expresiones algebraicas combinan números, variables y operaciones. Un monomio es un término con coeficiente y variable: $3x^2$. Un polinomio es la suma de monomios.\n\nEjemplos de polinomios:\n$$P(x) = 2x^3 + 5x^2 - 3x + 7$$\n\nProductos notables fundamentales:\n\n**Cuadrado de un binomio:**\n$$(a + b)^2 = a^2 + 2ab + b^2$$\n$$(a - b)^2 = a^2 - 2ab + b^2$$\n\n**Diferencia de cuadrados:**\n$$(a + b)(a - b) = a^2 - b^2$$\n\nFactorización es el proceso inverso de expandir: identificar factores comunes y aplicar las fórmulas de productos notables para simplificar expresiones.",
     "imagenes": [
       {
-        "src": "/images/temas/8/expresiones-algebraicas-partes.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Expresiones+Algebraicas",
         "alt": "Diagrama mostrando las partes de un monomio: coeficiente, variable y exponente señalados en 3x²",
         "caption": "Partes de un monomio: coeficiente, base y exponente"
       }
     ],
     "videos": [
       {
-        "youtubeId": "YTMbCOVpHqo",
+        "youtubeId": "oneC1gsSQaM",
         "titulo": "Expresiones Algebraicas y Productos Notables",
-        "urlDirecta": "https://www.youtube.com/watch?v=YTMbCOVpHqo"
+        "urlDirecta": "https://www.youtube.com/watch?v=oneC1gsSQaM"
       }
     ],
     "audio": {
-      "src": "/audio/temas/8/expresiones-algebraicas.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Expresiones Algebraicas",
       "duracionSegundos": 250
     }

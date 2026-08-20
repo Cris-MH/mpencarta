@@ -7,20 +7,20 @@
     "explicacion": "El concepto de límite es la base del cálculo diferencial e integral. El límite describe el comportamiento de una función cuando la variable se acerca a un valor determinado.\n\n$$\\lim_{x \\to a} f(x) = L$$\n\nsignifica que $f(x)$ se acerca a $L$ cuando $x$ se acerca a $a$.\n\n**Propiedades de los límites:**\n$$\\lim_{x \\to a} [f(x) + g(x)] = \\lim_{x \\to a} f(x) + \\lim_{x \\to a} g(x)$$\n$$\\lim_{x \\to a} [c \\cdot f(x)] = c \\cdot \\lim_{x \\to a} f(x)$$\n$$\\lim_{x \\to a} [f(x) \\cdot g(x)] = \\lim_{x \\to a} f(x) \\cdot \\lim_{x \\to a} g(x)$$\n\n**Límites notables:**\n$$\\lim_{x \\to 0} \\frac{\\sin(x)}{x} = 1$$\n\nCuando la sustitución directa produce $\\frac{0}{0}$ (indeterminación), se deben aplicar técnicas como factorización, racionalización o la regla de L'Hôpital.",
     "imagenes": [
       {
-        "src": "/images/temas/11/limites-grafica.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Límites",
         "alt": "Gráfica de una función con una discontinuidad, mostrando los límites laterales y el concepto de aproximación",
         "caption": "Concepto de límite: la función se aproxima a L cuando x tiende a a"
       }
     ],
     "videos": [
       {
-        "youtubeId": "VSqOZRM8Vy0",
+        "youtubeId": "mvpBs_D1XKk",
         "titulo": "Límites - Concepto y propiedades",
-        "urlDirecta": "https://www.youtube.com/watch?v=VSqOZRM8Vy0"
+        "urlDirecta": "https://www.youtube.com/watch?v=mvpBs_D1XKk"
       }
     ],
     "audio": {
-      "src": "/audio/temas/11/limites.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Límites",
       "duracionSegundos": 330
     }

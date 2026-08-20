@@ -7,20 +7,20 @@
     "explicacion": "Una función lineal es una relación entre dos variables que se representa gráficamente como una línea recta. Su ecuación general es:\n$$f(x) = mx + b$$\n\ndonde $m$ es la pendiente (inclinación de la recta) y $b$ es el intercepto con el eje $y$.\n\nLa pendiente se calcula como:\n$$m = \\frac{y_2 - y_1}{x_2 - x_1} = \\frac{\\Delta y}{\\Delta x}$$\n\nInterpretación de la pendiente:\n- Si $m > 0$: la función es creciente\n- Si $m < 0$: la función es decreciente\n- Si $m = 0$: la función es constante (horizontal)\n\nEl dominio de una función lineal es todos los reales: $D_f = \\mathbb{R}$, y su rango también: $R_f = \\mathbb{R}$ (excepto si $m = 0$).",
     "imagenes": [
       {
-        "src": "/images/temas/9/funciones-lineales-grafica.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Funciones+Lineales",
         "alt": "Plano cartesiano con tres rectas: una creciente (m>0), una decreciente (m<0) y una horizontal (m=0)",
         "caption": "Gráficas de funciones lineales con distintas pendientes"
       }
     ],
     "videos": [
       {
-        "youtubeId": "WEBKkx4M0DI",
+        "youtubeId": "oneC1gsSQaM",
         "titulo": "Función Lineal - Pendiente e intercepto",
-        "urlDirecta": "https://www.youtube.com/watch?v=WEBKkx4M0DI"
+        "urlDirecta": "https://www.youtube.com/watch?v=oneC1gsSQaM"
       }
     ],
     "audio": {
-      "src": "/audio/temas/9/funciones-lineales.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Funciones Lineales",
       "duracionSegundos": 270
     }

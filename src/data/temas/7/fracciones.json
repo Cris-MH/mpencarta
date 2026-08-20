@@ -7,20 +7,20 @@
     "explicacion": "Una fracción representa una parte de un todo. Se escribe como $\\frac{a}{b}$ donde $a$ es el numerador y $b$ es el denominador, con $b \\neq 0$.\n\nOperaciones con fracciones:\n\n**Suma de fracciones con igual denominador:**\n$$\\frac{a}{c} + \\frac{b}{c} = \\frac{a + b}{c}$$\n\n**Suma con diferente denominador:**\n$$\\frac{a}{b} + \\frac{c}{d} = \\frac{a \\cdot d + c \\cdot b}{b \\cdot d}$$\n\n**Multiplicación:**\n$$\\frac{a}{b} \\times \\frac{c}{d} = \\frac{a \\cdot c}{b \\cdot d}$$\n\n**División (se multiplica por el recíproco):**\n$$\\frac{a}{b} \\div \\frac{c}{d} = \\frac{a}{b} \\times \\frac{d}{c}$$\n\nLas fracciones equivalentes representan la misma cantidad: $\\frac{1}{2} = \\frac{2}{4} = \\frac{3}{6}$.",
     "imagenes": [
       {
-        "src": "/images/temas/7/fracciones-representacion.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Fracciones",
         "alt": "Círculos divididos en partes iguales mostrando fracciones 1/2, 1/3, 1/4 y 3/4 coloreadas",
         "caption": "Representación gráfica de fracciones como partes de un todo"
       }
     ],
     "videos": [
       {
-        "youtubeId": "0YWXE4qkXhk",
+        "youtubeId": "8sViQZCKC9g",
         "titulo": "Fracciones - Concepto y operaciones",
-        "urlDirecta": "https://www.youtube.com/watch?v=0YWXE4qkXhk"
+        "urlDirecta": "https://www.youtube.com/watch?v=8sViQZCKC9g"
       }
     ],
     "audio": {
-      "src": "/audio/temas/7/fracciones.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Fracciones",
       "duracionSegundos": 240
     }

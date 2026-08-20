@@ -7,20 +7,20 @@
     "explicacion": "La integral es la operación inversa de la derivada. Permite calcular áreas bajo curvas, volúmenes y acumulaciones.\n\n**Integral indefinida (antiderivada):**\n$$\\int x^n \\, dx = \\frac{x^{n+1}}{n+1} + C \\quad (n \\neq -1)$$\n\n**Propiedades:**\n$$\\int [f(x) + g(x)] \\, dx = \\int f(x) \\, dx + \\int g(x) \\, dx$$\n$$\\int k \\cdot f(x) \\, dx = k \\int f(x) \\, dx$$\n\n**Integral definida** (área bajo la curva entre $a$ y $b$):\n$$\\int_a^b f(x) \\, dx = F(b) - F(a)$$\n\ndonde $F(x)$ es una antiderivada de $f(x)$. Este resultado es el **Teorema Fundamental del Cálculo**.\n\nLas integrales modelan el desplazamiento a partir de la velocidad, el trabajo realizado por una fuerza variable y el cálculo de áreas irregulares.",
     "imagenes": [
       {
-        "src": "/images/temas/11/integrales-area.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Integrales",
         "alt": "Gráfica de una función positiva con el área sombreada bajo la curva entre los límites a y b representando la integral definida",
         "caption": "La integral definida como área bajo la curva"
       }
     ],
     "videos": [
       {
-        "youtubeId": "PoKCcSrlqM4",
+        "youtubeId": "a8BIxz5t7DM",
         "titulo": "Integrales - Concepto y reglas básicas",
-        "urlDirecta": "https://www.youtube.com/watch?v=PoKCcSrlqM4"
+        "urlDirecta": "https://www.youtube.com/watch?v=a8BIxz5t7DM"
       }
     ],
     "audio": {
-      "src": "/audio/temas/11/integrales.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Integrales",
       "duracionSegundos": 360
     }

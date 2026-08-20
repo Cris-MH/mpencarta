@@ -7,20 +7,20 @@
     "explicacion": "Los números naturales son el conjunto $\\mathbb{N} = \\{1, 2, 3, 4, \\ldots\\}$ que utilizamos para contar elementos. Son la base fundamental de la aritmética y las matemáticas.\n\nPropiedades fundamentales de los números naturales:\n- **Cerradura en la suma**: Si $a, b \\in \\mathbb{N}$, entonces $a + b \\in \\mathbb{N}$\n- **Cerradura en la multiplicación**: Si $a, b \\in \\mathbb{N}$, entonces $a \\times b \\in \\mathbb{N}$\n\n$$a + b = b + a \\quad \\text{(propiedad conmutativa de la suma)}$$\n\n$$a \\times (b + c) = a \\times b + a \\times c \\quad \\text{(propiedad distributiva)}$$\n\nLos números naturales se representan en la recta numérica como puntos equidistantes a la derecha del cero.",
     "imagenes": [
       {
-        "src": "/images/temas/6/numeros-naturales-recta.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Números+Naturales",
         "alt": "Recta numérica mostrando los números naturales del 0 al 10 con puntos equidistantes",
         "caption": "Representación de números naturales en la recta numérica"
       }
     ],
     "videos": [
       {
-        "youtubeId": "5UjQqOhSRZo",
+        "youtubeId": "aGJ00fU5Cik",
         "titulo": "Los Números Naturales - Explicación completa",
-        "urlDirecta": "https://www.youtube.com/watch?v=5UjQqOhSRZo"
+        "urlDirecta": "https://www.youtube.com/watch?v=aGJ00fU5Cik"
       }
     ],
     "audio": {
-      "src": "/audio/temas/6/numeros-naturales.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Números Naturales",
       "duracionSegundos": 180
     }

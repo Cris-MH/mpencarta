@@ -7,20 +7,20 @@
     "explicacion": "Un sistema de ecuaciones lineales es un conjunto de dos o más ecuaciones con las mismas incógnitas. Un sistema $2 \\times 2$ tiene la forma:\n$$\\begin{cases} a_1x + b_1y = c_1 \\\\ a_2x + b_2y = c_2 \\end{cases}$$\n\n**Método de sustitución:** Se despeja una variable de una ecuación y se reemplaza en la otra.\n\n**Método de igualación:** Se despeja la misma variable en ambas ecuaciones y se igualan.\n\n**Método de eliminación (reducción):** Se suman o restan las ecuaciones para eliminar una variable.\n\nClasificación de sistemas:\n- **Compatible determinado**: una única solución (las rectas se cortan)\n- **Compatible indeterminado**: infinitas soluciones (rectas coincidentes)\n- **Incompatible**: sin solución (rectas paralelas, $\\frac{a_1}{a_2} = \\frac{b_1}{b_2} \\neq \\frac{c_1}{c_2}$)",
     "imagenes": [
       {
-        "src": "/images/temas/9/sistemas-ecuaciones-grafica.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Sistemas+de+Ecuaciones",
         "alt": "Plano cartesiano con dos rectas que se intersecan en un punto, señalando la solución del sistema",
         "caption": "Solución gráfica de un sistema de ecuaciones: punto de intersección"
       }
     ],
     "videos": [
       {
-        "youtubeId": "PaLA9XoFMCQ",
+        "youtubeId": "aGJ00fU5Cik",
         "titulo": "Sistemas de Ecuaciones - Métodos de solución",
-        "urlDirecta": "https://www.youtube.com/watch?v=PaLA9XoFMCQ"
+        "urlDirecta": "https://www.youtube.com/watch?v=aGJ00fU5Cik"
       }
     ],
     "audio": {
-      "src": "/audio/temas/9/sistemas-ecuaciones.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Sistemas de Ecuaciones",
       "duracionSegundos": 300
     }

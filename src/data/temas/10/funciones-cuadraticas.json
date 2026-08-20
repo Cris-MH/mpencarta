@@ -7,20 +7,20 @@
     "explicacion": "Una función cuadrática tiene la forma general:\n$$f(x) = ax^2 + bx + c \\quad \\text{con } a \\neq 0$$\n\nSu gráfica es una parábola que abre hacia arriba si $a > 0$ o hacia abajo si $a < 0$.\n\n**Vértice de la parábola:**\n$$V = \\left(-\\frac{b}{2a},\\; f\\left(-\\frac{b}{2a}\\right)\\right)$$\n\n**Fórmula cuadrática** para encontrar las raíces (donde la parábola cruza el eje $x$):\n$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$\n\n**Discriminante** $\\Delta = b^2 - 4ac$:\n- Si $\\Delta > 0$: dos raíces reales distintas\n- Si $\\Delta = 0$: una raíz doble\n- Si $\\Delta < 0$: no hay raíces reales\n\nLa función cuadrática modela fenómenos como el lanzamiento de proyectiles, ganancias económicas y diseño de puentes.",
     "imagenes": [
       {
-        "src": "/images/temas/10/funciones-cuadraticas-parabola.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Funciones+Cuadráticas",
         "alt": "Parábola en el plano cartesiano con vértice, eje de simetría y raíces señalados",
         "caption": "Elementos de una función cuadrática: vértice, eje de simetría y raíces"
       }
     ],
     "videos": [
       {
-        "youtubeId": "RTbgNdsS3LY",
+        "youtubeId": "oneC1gsSQaM",
         "titulo": "Función Cuadrática - Gráfica y propiedades",
-        "urlDirecta": "https://www.youtube.com/watch?v=RTbgNdsS3LY"
+        "urlDirecta": "https://www.youtube.com/watch?v=oneC1gsSQaM"
       }
     ],
     "audio": {
-      "src": "/audio/temas/10/funciones-cuadraticas.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Funciones Cuadráticas",
       "duracionSegundos": 300
     }

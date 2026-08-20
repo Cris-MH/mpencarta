@@ -7,20 +7,20 @@
     "explicacion": "La geometría analítica combina álgebra y geometría usando el plano cartesiano. Permite estudiar figuras geométricas mediante ecuaciones y coordenadas.\n\n**Distancia entre dos puntos** $P_1(x_1, y_1)$ y $P_2(x_2, y_2)$:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$\n\n**Punto medio** de un segmento:\n$$M = \\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right)$$\n\n**Ecuación de la circunferencia** con centro $(h, k)$ y radio $r$:\n$$(x - h)^2 + (y - k)^2 = r^2$$\n\nLa geometría analítica es fundamental para la ingeniería, la física y la computación gráfica, ya que permite calcular posiciones y trayectorias con precisión.",
     "imagenes": [
       {
-        "src": "/images/temas/9/geometria-analitica-distancia.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Geometría+Analítica",
         "alt": "Plano cartesiano mostrando dos puntos conectados por un segmento con la fórmula de distancia aplicada",
         "caption": "Distancia entre dos puntos en el plano cartesiano"
       }
     ],
     "videos": [
       {
-        "youtubeId": "jvQYgMlfthA",
+        "youtubeId": "_d1SyjVGVpk",
         "titulo": "Geometría Analítica - Distancia y punto medio",
-        "urlDirecta": "https://www.youtube.com/watch?v=jvQYgMlfthA"
+        "urlDirecta": "https://www.youtube.com/watch?v=_d1SyjVGVpk"
       }
     ],
     "audio": {
-      "src": "/audio/temas/9/geometria-analitica.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Geometría Analítica",
       "duracionSegundos": 280
     }

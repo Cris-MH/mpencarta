@@ -7,20 +7,20 @@
     "explicacion": "Una ecuación lineal es una igualdad con una incógnita de primer grado. Su forma general es:\n$$ax + b = 0 \\quad \\text{con } a \\neq 0$$\n\nPara resolver una ecuación lineal se aísla la variable $x$:\n$$ax + b = c$$\n$$ax = c - b$$\n$$x = \\frac{c - b}{a}$$\n\nPasos para resolver ecuaciones:\n1. Eliminar paréntesis aplicando la propiedad distributiva\n2. Agrupar términos semejantes a cada lado\n3. Transponer términos (cambiando de signo)\n4. Despejar la incógnita\n\nEjemplo: Resolver $3x + 5 = 20$\n$$3x = 20 - 5 = 15$$\n$$x = \\frac{15}{3} = 5$$",
     "imagenes": [
       {
-        "src": "/images/temas/8/ecuaciones-lineales-balanza.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Ecuaciones+Lineales",
         "alt": "Balanza en equilibrio representando una ecuación lineal con pesas y la incógnita x",
         "caption": "Una ecuación es como una balanza: ambos lados deben ser iguales"
       }
     ],
     "videos": [
       {
-        "youtubeId": "px3JRKbVFKI",
+        "youtubeId": "aGJ00fU5Cik",
         "titulo": "Ecuaciones de Primer Grado - Paso a paso",
-        "urlDirecta": "https://www.youtube.com/watch?v=px3JRKbVFKI"
+        "urlDirecta": "https://www.youtube.com/watch?v=aGJ00fU5Cik"
       }
     ],
     "audio": {
-      "src": "/audio/temas/8/ecuaciones-lineales.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Ecuaciones Lineales",
       "duracionSegundos": 230
     }

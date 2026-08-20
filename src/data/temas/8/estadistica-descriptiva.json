@@ -7,20 +7,20 @@
     "explicacion": "La estadística descriptiva organiza, resume y presenta datos de manera significativa. Las medidas de tendencia central son:\n\n**Media aritmética (promedio):**\n$$\\bar{x} = \\frac{\\sum_{i=1}^{n} x_i}{n} = \\frac{x_1 + x_2 + \\cdots + x_n}{n}$$\n\n**Mediana:** valor central de los datos ordenados. Si $n$ es par:\n$$Me = \\frac{x_{n/2} + x_{n/2 + 1}}{2}$$\n\n**Moda:** valor que más se repite en el conjunto de datos.\n\nLas medidas de dispersión indican qué tan esparcidos están los datos:\n$$\\text{Rango} = x_{\\max} - x_{\\min}$$\n\nEstas herramientas permiten analizar encuestas, experimentos y datos de la vida real de forma objetiva.",
     "imagenes": [
       {
-        "src": "/images/temas/8/estadistica-descriptiva-grafico.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Estadística+Descriptiva",
         "alt": "Diagrama de barras y diagrama circular mostrando la distribución de datos de una encuesta escolar",
         "caption": "Representaciones gráficas de datos estadísticos"
       }
     ],
     "videos": [
       {
-        "youtubeId": "BRbhFOG7dGY",
+        "youtubeId": "8sViQZCKC9g",
         "titulo": "Media, Mediana y Moda - Estadística Descriptiva",
-        "urlDirecta": "https://www.youtube.com/watch?v=BRbhFOG7dGY"
+        "urlDirecta": "https://www.youtube.com/watch?v=8sViQZCKC9g"
       }
     ],
     "audio": {
-      "src": "/audio/temas/8/estadistica-descriptiva.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Estadística Descriptiva",
       "duracionSegundos": 260
     }

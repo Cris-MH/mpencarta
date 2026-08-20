@@ -7,20 +7,20 @@
     "explicacion": "Los números enteros forman el conjunto $\\mathbb{Z} = \\{\\ldots, -3, -2, -1, 0, 1, 2, 3, \\ldots\\}$, que incluye los números positivos, negativos y el cero.\n\nEl valor absoluto de un entero es su distancia al cero en la recta numérica:\n$$|a| = \\begin{cases} a & \\text{si } a \\geq 0 \\\\ -a & \\text{si } a < 0 \\end{cases}$$\n\nReglas de signos para la multiplicación:\n$$( + ) \\times ( + ) = ( + )$$\n$$( - ) \\times ( - ) = ( + )$$\n$$( + ) \\times ( - ) = ( - )$$\n\nLos enteros permiten representar situaciones como temperaturas bajo cero, deudas y altitudes bajo el nivel del mar.",
     "imagenes": [
       {
-        "src": "/images/temas/7/numeros-enteros-recta.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Números+Enteros",
         "alt": "Recta numérica mostrando números enteros del -5 al 5 con el cero en el centro",
         "caption": "Los números enteros en la recta numérica"
       }
     ],
     "videos": [
       {
-        "youtubeId": "uELz2cqoEn8",
+        "youtubeId": "aGJ00fU5Cik",
         "titulo": "Números Enteros - Operaciones y propiedades",
-        "urlDirecta": "https://www.youtube.com/watch?v=uELz2cqoEn8"
+        "urlDirecta": "https://www.youtube.com/watch?v=aGJ00fU5Cik"
       }
     ],
     "audio": {
-      "src": "/audio/temas/7/numeros-enteros.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Números Enteros",
       "duracionSegundos": 200
     }

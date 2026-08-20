@@ -7,20 +7,20 @@
     "explicacion": "La geometría básica estudia las figuras planas y sus propiedades fundamentales. Los elementos básicos son el punto, la recta y el plano.\n\nEl perímetro de un rectángulo se calcula como:\n$$P = 2(l + a)$$\ndonde $l$ es el largo y $a$ es el ancho.\n\nEl área de un rectángulo es:\n$$A = l \\times a$$\n\nPara un triángulo, el área se calcula como:\n$$A = \\frac{b \\times h}{2}$$\ndonde $b$ es la base y $h$ es la altura. Estas fórmulas permiten resolver problemas de medición de superficies y contornos en la vida cotidiana.",
     "imagenes": [
       {
-        "src": "/images/temas/6/geometria-basica-figuras.svg",
+        "src": "https://placehold.co/600x400/e8d5ff/4B0082?text=Geometría+Básica",
         "alt": "Figuras geométricas básicas: triángulo, cuadrado, rectángulo y círculo con sus elementos señalados",
         "caption": "Figuras geométricas planas fundamentales"
       }
     ],
     "videos": [
       {
-        "youtubeId": "YsA5PwQMP7E",
+        "youtubeId": "LVNSEhMdGLk",
         "titulo": "Geometría Básica - Perímetro y Área",
-        "urlDirecta": "https://www.youtube.com/watch?v=YsA5PwQMP7E"
+        "urlDirecta": "https://www.youtube.com/watch?v=LVNSEhMdGLk"
       }
     ],
     "audio": {
-      "src": "/audio/temas/6/geometria-basica.mp3",
+      "src": "/audio/placeholder.mp3",
       "titulo": "Explicación auditiva: Geometría Básica",
       "duracionSegundos": 195
     }
