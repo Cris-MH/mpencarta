@@ -1,0 +1,10 @@
+.frame {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  border: 2px solid var(--mi-green-dark);
+  background: var(--mi-cream);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}

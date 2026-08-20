@@ -1,0 +1,43 @@
+.widget {
+  background: rgba(255, 253, 243, 0.95);
+  border: 1px solid #d8d0b8;
+  border-radius: 3px;
+  padding: 10px 12px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.indicator {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--mi-gold);
+  margin-top: 3px;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.label {
+  font-size: var(--mi-font-size-sm);
+  font-weight: 600;
+  color: var(--mi-orange);
+}
+
+.fact {
+  font-size: var(--mi-font-size-sm);
+  color: var(--mi-dark-text);
+  line-height: 1.4;
+}

@@ -1,0 +1,19 @@
+.prompt {
+  text-align: center;
+  padding: 12px 0 4px;
+}
+
+.ornament {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(38, 53, 43, 0.25), transparent);
+  margin: 0 auto 8px;
+}
+
+.text {
+  font-size: var(--mi-font-size-sm);
+  color: #6a7a6e;
+  font-style: italic;
+  letter-spacing: 0.3px;
+}

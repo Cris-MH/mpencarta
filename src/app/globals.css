@@ -1,49 +1,41 @@
+@import "../styles/tokens.css";
 @import "tailwindcss";
 
-@theme inline {
-  --color-background: #f8f5ff;
-  --color-foreground: #1a1a2e;
-  --color-primary-50: #f3e8ff;
-  --color-primary-100: #e9d5ff;
-  --color-primary-200: #d8b4fe;
-  --color-primary-300: #c084fc;
-  --color-primary-400: #a855f7;
-  --color-primary-500: #7c3aed;
-  --color-primary-600: #6A0DAD;
-  --color-primary-700: #4B0082;
-  --color-primary-800: #3b0066;
-  --color-primary-900: #2e004f;
-  --color-secondary: #00BCD4;
-  --color-secondary-light: #4DD0E1;
-  --color-secondary-dark: #00838F;
-  --color-accent: #FF9800;
-  --color-accent-light: #FFB74D;
-  --color-accent-dark: #F57C00;
-  --color-success: #16a34a;
-  --color-error: #dc2626;
-  --color-grade-6: #2196F3;
-  --color-grade-7: #4CAF50;
-  --color-grade-8: #FF9800;
-  --color-grade-9: #9C27B0;
-  --color-grade-10: #009688;
-  --color-grade-11: #F44336;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-html {
-  overflow-x: hidden;
-}
-
+html,
 body {
-  background: linear-gradient(135deg, #f3e8ff 0%, #e8f4f8 30%, #ffffff 100%);
-  color: var(--color-foreground);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  font-size: 16px;
-  overflow-x: hidden;
-  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: var(--mi-font-family);
+  font-size: var(--mi-font-size-body);
+  line-height: 1.4;
+  color: var(--mi-dark-text);
+  background: #1a1a1a;
 }
 
-/* Ensure formulas don't cause horizontal overflow */
-.katex-display {
-  overflow-x: auto;
-  overflow-y: hidden;
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e8e0c8;
+  border-left: 1px solid #c0b898;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #c8c0a0, #b0a880);
+  border: 1px solid #a09870;
+  border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to right, #b8b090, #a09870);
 }

@@ -1,0 +1,148 @@
+.homeWrapper {
+  position: relative;
+  min-height: 100%;
+  padding: 20px 24px 16px;
+  background: linear-gradient(135deg, #eef6f0 0%, var(--mi-cream) 40%, #f5f0e0 100%);
+  overflow-y: auto;
+}
+
+.backgroundLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Identity block */
+.identity {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.identityTitle {
+  font-size: var(--mi-font-size-xxl);
+  font-weight: 700;
+  color: var(--mi-green-deep);
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  margin: 0 0 4px;
+}
+
+.identitySubtitle {
+  font-size: var(--mi-font-size-sm);
+  color: #5a6a5e;
+  letter-spacing: 0.3px;
+}
+
+.identityIllustration {
+  margin: 8px auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Main composition layout */
+.composition {
+  display: grid;
+  grid-template-columns: 180px 1fr 180px;
+  grid-template-rows: auto auto auto auto;
+  gap: 14px;
+  align-items: start;
+}
+
+/* Top row: 3 categories spanning center */
+.topRow {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+}
+
+/* Left sidebar area */
+.leftSidebar {
+  grid-column: 1;
+  grid-row: 2 / 4;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Middle content area */
+.middleArea {
+  grid-column: 2;
+  grid-row: 2 / 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 12px;
+}
+
+/* Right sidebar area */
+.rightSidebar {
+  grid-column: 3;
+  grid-row: 2 / 4;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Bottom row */
+.bottomRow {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 0.8fr;
+  gap: 12px;
+}
+
+/* Explore prompt area */
+.exploreArea {
+  grid-column: 1 / -1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .composition {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .topRow,
+  .bottomRow {
+    grid-column: 1;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .leftSidebar,
+  .rightSidebar {
+    grid-column: 1;
+    grid-row: auto;
+    flex-direction: row;
+  }
+
+  .middleArea {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .homeWrapper {
+    padding: 12px 12px 10px;
+  }
+
+  .topRow,
+  .bottomRow,
+  .middleArea {
+    grid-template-columns: 1fr;
+  }
+
+  .identityTitle {
+    font-size: var(--mi-font-size-xl);
+  }
+}

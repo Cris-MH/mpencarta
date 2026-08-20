@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import Navbar from "@/components/Navbar";
+import AppFrame from "@/components/shell/AppFrame";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Mi Primera Encarta - Matemáticas",
+  title: "Matemática Interactiva",
   description:
-    "Mi Primera Encarta: enciclopedia interactiva de matemáticas para el bachillerato colombiano (grados 6° a 11°). Explora temas de aritmética, álgebra, geometría, estadística, trigonometría y cálculo con contenido multimedia.",
+    "Enciclopedia interactiva de matemáticas. Explora aritmética, álgebra, geometría, trigonometría, cálculo, estadística, probabilidad, matemática discreta y teoría de números.",
 };
 
 export default function RootLayout({
@@ -15,9 +15,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className="antialiased min-h-screen text-foreground overflow-x-hidden">
-        <Navbar />
-        <main className="max-w-7xl mx-auto w-full">{children}</main>
+      <body>
+        <AppFrame>{children}</AppFrame>
       </body>
     </html>
   );
