@@ -10,21 +10,17 @@ export default function ImageGallery({ imagenes }: ImageGalleryProps) {
   }
 
   return (
-    <section aria-label="Galería de imágenes" className="w-full space-y-3">
+    <section aria-label="Galería de imágenes" className="w-full space-y-6">
       {imagenes.map((imagen, index) => (
-        <figure
-          key={`${imagen.src}-${index}`}
-          className="w-full border border-[#8b7d5e] bg-white p-1"
-          style={{ boxShadow: "0 1px 2px rgba(0,0,0,0.15)" }}
-        >
+        <figure key={`${imagen.src}-${index}`} className="w-full">
           <img
             src={imagen.src}
             alt={imagen.alt}
-            className="w-full max-w-full h-auto"
+            className="w-full max-w-full h-auto rounded-lg"
             loading="lazy"
           />
           {imagen.caption && (
-            <figcaption className="mt-1 px-1 py-0.5 text-[11px] text-[#6b5d3e] text-center bg-[#f8f4e8] border-t border-[#e8e0c8]">
+            <figcaption className="mt-2 text-sm text-gray-600 text-center">
               {imagen.caption}
             </figcaption>
           )}

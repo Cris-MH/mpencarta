@@ -35,7 +35,7 @@ export default function FormulaRenderer({ content }: FormulaRendererProps) {
             return (
               <span
                 key={index}
-                className="border border-[var(--color-encarta-red)] bg-[#fce4ec] px-1 text-[11px] font-mono"
+                className="border border-red-500 bg-red-50 px-1 rounded text-sm font-mono"
               >
                 {segment.content}
               </span>
@@ -52,7 +52,7 @@ export default function FormulaRenderer({ content }: FormulaRendererProps) {
             return (
               <div
                 key={index}
-                className="my-2 text-center overflow-x-auto formula-block-panel"
+                className="my-4 text-center overflow-x-auto"
                 dangerouslySetInnerHTML={{ __html: html }}
               />
             );
@@ -60,9 +60,9 @@ export default function FormulaRenderer({ content }: FormulaRendererProps) {
             return (
               <div
                 key={index}
-                className="my-2 text-center overflow-x-auto formula-block-panel"
+                className="my-4 text-center overflow-x-auto"
               >
-                <span className="border border-[var(--color-encarta-red)] bg-[#fce4ec] px-1 text-[11px] font-mono">
+                <span className="border border-red-500 bg-red-50 px-1 rounded text-sm font-mono">
                   {segment.content}
                 </span>
               </div>

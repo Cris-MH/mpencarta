@@ -10,13 +10,22 @@ const AREA_LABELS: Record<Area, string> = {
   calculo: "Cálculo",
 };
 
-const AREA_ICONS: Record<Area, string> = {
+const AREA_EMOJIS: Record<Area, string> = {
   aritmetica: "🔢",
-  algebra: "𝑥",
-  geometria: "△",
+  algebra: "🧮",
+  geometria: "📐",
   estadistica: "📊",
-  trigonometria: "∠",
+  trigonometria: "📈",
   calculo: "∫",
+};
+
+const AREA_COLORS: Record<Area, string> = {
+  aritmetica: "#2196F3",
+  algebra: "#9C27B0",
+  geometria: "#FF9800",
+  estadistica: "#009688",
+  trigonometria: "#F44336",
+  calculo: "#4CAF50",
 };
 
 const AREA_ORDER: Area[] = [
@@ -47,32 +56,27 @@ export default function TopicList({ temas, gradoId }: TopicListProps) {
   }
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-8">
       {nonEmptyAreas.map((area) => (
-        <div key={area} className="encarta-panel">
-          <div className="encarta-panel-header flex items-center gap-1.5">
-            <span aria-hidden="true">{AREA_ICONS[area]}</span>
-            <span>{AREA_LABELS[area]}</span>
-            <span className="ml-auto text-[10px] opacity-70">
-              {grouped[area]!.length} {grouped[area]!.length === 1 ? "tema" : "temas"}
-            </span>
-          </div>
-          <div className="encarta-panel-content py-1">
-            <ul>
-              {grouped[area]!.map((tema) => (
-                <li key={tema.slug}>
-                  <Link
-                    href={`/grado/${gradoId}/${tema.slug}`}
-                    className="flex items-center gap-2 px-2 py-1.5 text-[13px] text-[var(--color-encarta-dark-text)] hover:bg-[#e8e0c8] transition-colors duration-100 border-b border-[#f0eaD4] last:border-b-0"
-                  >
-                    <span className="text-[var(--color-encarta-green)] text-[10px]" aria-hidden="true">▸</span>
-                    <span className="font-medium">{tema.titulo}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        <section key={area} className="bg-white rounded-xl p-5 shadow-sm border border-gray-100">
+          <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+            <span aria-hidden="true">{AREA_EMOJIS[area]}</span>
+            <span style={{ color: AREA_COLORS[area] }}>{AREA_LABELS[area]}</span>
+          </h2>
+          <ul className="space-y-2 pl-2">
+            {grouped[area]!.map((tema) => (
+              <li key={tema.slug}>
+                <Link
+                  href={`/grado/${gradoId}/${tema.slug}`}
+                  className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-800 hover:underline font-medium transition-colors min-h-[44px]"
+                >
+                  <span className="text-secondary" aria-hidden="true">▸</span>
+                  {tema.titulo}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
       ))}
     </div>
   );

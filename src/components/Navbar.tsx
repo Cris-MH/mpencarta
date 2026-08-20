@@ -4,51 +4,33 @@ import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
   return (
-    <nav className="shrink-0 bg-gradient-to-b from-[#1f7d45] to-[#0D4A28] text-white border-b border-[#0a3a1e]">
-      {/* Main Header Bar */}
-      <div className="flex items-center h-10 px-3 gap-3" style={{ boxShadow: "inset 0 1px rgba(255,255,255,0.15)" }}>
-        {/* Logo / Title */}
-        <Link
-          href="/"
-          className="flex items-center gap-1.5 shrink-0 hover:opacity-90 transition-opacity duration-120"
-        >
-          <span className="text-base" aria-hidden="true">📚</span>
-          <span className="text-sm font-bold tracking-tight text-[#F5EED7]">
-            Mi Primera Encarta
-          </span>
-        </Link>
-
-        {/* Separator */}
-        <div className="w-px h-5 bg-white/20 hidden sm:block" />
-
-        {/* Navigation Buttons - Desktop */}
-        <div className="hidden sm:flex items-center gap-1">
+    <nav className="sticky top-0 z-50 bg-gradient-to-r from-primary-700 via-primary-600 to-primary-700 text-white shadow-lg border-b-2 border-secondary/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* App title / logo linking to home */}
           <Link
             href="/"
-            className="encarta-btn-green text-[11px] px-2.5 py-1 rounded-sm border border-[#0a3a1e] inline-flex items-center gap-1"
-            style={{
-              boxShadow: "0 1px 2px rgba(0,0,0,0.3), inset 0 1px rgba(255,255,255,0.2)",
-              background: "linear-gradient(180deg, #2d8f52 0%, #176B3A 100%)",
-            }}
+            className="flex items-center gap-2 text-lg sm:text-xl font-bold tracking-tight hover:text-primary-100 transition-colors min-h-[44px]"
           >
-            🏠 <span>Inicio</span>
+            <span className="text-2xl" aria-hidden="true">🧮</span>
+            <span className="bg-gradient-to-r from-white to-primary-100 bg-clip-text text-transparent">
+              Mi Primera Encarta
+            </span>
           </Link>
-        </div>
 
-        {/* Search Bar - Desktop */}
-        <div className="hidden sm:block flex-1 max-w-xs ml-auto">
-          <SearchBar />
-        </div>
+          {/* SearchBar - hidden on mobile, shown on sm+ */}
+          <div className="hidden sm:block flex-1 max-w-md ml-6">
+            <SearchBar />
+          </div>
 
-        {/* Mobile menu */}
-        <div className="ml-auto sm:hidden">
+          {/* Mobile menu hamburger */}
           <MobileMenu />
         </div>
-      </div>
 
-      {/* Mobile Search Row */}
-      <div className="sm:hidden px-3 pb-2">
-        <SearchBar />
+        {/* Mobile search bar - below title row on small screens */}
+        <div className="sm:hidden pb-3">
+          <SearchBar />
+        </div>
       </div>
     </nav>
   );
