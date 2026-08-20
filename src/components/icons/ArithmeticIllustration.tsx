@@ -1,9 +1,9 @@
-export default function ArithmeticIllustration({ size = 72 }: { size?: number }) {
+export default function ArithmeticIllustration({ size = 120 }: { size?: number }) {
   return (
     <svg
       width={size}
       height={size}
-      viewBox="0 0 72 72"
+      viewBox="0 0 120 120"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className="arithmetic-icon"
@@ -13,57 +13,86 @@ export default function ArithmeticIllustration({ size = 72 }: { size?: number })
           transition: transform 200ms ease;
         }
         .arithmetic-icon:hover .bead-row-2 {
-          transform: translateX(3px);
+          transform: translateX(4px);
+        }
+        .arithmetic-icon .bead-row-3 {
+          transition: transform 200ms ease;
+        }
+        .arithmetic-icon:hover .bead-row-3 {
+          transform: translateX(-3px);
         }
       `}</style>
 
+      {/* Floor shadow */}
+      <ellipse cx="60" cy="112" rx="35" ry="5" fill="rgba(0,0,0,0.25)" />
+
       {/* Frame outer shadow */}
-      <rect x="12" y="8" width="48" height="54" rx="4" fill="#3d2210" opacity="0.4" />
+      <rect x="18" y="10" width="84" height="95" rx="5" fill="#3d2210" opacity="0.4" />
 
       {/* Wooden frame with gradient */}
-      <rect x="10" y="6" width="48" height="54" rx="4" fill="#6B4226" stroke="#3d2210" strokeWidth="1.5" />
-      <rect x="10" y="6" width="48" height="8" rx="4" fill="#8B5E3C" />
-      <rect x="10" y="52" width="48" height="8" rx="4" fill="#5C3A1E" />
+      <rect x="15" y="8" width="84" height="95" rx="5" fill="#6B4226" stroke="#3d2210" strokeWidth="2" />
 
-      {/* Inner frame */}
-      <rect x="14" y="14" width="40" height="38" rx="2" fill="#A0724D" stroke="#5C3A1E" strokeWidth="0.5" />
+      {/* Frame top piece */}
+      <rect x="15" y="8" width="84" height="12" rx="5" fill="#8B5E3C" />
+      {/* Frame bottom piece */}
+      <rect x="15" y="91" width="84" height="12" rx="5" fill="#5C3A1E" />
+
+      {/* Wood grain texture — subtle horizontal lines */}
+      <line x1="17" y1="12" x2="97" y2="12" stroke="rgba(160,114,77,0.3)" strokeWidth="0.3" />
+      <line x1="17" y1="14" x2="97" y2="14" stroke="rgba(160,114,77,0.2)" strokeWidth="0.3" />
+      <line x1="17" y1="95" x2="97" y2="95" stroke="rgba(60,30,10,0.3)" strokeWidth="0.3" />
+      <line x1="17" y1="97" x2="97" y2="97" stroke="rgba(60,30,10,0.2)" strokeWidth="0.3" />
+
+      {/* Inner frame area */}
+      <rect x="22" y="22" width="70" height="62" rx="2" fill="#A0724D" stroke="#5C3A1E" strokeWidth="0.6" />
 
       {/* Rod 1 */}
-      <line x1="14" y1="23" x2="54" y2="23" stroke="#6B4226" strokeWidth="2" strokeLinecap="round" />
-      {/* Beads rod 1 — red spheres with gradient */}
-      <circle cx="22" cy="23" r="4.5" fill="#E53935" stroke="#B71C1C" strokeWidth="0.8" />
-      <circle cx="22" cy="21" r="1.8" fill="rgba(255,255,255,0.25)" />
-      <circle cx="31" cy="23" r="4.5" fill="#E53935" stroke="#B71C1C" strokeWidth="0.8" />
-      <circle cx="31" cy="21" r="1.8" fill="rgba(255,255,255,0.25)" />
-      <circle cx="40" cy="23" r="4.5" fill="#E53935" stroke="#B71C1C" strokeWidth="0.8" />
-      <circle cx="40" cy="21" r="1.8" fill="rgba(255,255,255,0.25)" />
+      <line x1="22" y1="35" x2="92" y2="35" stroke="#6B4226" strokeWidth="3" strokeLinecap="round" />
+      {/* Beads rod 1 — red spheres */}
+      <circle cx="34" cy="35" r="6" fill="#E53935" stroke="#B71C1C" strokeWidth="1" />
+      <circle cx="34" cy="33" r="2.5" fill="rgba(255,255,255,0.2)" />
+      <circle cx="46" cy="35" r="6" fill="#E53935" stroke="#B71C1C" strokeWidth="1" />
+      <circle cx="46" cy="33" r="2.5" fill="rgba(255,255,255,0.2)" />
+      <circle cx="58" cy="35" r="6" fill="#E53935" stroke="#B71C1C" strokeWidth="1" />
+      <circle cx="58" cy="33" r="2.5" fill="rgba(255,255,255,0.2)" />
+      <circle cx="70" cy="35" r="6" fill="#EF5350" stroke="#C62828" strokeWidth="1" />
+      <circle cx="70" cy="33" r="2.5" fill="rgba(255,255,255,0.2)" />
 
       {/* Rod 2 */}
-      <line x1="14" y1="33" x2="54" y2="33" stroke="#6B4226" strokeWidth="2" strokeLinecap="round" />
+      <line x1="22" y1="52" x2="92" y2="52" stroke="#6B4226" strokeWidth="3" strokeLinecap="round" />
       {/* Beads rod 2 — blue spheres, animated */}
       <g className="bead-row-2">
-        <circle cx="20" cy="33" r="4.5" fill="#1E88E5" stroke="#0D47A1" strokeWidth="0.8" />
-        <circle cx="20" cy="31" r="1.8" fill="rgba(255,255,255,0.25)" />
-        <circle cx="29" cy="33" r="4.5" fill="#1E88E5" stroke="#0D47A1" strokeWidth="0.8" />
-        <circle cx="29" cy="31" r="1.8" fill="rgba(255,255,255,0.25)" />
-        <circle cx="38" cy="33" r="4.5" fill="#42A5F5" stroke="#1565C0" strokeWidth="0.8" />
-        <circle cx="38" cy="31" r="1.8" fill="rgba(255,255,255,0.25)" />
-        <circle cx="47" cy="33" r="4.5" fill="#42A5F5" stroke="#1565C0" strokeWidth="0.8" />
-        <circle cx="47" cy="31" r="1.8" fill="rgba(255,255,255,0.25)" />
+        <circle cx="32" cy="52" r="6" fill="#1E88E5" stroke="#0D47A1" strokeWidth="1" />
+        <circle cx="32" cy="50" r="2.5" fill="rgba(255,255,255,0.2)" />
+        <circle cx="44" cy="52" r="6" fill="#1E88E5" stroke="#0D47A1" strokeWidth="1" />
+        <circle cx="44" cy="50" r="2.5" fill="rgba(255,255,255,0.2)" />
+        <circle cx="56" cy="52" r="6" fill="#42A5F5" stroke="#1565C0" strokeWidth="1" />
+        <circle cx="56" cy="50" r="2.5" fill="rgba(255,255,255,0.2)" />
+        <circle cx="68" cy="52" r="6" fill="#42A5F5" stroke="#1565C0" strokeWidth="1" />
+        <circle cx="68" cy="50" r="2.5" fill="rgba(255,255,255,0.2)" />
+        <circle cx="80" cy="52" r="6" fill="#64B5F6" stroke="#1976D2" strokeWidth="1" />
+        <circle cx="80" cy="50" r="2.5" fill="rgba(255,255,255,0.2)" />
       </g>
 
       {/* Rod 3 */}
-      <line x1="14" y1="43" x2="54" y2="43" stroke="#6B4226" strokeWidth="2" strokeLinecap="round" />
-      {/* Beads rod 3 — green spheres */}
-      <circle cx="24" cy="43" r="4.5" fill="#43A047" stroke="#1B5E20" strokeWidth="0.8" />
-      <circle cx="24" cy="41" r="1.8" fill="rgba(255,255,255,0.25)" />
-      <circle cx="33" cy="43" r="4.5" fill="#66BB6A" stroke="#2E7D32" strokeWidth="0.8" />
-      <circle cx="33" cy="41" r="1.8" fill="rgba(255,255,255,0.25)" />
-      <circle cx="42" cy="43" r="4.5" fill="#43A047" stroke="#1B5E20" strokeWidth="0.8" />
-      <circle cx="42" cy="41" r="1.8" fill="rgba(255,255,255,0.25)" />
+      <line x1="22" y1="69" x2="92" y2="69" stroke="#6B4226" strokeWidth="3" strokeLinecap="round" />
+      {/* Beads rod 3 — green spheres, animated */}
+      <g className="bead-row-3">
+        <circle cx="36" cy="69" r="6" fill="#43A047" stroke="#1B5E20" strokeWidth="1" />
+        <circle cx="36" cy="67" r="2.5" fill="rgba(255,255,255,0.2)" />
+        <circle cx="48" cy="69" r="6" fill="#66BB6A" stroke="#2E7D32" strokeWidth="1" />
+        <circle cx="48" cy="67" r="2.5" fill="rgba(255,255,255,0.2)" />
+        <circle cx="60" cy="69" r="6" fill="#43A047" stroke="#1B5E20" strokeWidth="1" />
+        <circle cx="60" cy="67" r="2.5" fill="rgba(255,255,255,0.2)" />
+      </g>
 
-      {/* Shadow beneath */}
-      <ellipse cx="34" cy="66" rx="20" ry="3" fill="rgba(0,0,0,0.3)" />
+      {/* Rod 4 */}
+      <line x1="22" y1="82" x2="92" y2="82" stroke="#6B4226" strokeWidth="3" strokeLinecap="round" />
+      {/* Beads rod 4 — yellow spheres */}
+      <circle cx="38" cy="82" r="5.5" fill="#FDD835" stroke="#F9A825" strokeWidth="1" />
+      <circle cx="38" cy="80" r="2.2" fill="rgba(255,255,255,0.25)" />
+      <circle cx="50" cy="82" r="5.5" fill="#FFEE58" stroke="#FBC02D" strokeWidth="1" />
+      <circle cx="50" cy="80" r="2.2" fill="rgba(255,255,255,0.25)" />
     </svg>
   );
 }
