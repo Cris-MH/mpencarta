@@ -155,7 +155,7 @@ export default function Documentacion() {
           <h3 className="doc-section__title">✨ Creado por</h3>
           <p className="doc-author">Salomé Murcia Muñoz</p>
           <p className="doc-author-sub">
-            Proyecto educativo • 2025
+            Proyecto educativo • 2026
           </p>
         </section>
 
