@@ -183,8 +183,8 @@ const CATEGORIES: Category[] = [
             { icon: "🎯", label: "Condición", value: "Equiprobable" },
           ],
           explanation: `La fórmula fundamental de la probabilidad clásica es:\n\nP(A) = Casos favorables / Casos posibles\n\nDonde:\n• P(A) es la probabilidad del evento A\n• n(A) es el número de resultados favorables al evento A\n• n(S) es el número total de resultados en el espacio muestral S\n\nEjemplo: Al lanzar un dado justo de 6 caras, la probabilidad de obtener un número par es:\nP(par) = 3/6 = 1/2 = 0.5 = 50%\n\nLos resultados favorables son {2, 4, 6} (3 resultados) de un total de {1, 2, 3, 4, 5, 6} (6 resultados posibles).`,
-          videoId: "8sViQZCKC9g",
-          videoTitle: "Introducción a la Probabilidad",
+          videoId: "Kp2c5IAcE2c",
+          videoTitle: "Probabilidad Clásica — Casos favorables y posibles",
           facts: [
             "Si lanzas una moneda al aire, la probabilidad de obtener cara es exactamente 1/2, pero en la práctica necesitas miles de lanzamientos para acercarte a ese valor.",
             "El estudio formal de la probabilidad nació en el siglo XVII cuando dos matemáticos franceses (Pascal y Fermat) discutieron un problema de juegos de azar por carta.",
