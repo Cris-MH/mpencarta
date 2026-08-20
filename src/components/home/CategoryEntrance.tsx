@@ -37,7 +37,7 @@ export default function CategoryEntrance({
   size = "medium",
 }: CategoryEntranceProps) {
   const Illustration = illustrations[slug];
-  const iconSize = size === "large" ? 64 : size === "small" ? 48 : 56;
+  const iconSize = size === "large" ? 96 : size === "small" ? 64 : 72;
 
   return (
     <a

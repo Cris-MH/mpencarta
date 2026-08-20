@@ -1,32 +1,65 @@
-export default function DiscreteIllustration({ size = 64 }: { size?: number }) {
+export default function DiscreteIllustration({ size = 72 }: { size?: number }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 72 72"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="discrete-icon"
+    >
+      <style>{`
+        .discrete-icon .highlight-edge {
+          transition: stroke-width 200ms ease, opacity 200ms ease;
+        }
+        .discrete-icon:hover .highlight-edge {
+          stroke-width: 3;
+          opacity: 1;
+        }
+      `}</style>
+
       {/* Edges (connections) */}
-      <line x1="18" y1="16" x2="46" y2="16" stroke="#5C6BC0" strokeWidth="1.5" opacity="0.7" />
-      <line x1="18" y1="16" x2="12" y2="40" stroke="#5C6BC0" strokeWidth="1.5" opacity="0.7" />
-      <line x1="18" y1="16" x2="52" y2="40" stroke="#5C6BC0" strokeWidth="1.5" opacity="0.7" />
-      <line x1="46" y1="16" x2="52" y2="40" stroke="#5C6BC0" strokeWidth="1.5" opacity="0.7" />
-      <line x1="46" y1="16" x2="12" y2="40" stroke="#5C6BC0" strokeWidth="1.5" opacity="0.5" />
-      <line x1="12" y1="40" x2="32" y2="54" stroke="#5C6BC0" strokeWidth="1.5" opacity="0.7" />
-      <line x1="52" y1="40" x2="32" y2="54" stroke="#5C6BC0" strokeWidth="1.5" opacity="0.7" />
-      <line x1="12" y1="40" x2="52" y2="40" stroke="#5C6BC0" strokeWidth="1.5" opacity="0.5" />
-      {/* Nodes */}
-      <circle cx="18" cy="16" r="6" fill="#7986CB" stroke="#3F51B5" strokeWidth="1.5" />
-      <circle cx="18" cy="16" r="3" fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
-      <circle cx="46" cy="16" r="6" fill="#7986CB" stroke="#3F51B5" strokeWidth="1.5" />
-      <circle cx="46" cy="16" r="3" fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
-      <circle cx="12" cy="40" r="6" fill="#9FA8DA" stroke="#5C6BC0" strokeWidth="1.5" />
-      <circle cx="12" cy="40" r="3" fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
-      <circle cx="52" cy="40" r="6" fill="#9FA8DA" stroke="#5C6BC0" strokeWidth="1.5" />
-      <circle cx="52" cy="40" r="3" fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
-      <circle cx="32" cy="54" r="6" fill="#C5CAE9" stroke="#7986CB" strokeWidth="1.5" />
-      <circle cx="32" cy="54" r="3" fill="none" stroke="rgba(255,255,255,0.3)" strokeWidth="0.5" />
+      <line x1="20" y1="16" x2="52" y2="16" stroke="#5C6BC0" strokeWidth="1.5" opacity="0.6" />
+      <line x1="20" y1="16" x2="10" y2="42" stroke="#5C6BC0" strokeWidth="1.5" opacity="0.6" />
+      <line x1="20" y1="16" x2="58" y2="42" stroke="#5C6BC0" strokeWidth="1.2" opacity="0.4" />
+      <line x1="52" y1="16" x2="58" y2="42" stroke="#5C6BC0" strokeWidth="1.5" opacity="0.6" />
+      <line x1="52" y1="16" x2="10" y2="42" stroke="#5C6BC0" strokeWidth="1.2" opacity="0.4" />
+      <line x1="10" y1="42" x2="36" y2="60" stroke="#5C6BC0" strokeWidth="1.5" opacity="0.6" />
+      <line x1="58" y1="42" x2="36" y2="60" stroke="#5C6BC0" strokeWidth="1.5" opacity="0.6" />
+      <line x1="10" y1="42" x2="58" y2="42" stroke="#5C6BC0" strokeWidth="1.2" opacity="0.4" />
+
+      {/* Highlighted path edge */}
+      <line className="highlight-edge" x1="20" y1="16" x2="52" y2="16" stroke="#E5B83F" strokeWidth="1.8" opacity="0.6" />
+      <line className="highlight-edge" x1="52" y1="16" x2="58" y2="42" stroke="#E5B83F" strokeWidth="1.8" opacity="0.6" />
+      <line className="highlight-edge" x1="58" y1="42" x2="36" y2="60" stroke="#E5B83F" strokeWidth="1.8" opacity="0.6" />
+
+      {/* Nodes with gradient fills */}
+      {/* Node A */}
+      <circle cx="20" cy="16" r="7" fill="#7986CB" stroke="#3F51B5" strokeWidth="1.5" />
+      <circle cx="20" cy="14" r="3" fill="rgba(255,255,255,0.15)" />
+
+      {/* Node B */}
+      <circle cx="52" cy="16" r="7" fill="#64B5F6" stroke="#1E88E5" strokeWidth="1.5" />
+      <circle cx="52" cy="14" r="3" fill="rgba(255,255,255,0.15)" />
+
+      {/* Node C */}
+      <circle cx="10" cy="42" r="7" fill="#81C784" stroke="#43A047" strokeWidth="1.5" />
+      <circle cx="10" cy="40" r="3" fill="rgba(255,255,255,0.15)" />
+
+      {/* Node D */}
+      <circle cx="58" cy="42" r="7" fill="#FFB74D" stroke="#F57C00" strokeWidth="1.5" />
+      <circle cx="58" cy="40" r="3" fill="rgba(255,255,255,0.15)" />
+
+      {/* Node E */}
+      <circle cx="36" cy="60" r="7" fill="#CE93D8" stroke="#8E24AA" strokeWidth="1.5" />
+      <circle cx="36" cy="58" r="3" fill="rgba(255,255,255,0.15)" />
+
       {/* Node labels */}
-      <text x="16" y="19" fontSize="7" fill="#fff" fontWeight="bold">A</text>
-      <text x="44" y="19" fontSize="7" fill="#fff" fontWeight="bold">B</text>
-      <text x="10" y="43" fontSize="7" fill="#fff" fontWeight="bold">C</text>
-      <text x="50" y="43" fontSize="7" fill="#fff" fontWeight="bold">D</text>
-      <text x="30" y="57" fontSize="7" fill="#5C6BC0" fontWeight="bold">E</text>
+      <text x="18" y="19" fontSize="7" fill="#fff" fontWeight="bold">A</text>
+      <text x="50" y="19" fontSize="7" fill="#fff" fontWeight="bold">B</text>
+      <text x="8" y="45" fontSize="7" fill="#fff" fontWeight="bold">C</text>
+      <text x="56" y="45" fontSize="7" fill="#fff" fontWeight="bold">D</text>
+      <text x="34" y="63" fontSize="7" fill="#fff" fontWeight="bold">E</text>
     </svg>
   );
 }

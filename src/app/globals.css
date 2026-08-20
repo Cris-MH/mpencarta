@@ -16,26 +16,25 @@ body {
   font-family: var(--mi-font-family);
   font-size: var(--mi-font-size-body);
   line-height: 1.4;
-  color: var(--mi-dark-text);
-  background: #1a1a1a;
+  color: var(--mi-cream);
+  background: #0d1f33;
 }
 
-/* Scrollbar styling */
+/* Scrollbar styling — dark theme */
 ::-webkit-scrollbar {
-  width: 14px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #e8e0c8;
-  border-left: 1px solid #c0b898;
+  background: #0d1f33;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to right, #c8c0a0, #b0a880);
-  border: 1px solid #a09870;
-  border-radius: 1px;
+  background: linear-gradient(to bottom, #1a4f7a, #1a3a5c);
+  border: 1px solid #0d2a44;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to right, #b8b090, #a09870);
+  background: linear-gradient(to bottom, #2a6f9a, #1a4f7a);
 }

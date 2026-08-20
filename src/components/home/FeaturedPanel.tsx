@@ -2,17 +2,23 @@ import styles from "./FeaturedPanel.module.css";
 
 function PythagorasTriangle() {
   return (
-    <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-      {/* Right triangle */}
-      <polygon points="6,42 42,42 6,10" fill="rgba(60,121,168,0.1)" stroke="#3C79A8" strokeWidth="1.5" strokeLinejoin="round" />
+    <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+      {/* Right triangle with labeled sides */}
+      <polygon
+        points="8,48 48,48 8,12"
+        fill="rgba(229,184,63,0.08)"
+        stroke="#E5B83F"
+        strokeWidth="1.2"
+        strokeLinejoin="round"
+      />
       {/* Right angle marker */}
-      <polyline points="6,36 12,36 12,42" fill="none" stroke="#3C79A8" strokeWidth="0.8" />
+      <polyline points="8,42 14,42 14,48" fill="none" stroke="#E5B83F" strokeWidth="0.8" opacity="0.6" />
       {/* Labels */}
-      <text x="20" y="46" fontSize="7" fill="#555" textAnchor="middle">a</text>
-      <text x="2" y="28" fontSize="7" fill="#555" textAnchor="middle">b</text>
-      <text x="27" y="24" fontSize="7" fill="#3C79A8" fontWeight="bold" textAnchor="middle">c</text>
-      {/* Formula hint */}
-      <text x="24" y="8" fontSize="6" fill="#666" textAnchor="middle">a² + b² = c²</text>
+      <text x="26" y="54" fontSize="8" fill="#F5EED7" textAnchor="middle" opacity="0.8">a</text>
+      <text x="3" y="32" fontSize="8" fill="#F5EED7" textAnchor="middle" opacity="0.8">b</text>
+      <text x="32" y="28" fontSize="8" fill="#E5B83F" fontWeight="bold" textAnchor="middle">c</text>
+      {/* Small squares on sides */}
+      <rect x="8" y="48" width="6" height="6" fill="rgba(229,184,63,0.15)" stroke="#E5B83F" strokeWidth="0.4" opacity="0.5" transform="translate(0,-6)" />
     </svg>
   );
 }
@@ -20,16 +26,14 @@ function PythagorasTriangle() {
 export default function FeaturedPanel() {
   return (
     <div className={styles.panel}>
-      <div className={styles.header}>Concepto Destacado</div>
+      <span className={styles.header}>Concepto Destacado</span>
       <div className={styles.body}>
         <div className={styles.illustration}>
           <PythagorasTriangle />
         </div>
         <div className={styles.textContent}>
-          <span className={styles.title}>El Teorema de Pitágoras</span>
-          <span className={styles.description}>
-            La relación fundamental entre los lados de un triángulo rectángulo.
-          </span>
+          <span className={styles.title}>Teorema de Pitágoras</span>
+          <span className={styles.description}>a² + b² = c²</span>
         </div>
       </div>
     </div>

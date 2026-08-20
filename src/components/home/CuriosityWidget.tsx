@@ -3,7 +3,10 @@ import styles from "./CuriosityWidget.module.css";
 export default function CuriosityWidget() {
   return (
     <div className={styles.widget}>
-      <span className={styles.indicator} aria-hidden="true" />
+      <div className={styles.iconArea}>
+        <span className={styles.questionMark}>?</span>
+        <span className={styles.sparkle} aria-hidden="true" />
+      </div>
       <div className={styles.content}>
         <span className={styles.label}>¿Sabías que...?</span>
         <span className={styles.fact}>

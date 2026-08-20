@@ -1,43 +1,65 @@
 .widget {
-  background: rgba(255, 253, 243, 0.95);
-  border: 1px solid #d8d0b8;
-  border-radius: 3px;
-  padding: 10px 12px;
+  background: none;
+  border: none;
+  padding: 10px;
   display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  text-align: center;
+  position: relative;
 }
 
-.indicator {
-  flex-shrink: 0;
-  width: 8px;
-  height: 8px;
+.iconArea {
+  position: relative;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.questionMark {
+  font-size: 18px;
+  font-weight: 700;
+  color: #E5B83F;
+  font-family: serif;
+  text-shadow: 0 0 8px rgba(229, 184, 63, 0.4);
+}
+
+.sparkle {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
-  background: var(--mi-gold);
-  margin-top: 3px;
-  animation: pulse 2.5s ease-in-out infinite;
+  background: #E5B83F;
+  animation: sparkleAnim 2s ease-in-out infinite;
 }
 
-@keyframes pulse {
-  0%, 100% { opacity: 0.5; transform: scale(0.9); }
-  50% { opacity: 1; transform: scale(1.1); }
+@keyframes sparkleAnim {
+  0%, 100% { opacity: 0.2; transform: scale(0.6); }
+  50% { opacity: 0.8; transform: scale(1.2); }
 }
 
 .content {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  align-items: center;
 }
 
 .label {
-  font-size: var(--mi-font-size-sm);
+  font-size: 11px;
   font-weight: 600;
-  color: var(--mi-orange);
+  color: #E5B83F;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .fact {
-  font-size: var(--mi-font-size-sm);
-  color: var(--mi-dark-text);
+  font-size: 10px;
+  color: rgba(245, 238, 215, 0.7);
   line-height: 1.4;
+  max-width: 140px;
 }

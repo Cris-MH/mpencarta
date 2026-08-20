@@ -1,9 +1,38 @@
 .homeWrapper {
   position: relative;
   min-height: 100%;
-  padding: 20px 24px 16px;
-  background: linear-gradient(135deg, #eef6f0 0%, var(--mi-cream) 40%, #f5f0e0 100%);
+  height: 100vh;
   overflow-y: auto;
+  overflow-x: hidden;
+  background: radial-gradient(ellipse at 50% 40%, #1a3a5c 0%, #0d1f33 70%);
+}
+
+/* Wave shapes layer */
+.homeWrapper::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 35%;
+  background:
+    radial-gradient(ellipse at 30% 100%, rgba(26, 107, 122, 0.25) 0%, transparent 60%),
+    radial-gradient(ellipse at 70% 90%, rgba(26, 107, 122, 0.15) 0%, transparent 50%);
+  clip-path: polygon(0% 40%, 10% 35%, 20% 42%, 35% 30%, 50% 38%, 65% 28%, 80% 36%, 90% 32%, 100% 40%, 100% 100%, 0% 100%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Warm accent glow zones */
+.homeWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 50% 35%, rgba(229, 184, 63, 0.06) 0%, transparent 40%),
+    radial-gradient(ellipse at 25% 75%, rgba(217, 130, 54, 0.04) 0%, transparent 35%);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .backgroundLayer {
@@ -16,133 +45,203 @@
 .content {
   position: relative;
   z-index: 1;
-  max-width: 960px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 24px 20px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
 }
 
 /* Identity block */
 .identity {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 32px;
+  position: relative;
 }
 
-.identityTitle {
-  font-size: var(--mi-font-size-xxl);
-  font-weight: 700;
-  color: var(--mi-green-deep);
-  letter-spacing: 0.5px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
-  margin: 0 0 4px;
-}
-
-.identitySubtitle {
-  font-size: var(--mi-font-size-sm);
-  color: #5a6a5e;
-  letter-spacing: 0.3px;
-}
-
-.identityIllustration {
-  margin: 8px auto 0;
+.identityBlock {
+  position: relative;
+  width: 320px;
+  height: 180px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
-/* Main composition layout */
-.composition {
+.identityTitle {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--mi-cream);
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(229, 184, 63, 0.3), 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+  line-height: 1.1;
+  font-family: system-ui, "Segoe UI", Tahoma, sans-serif;
+}
+
+.identitySubtitle {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--mi-cream);
+  letter-spacing: 4px;
+  text-shadow: 0 0 20px rgba(229, 184, 63, 0.3), 0 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 2px 0 0;
+}
+
+/* Scene composition layout */
+.sceneContainer {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
   display: grid;
-  grid-template-columns: 180px 1fr 180px;
+  grid-template-columns: repeat(5, 1fr);
   grid-template-rows: auto auto auto auto;
-  gap: 14px;
-  align-items: start;
+  gap: 8px 12px;
+  align-items: center;
+  justify-items: center;
 }
 
-/* Top row: 3 categories spanning center */
-.topRow {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 12px;
-}
-
-/* Left sidebar area */
-.leftSidebar {
+/* Category positions — staggered */
+.pos-aritmetica {
   grid-column: 1;
-  grid-row: 2 / 4;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  grid-row: 1;
+  transform: translateY(4px);
 }
 
-/* Middle content area */
-.middleArea {
-  grid-column: 2;
-  grid-row: 2 / 4;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 12px;
-}
-
-/* Right sidebar area */
-.rightSidebar {
+.pos-algebra {
   grid-column: 3;
+  grid-row: 1;
+  transform: translateY(-2px);
+}
+
+.pos-geometria {
+  grid-column: 5;
+  grid-row: 1;
+  transform: translateY(6px);
+}
+
+.pos-probabilidad {
+  grid-column: 1;
+  grid-row: 2;
+  transform: translateY(-4px) translateX(8px);
+}
+
+.pos-trigonometria {
+  grid-column: 5;
+  grid-row: 2;
+  transform: translateY(2px) translateX(-8px);
+}
+
+.pos-discreta {
+  grid-column: 1;
+  grid-row: 3;
+  transform: translateY(6px);
+}
+
+.pos-calculo {
+  grid-column: 5;
+  grid-row: 3;
+  transform: translateY(-3px);
+}
+
+.pos-teoria {
+  grid-column: 2;
+  grid-row: 4;
+  transform: translateY(4px);
+}
+
+.pos-estadistica {
+  grid-column: 3;
+  grid-row: 4;
+  transform: translateY(-2px);
+}
+
+.pos-featured {
+  grid-column: 4 / 6;
+  grid-row: 4;
+  justify-self: center;
+}
+
+/* Center identity in grid */
+.centerIdentity {
+  grid-column: 2 / 5;
   grid-row: 2 / 4;
   display: flex;
-  flex-direction: column;
-  gap: 12px;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Bottom row */
-.bottomRow {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: 1.2fr 1fr 0.8fr;
-  gap: 12px;
+/* Curiosity widget position */
+.curiosityArea {
+  grid-column: 2;
+  grid-row: 3;
+  transform: translateX(-10px);
 }
 
-/* Explore prompt area */
+/* Explore prompt */
 .exploreArea {
-  grid-column: 1 / -1;
+  margin-top: 20px;
+  width: 100%;
+  text-align: center;
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
-  .composition {
-    grid-template-columns: 1fr;
+/* Responsive */
+@media (max-width: 800px) {
+  .sceneContainer {
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
+    gap: 16px;
   }
 
-  .topRow,
-  .bottomRow {
-    grid-column: 1;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .leftSidebar,
-  .rightSidebar {
-    grid-column: 1;
+  .pos-aritmetica,
+  .pos-algebra,
+  .pos-geometria,
+  .pos-probabilidad,
+  .pos-trigonometria,
+  .pos-discreta,
+  .pos-calculo,
+  .pos-teoria,
+  .pos-estadistica,
+  .pos-featured {
+    grid-column: auto;
     grid-row: auto;
-    flex-direction: row;
+    transform: none;
   }
 
-  .middleArea {
-    grid-column: 1;
+  .centerIdentity {
+    grid-column: 1 / -1;
     grid-row: auto;
   }
-}
 
-@media (max-width: 600px) {
-  .homeWrapper {
-    padding: 12px 12px 10px;
+  .curiosityArea {
+    grid-column: auto;
+    grid-row: auto;
+    transform: none;
   }
 
-  .topRow,
-  .bottomRow,
-  .middleArea {
-    grid-template-columns: 1fr;
+  .identityBlock {
+    width: 260px;
+    height: 140px;
   }
 
   .identityTitle {
-    font-size: var(--mi-font-size-xl);
+    font-size: 24px;
+  }
+
+  .identitySubtitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 500px) {
+  .sceneContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .content {
+    padding: 12px 8px;
   }
 }

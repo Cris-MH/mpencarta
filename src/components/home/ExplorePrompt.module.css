@@ -1,19 +1,42 @@
 .prompt {
   text-align: center;
-  padding: 12px 0 4px;
+  padding: 16px 0 8px;
+  opacity: 0.6;
 }
 
 .ornament {
   display: block;
-  width: 40px;
+  width: 200px;
   height: 1px;
-  background: linear-gradient(to right, transparent, rgba(38, 53, 43, 0.25), transparent);
-  margin: 0 auto 8px;
+  margin: 0 auto 10px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(229, 184, 63, 0.4),
+    rgba(229, 184, 63, 0.6),
+    rgba(229, 184, 63, 0.4),
+    transparent
+  );
+  position: relative;
+}
+
+.ornament::before {
+  content: "∴ ◊ ∴";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 8px;
+  color: #E5B83F;
+  letter-spacing: 4px;
+  background: #0d1f33;
+  padding: 0 8px;
 }
 
 .text {
-  font-size: var(--mi-font-size-sm);
-  color: #6a7a6e;
+  font-size: 12px;
+  color: var(--mi-cream);
   font-style: italic;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
