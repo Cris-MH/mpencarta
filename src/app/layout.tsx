@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import AppFrame from "@/components/shell/AppFrame";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -15,8 +14,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body>
-        <AppFrame>{children}</AppFrame>
+        <div className="desk-bg" aria-hidden="true" />
+        {children}
       </body>
     </html>
   );
