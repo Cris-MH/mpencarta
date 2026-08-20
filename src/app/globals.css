@@ -407,3 +407,135 @@ html, body {
   background: rgba(27,58,75,0.03);
   margin-top: 12px;
 }
+
+/* =========================================================
+   Página de documentación
+   ========================================================= */
+.doc-content {
+  padding: 32px 40px 40px;
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+.doc-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 28px;
+  color: var(--color-navy);
+  margin: 0 0 28px;
+  text-align: center;
+}
+
+.doc-section {
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid rgba(27,58,75,0.08);
+}
+
+.doc-section:last-of-type {
+  border-bottom: none;
+}
+
+.doc-section__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-navy);
+  margin: 0 0 12px;
+}
+
+.doc-section p {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--color-navy-soft);
+  margin: 0 0 10px;
+}
+
+.doc-section p:last-child {
+  margin-bottom: 0;
+}
+
+.doc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.doc-list li {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-navy-soft);
+  padding: 8px 0 8px 20px;
+  position: relative;
+}
+
+.doc-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-orange);
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.doc-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.doc-cat {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  border: 3px solid var(--color-navy);
+  border-radius: var(--radius-sm);
+  color: var(--color-navy);
+}
+
+.doc-cat--orange { background: var(--color-orange); }
+.doc-cat--purple { background: var(--color-purple); }
+.doc-cat--green  { background: var(--color-green); }
+.doc-cat--pink   { background: var(--color-pink); }
+.doc-cat--blue   { background: var(--color-blue); }
+.doc-cat--yellow { background: var(--color-yellow); }
+
+.doc-section--author {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.doc-author {
+  font-family: var(--font-display) !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: var(--color-navy) !important;
+}
+
+.doc-author-sub {
+  font-size: 13px !important;
+  color: #9AA9B0 !important;
+}
+
+.doc-back {
+  text-align: center;
+  margin-top: 24px;
+  padding-top: 20px;
+}
+
+@media (max-width: 560px) {
+  .doc-content {
+    padding: 20px 18px 28px;
+  }
+  .doc-title { font-size: 22px; }
+  .doc-section__title { font-size: 17px; }
+}
