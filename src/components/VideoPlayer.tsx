@@ -32,11 +32,26 @@ export default function VideoPlayer({ video }: VideoPlayerProps) {
   const hasValidYoutubeId = video.youtubeId && video.youtubeId.trim().length > 0;
 
   return (
-    <div ref={containerRef} className="w-full min-w-[280px]">
-      <div className="relative w-full aspect-video bg-gray-100 rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+    <div ref={containerRef} className="w-full">
+      {/* Video Title Bar */}
+      <div
+        className="text-[11px] font-semibold text-[var(--color-encarta-cream)] px-2 py-1 border border-[#0a3a1e] border-b-0"
+        style={{
+          background: "linear-gradient(180deg, #1f7d45 0%, #0D4A28 100%)",
+          boxShadow: "inset 0 1px rgba(255,255,255,0.15)",
+        }}
+      >
+        🎬 {video.titulo}
+      </div>
+
+      {/* Video Frame */}
+      <div
+        className="relative w-full aspect-video border border-[#5a5a5a] bg-[#1a1a1a]"
+        style={{ boxShadow: "inset 0 1px 3px rgba(0,0,0,0.5)" }}
+      >
         {!hasValidYoutubeId || hasError ? (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-600">
-            <p className="text-center px-4">Video no disponible</p>
+          <div className="absolute inset-0 flex items-center justify-center bg-[#2a2a2a] text-[#888]">
+            <p className="text-center text-[12px] px-4">Video no disponible</p>
           </div>
         ) : isVisible ? (
           <iframe
@@ -49,20 +64,29 @@ export default function VideoPlayer({ video }: VideoPlayerProps) {
             onError={() => setHasError(true)}
           />
         ) : (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-500">
-            <p className="text-center px-4">Cargando video...</p>
+          <div className="absolute inset-0 flex items-center justify-center bg-[#2a2a2a] text-[#888]">
+            <p className="text-center text-[12px] px-4">Cargando video...</p>
           </div>
         )}
       </div>
 
-      <a
-        href={video.urlDirecta}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-1 mt-3 text-sm text-secondary-dark hover:text-secondary hover:underline font-medium"
+      {/* Video Controls Bar */}
+      <div
+        className="flex items-center justify-between px-2 py-1 border border-[#5a5a5a] border-t-0"
+        style={{
+          background: "linear-gradient(180deg, #e8e0c8 0%, #d4c9a8 100%)",
+          boxShadow: "inset 0 1px rgba(255,255,255,0.4)",
+        }}
       >
-        Ver en YouTube ↗
-      </a>
+        <a
+          href={video.urlDirecta}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-[10px] text-[var(--color-encarta-blue)] hover:underline font-medium"
+        >
+          Ver en YouTube ↗
+        </a>
+      </div>
     </div>
   );
 }

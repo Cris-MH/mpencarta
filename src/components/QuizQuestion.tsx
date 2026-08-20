@@ -10,24 +10,41 @@ export default function QuizQuestion({
 }: QuizQuestionProps) {
   const isCorrect = selectedOptionId === pregunta.respuestaCorrecta;
 
-  const getOptionClasses = (opcionId: string): string => {
-    const base =
-      "w-full min-h-[44px] px-4 py-3 text-left border-2 rounded-xl transition-all duration-200";
+  const getOptionStyles = (opcionId: string) => {
+    const base = {
+      boxShadow: "0 1px 1px rgba(0,0,0,0.1), inset 0 1px rgba(255,255,255,0.4)",
+    };
 
     if (!answered) {
-      return `${base} border-gray-200 hover:border-primary-400 hover:bg-primary-50 hover:shadow-sm cursor-pointer`;
+      return {
+        ...base,
+        background: "linear-gradient(180deg, #f8f4e8 0%, #e8e0c8 100%)",
+        border: "1px solid #8b7d5e",
+      };
     }
 
-    // After answering - show feedback
     if (opcionId === pregunta.respuestaCorrecta) {
-      return `${base} border-green-500 bg-green-50 cursor-default`;
+      return {
+        boxShadow: "0 1px 1px rgba(0,0,0,0.1), inset 0 1px rgba(255,255,255,0.4)",
+        background: "linear-gradient(180deg, #c8e6c9 0%, #a5d6a7 100%)",
+        border: "1px solid #2e7d32",
+      };
     }
 
     if (opcionId === selectedOptionId && !isCorrect) {
-      return `${base} border-red-500 bg-red-50 cursor-default`;
+      return {
+        boxShadow: "inset 0 1px 2px rgba(0,0,0,0.15)",
+        background: "linear-gradient(180deg, #ffcdd2 0%, #ef9a9a 100%)",
+        border: "1px solid #c62828",
+      };
     }
 
-    return `${base} border-gray-200 bg-gray-50 cursor-default opacity-60`;
+    return {
+      ...base,
+      background: "#e8e0c8",
+      border: "1px solid #c4b896",
+      opacity: 0.6,
+    };
   };
 
   const handleClick = (opcionId: string) => {
@@ -36,16 +53,22 @@ export default function QuizQuestion({
   };
 
   return (
-    <div className="mb-6 p-5 border border-gray-100 rounded-2xl bg-white shadow-sm">
-      <p className="font-medium text-gray-800 mb-4">{pregunta.enunciado}</p>
+    <div
+      className="p-3 border border-[#c4b896] bg-[var(--color-encarta-warm-white)]"
+      style={{ boxShadow: "inset 0 1px rgba(255,255,255,0.5)" }}
+    >
+      <p className="text-[13px] font-medium text-[var(--color-encarta-dark-text)] mb-2">{pregunta.enunciado}</p>
 
-      <div className="space-y-2">
+      <div className="space-y-1">
         {pregunta.opciones.map((opcion) => (
           <button
             key={opcion.id}
             onClick={() => handleClick(opcion.id)}
             disabled={answered}
-            className={getOptionClasses(opcion.id)}
+            className={`w-full text-left px-3 py-1.5 text-[12px] rounded-sm transition-all duration-120 ${
+              !answered ? "hover:brightness-105 cursor-pointer" : "cursor-default"
+            }`}
+            style={getOptionStyles(opcion.id)}
             aria-disabled={answered}
           >
             {opcion.texto}
@@ -55,20 +78,20 @@ export default function QuizQuestion({
 
       {answered && (
         <div
-          className={`mt-4 p-3 rounded-xl text-sm flex items-start gap-2 ${
+          className={`mt-2 p-2 text-[11px] flex items-start gap-1.5 border ${
             isCorrect
-              ? "bg-green-50 text-green-800 border border-green-200"
-              : "bg-red-50 text-red-800 border border-red-200"
+              ? "bg-[#e8f5ec] border-[#a5d6a7] text-[#1b5e20]"
+              : "bg-[#fce4ec] border-[#ef9a9a] text-[#b71c1c]"
           }`}
         >
-          <span className="text-lg shrink-0" aria-hidden="true">
+          <span className="text-sm shrink-0" aria-hidden="true">
             {isCorrect ? "✅" : "❌"}
           </span>
           <div>
-            <p className="font-semibold mb-1">
+            <p className="font-semibold">
               {isCorrect ? "¡Correcto!" : "Incorrecto"}
             </p>
-            <p>{pregunta.explicacion}</p>
+            <p className="mt-0.5">{pregunta.explicacion}</p>
           </div>
         </div>
       )}

@@ -6,27 +6,30 @@ interface ExtendedGradeCardProps extends GradeCardProps {
   emoji?: string;
 }
 
-export default function GradeCard({ grado, color = "#6A0DAD", emoji = "📚" }: ExtendedGradeCardProps) {
+export default function GradeCard({ grado, color = "#176B3A", emoji = "📚" }: ExtendedGradeCardProps) {
   return (
     <Link
       href={`/grado/${grado.id}`}
-      className="group block min-h-[44px] min-w-[44px] rounded-2xl bg-white p-6 shadow-md transition-all duration-300 hover:shadow-xl hover:-translate-y-2 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-primary-500 border-l-4"
-      style={{ borderLeftColor: color }}
+      className="group flex items-center gap-2 p-2.5 border border-[#8b7d5e] bg-gradient-to-b from-[#f8f4e8] to-[#e8e0c8] rounded-sm hover:from-white hover:to-[#f0eaD4] active:from-[#d4c9a8] active:to-[#e8e0c8] transition-all duration-120 min-h-[36px]"
+      style={{
+        boxShadow: "0 1px 2px rgba(0,0,0,0.2), inset 0 1px rgba(255,255,255,0.5), inset 0 -1px rgba(0,0,0,0.1)",
+      }}
     >
-      <div className="flex items-center gap-3 mb-3">
-        <span className="text-3xl" aria-hidden="true">{emoji}</span>
-        <h2 className="text-xl font-bold text-gray-900 group-hover:text-primary-700 transition-colors">
-          {grado.nombre}
-        </h2>
-      </div>
-      <p className="text-sm text-gray-600">
-        {grado.temaCount} {grado.temaCount === 1 ? "tema disponible" : "temas disponibles"}
-      </p>
-      <div
-        className="mt-3 h-1 w-12 rounded-full opacity-60 group-hover:w-full transition-all duration-300"
-        style={{ backgroundColor: color }}
+      <span
+        className="w-7 h-7 flex items-center justify-center text-sm border border-[#c4b896] rounded-sm bg-white shrink-0"
+        style={{ color }}
         aria-hidden="true"
-      />
+      >
+        {emoji}
+      </span>
+      <div className="flex flex-col">
+        <span className="text-[12px] font-bold text-[var(--color-encarta-dark-text)] group-hover:text-[var(--color-encarta-green)]">
+          {grado.nombre}
+        </span>
+        <span className="text-[10px] text-[#6b5d3e]">
+          {grado.temaCount} {grado.temaCount === 1 ? "tema" : "temas"}
+        </span>
+      </div>
     </Link>
   );
 }

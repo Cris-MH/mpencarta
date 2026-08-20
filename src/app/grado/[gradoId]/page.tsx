@@ -3,24 +3,6 @@ import { notFound } from "next/navigation";
 import { getGrado } from "@/lib/content";
 import TopicList from "@/components/TopicList";
 
-const GRADE_COLORS: Record<string, string> = {
-  "6": "#2196F3",
-  "7": "#4CAF50",
-  "8": "#FF9800",
-  "9": "#9C27B0",
-  "10": "#009688",
-  "11": "#F44336",
-};
-
-const GRADE_EMOJIS: Record<string, string> = {
-  "6": "🔢",
-  "7": "➗",
-  "8": "📐",
-  "9": "📈",
-  "10": "📊",
-  "11": "∫",
-};
-
 export function generateStaticParams() {
   return [
     { gradoId: "6" },
@@ -44,35 +26,48 @@ export default async function GradePage({ params }: GradePageProps) {
     notFound();
   }
 
-  const color = GRADE_COLORS[gradoId] || "#6A0DAD";
-  const emoji = GRADE_EMOJIS[gradoId] || "📚";
-
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8">
-      <Link
-        href="/"
-        className="inline-flex items-center gap-1 text-primary-600 hover:text-primary-800 hover:underline mb-6 font-medium min-h-[44px]"
+    <div className="h-full flex flex-col">
+      {/* Grade Header Bar */}
+      <div
+        className="shrink-0 flex items-center gap-2 px-3 py-1.5 border-b border-[#b0a582]"
+        style={{
+          background: "linear-gradient(180deg, #e8e0c8 0%, #d4c9a8 100%)",
+          boxShadow: "inset 0 1px rgba(255,255,255,0.5)",
+        }}
       >
-        ← Volver a grados
-      </Link>
-
-      <div className="flex items-center gap-3 mb-8">
-        <span className="text-4xl" aria-hidden="true">{emoji}</span>
-        <h1
-          className="text-3xl font-bold"
-          style={{ color }}
+        <Link
+          href="/"
+          className="text-[11px] px-2 py-0.5 rounded-sm border border-[#8b7d5e] bg-gradient-to-b from-[#f8f4e8] to-[#e8e0c8] text-[#26352B] font-medium hover:from-white hover:to-[#f0eaD4] active:from-[#d4c9a8] active:to-[#e8e0c8] transition-all duration-120 inline-flex items-center gap-1"
+          style={{
+            boxShadow: "0 1px 1px rgba(0,0,0,0.15), inset 0 1px rgba(255,255,255,0.5)",
+          }}
         >
+          ← Inicio
+        </Link>
+        <div className="w-px h-4 bg-[#b0a582]" />
+        <span className="text-[12px] font-bold text-[var(--color-encarta-green-dark)]">
           {grado.nombre}
-        </h1>
+        </span>
+        <span className="text-[10px] text-[#6b5d3e] ml-auto">
+          {grado.temas.length} {grado.temas.length === 1 ? "tema" : "temas"}
+        </span>
       </div>
 
-      {grado.temas.length === 0 ? (
-        <p className="text-gray-600">
-          No hay temas disponibles para este grado
-        </p>
-      ) : (
-        <TopicList temas={grado.temas} gradoId={gradoId} />
-      )}
+      {/* Content */}
+      <div className="flex-1 overflow-y-auto encarta-scroll p-4">
+        <div className="max-w-3xl mx-auto">
+          {grado.temas.length === 0 ? (
+            <div className="encarta-panel p-4 text-center">
+              <p className="text-[12px] text-[#6b5d3e]">
+                No hay temas disponibles para este grado
+              </p>
+            </div>
+          ) : (
+            <TopicList temas={grado.temas} gradoId={gradoId} />
+          )}
+        </div>
+      </div>
     </div>
   );
 }

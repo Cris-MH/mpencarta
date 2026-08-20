@@ -5,15 +5,6 @@ import { useRouter } from "next/navigation";
 import { searchTopics } from "@/lib/search";
 import type { SearchResult } from "@/lib/types";
 
-const GRADE_COLORS: Record<string, string> = {
-  "6": "#2196F3",
-  "7": "#4CAF50",
-  "8": "#FF9800",
-  "9": "#9C27B0",
-  "10": "#009688",
-  "11": "#F44336",
-};
-
 export default function SearchBar() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -76,30 +67,37 @@ export default function SearchBar() {
 
   return (
     <div ref={containerRef} className="relative w-full">
-      <input
-        type="text"
-        value={query}
-        onChange={(e) => handleSearch(e.target.value)}
-        onFocus={() => {
-          if (query.trim().length >= 2) {
-            setIsOpen(true);
-          }
-        }}
-        placeholder="🔍 Buscar temas..."
-        aria-label="Buscar temas"
-        className="w-full h-10 bg-primary-800/50 rounded-full border border-primary-400/30 px-4 text-white placeholder-primary-200 text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary transition-colors"
-      />
+      <div className="flex items-center gap-1">
+        <span className="text-[10px] text-white/70 shrink-0 hidden sm:inline">Buscar:</span>
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => handleSearch(e.target.value)}
+          onFocus={() => {
+            if (query.trim().length >= 2) {
+              setIsOpen(true);
+            }
+          }}
+          placeholder="Buscar temas..."
+          aria-label="Buscar temas"
+          className="w-full h-6 bg-[var(--color-encarta-warm-white)] border border-[#5a5a5a] rounded-sm px-2 text-[12px] text-[var(--color-encarta-dark-text)] placeholder-[#8b7d5e] focus:outline-none focus:border-[var(--color-encarta-green)] transition-colors duration-120"
+          style={{ boxShadow: "inset 0 1px 2px rgba(0,0,0,0.15)" }}
+        />
+      </div>
 
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border border-gray-100 z-50 max-h-80 overflow-y-auto">
+        <div
+          className="absolute top-full left-0 right-0 mt-1 bg-[var(--color-encarta-warm-white)] border border-[#8b7d5e] z-50 max-h-60 overflow-y-auto encarta-scroll"
+          style={{ boxShadow: "0 3px 6px rgba(0,0,0,0.3)" }}
+        >
           {error && (
-            <div className="p-4 text-center">
-              <p className="text-red-600 text-sm mb-2">
-                Búsqueda no disponible temporalmente
+            <div className="p-3 text-center">
+              <p className="text-[var(--color-encarta-red)] text-[11px] mb-1">
+                ⚠ Búsqueda no disponible
               </p>
               <button
                 onClick={handleRetry}
-                className="text-sm text-primary-700 hover:text-primary-900 font-medium underline min-h-[44px] min-w-[44px] px-3 py-2"
+                className="text-[11px] text-[var(--color-encarta-green)] hover:underline font-medium px-2 py-1"
               >
                 Reintentar
               </button>
@@ -107,9 +105,9 @@ export default function SearchBar() {
           )}
 
           {!error && hasSearched && results.length === 0 && (
-            <div className="p-4 text-center">
-              <p className="text-gray-500 text-sm">
-                No se encontraron temas relacionados
+            <div className="p-3 text-center">
+              <p className="text-[#6b5d3e] text-[11px]">
+                No se encontraron temas
               </p>
             </div>
           )}
@@ -120,20 +118,14 @@ export default function SearchBar() {
                 <li key={`${result.gradoId}-${result.temaSlug}`} role="option">
                   <button
                     onClick={() => handleResultClick(result)}
-                    className="w-full text-left px-4 py-3 hover:bg-primary-50 transition-colors border-b border-gray-50 last:border-b-0 min-h-[44px] flex items-center gap-3"
+                    className="w-full text-left px-3 py-1.5 hover:bg-[#e8e0c8] transition-colors duration-100 border-b border-[#e8e0c8] last:border-b-0 flex items-center gap-2"
                   >
-                    <span
-                      className="w-2 h-8 rounded-full shrink-0"
-                      style={{ backgroundColor: GRADE_COLORS[result.gradoId] || "#6A0DAD" }}
-                      aria-hidden="true"
-                    />
-                    <span className="flex flex-col">
-                      <span className="text-sm font-medium text-gray-900">
-                        {result.temaTitulo}
-                      </span>
-                      <span className="text-xs text-gray-500">
-                        {result.gradoNombre}
-                      </span>
+                    <span className="text-[11px] text-[#6b5d3e] shrink-0">▸</span>
+                    <span className="text-[12px] font-medium text-[var(--color-encarta-dark-text)] truncate">
+                      {result.temaTitulo}
+                    </span>
+                    <span className="text-[10px] text-[#8b7d5e] shrink-0 ml-auto">
+                      {result.gradoNombre}
                     </span>
                   </button>
                 </li>
