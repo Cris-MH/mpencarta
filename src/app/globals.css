@@ -394,3 +394,15 @@ html, body {
   .mascot__figure { animation: none; }
   .chip-btn, .book-tile, .toast { transition: none; }
 }
+
+/* ---- Footer de autor ---- */
+.console-footer {
+  padding: 10px 24px;
+  text-align: center;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--color-navy-soft);
+  border-top: 2px solid rgba(27,58,75,0.15);
+  background: rgba(27,58,75,0.03);
+}

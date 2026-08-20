@@ -240,6 +240,11 @@ export default function Home() {
       >
         {toastMessage}
       </div>
+
+      {/* Footer / Autor */}
+      <footer className="console-footer">
+        Creado por Salomé Murcia Muñoz
+      </footer>
     </main>
   );
 }
