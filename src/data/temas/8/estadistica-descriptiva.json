@@ -1,0 +1,69 @@
+{
+  "slug": "estadistica-descriptiva",
+  "titulo": "Estadística Descriptiva",
+  "area": "estadistica",
+  "gradoId": "8",
+  "contenido": {
+    "explicacion": "La estadística descriptiva organiza, resume y presenta datos de manera significativa. Las medidas de tendencia central son:\n\n**Media aritmética (promedio):**\n$$\\bar{x} = \\frac{\\sum_{i=1}^{n} x_i}{n} = \\frac{x_1 + x_2 + \\cdots + x_n}{n}$$\n\n**Mediana:** valor central de los datos ordenados. Si $n$ es par:\n$$Me = \\frac{x_{n/2} + x_{n/2 + 1}}{2}$$\n\n**Moda:** valor que más se repite en el conjunto de datos.\n\nLas medidas de dispersión indican qué tan esparcidos están los datos:\n$$\\text{Rango} = x_{\\max} - x_{\\min}$$\n\nEstas herramientas permiten analizar encuestas, experimentos y datos de la vida real de forma objetiva.",
+    "imagenes": [
+      {
+        "src": "/images/temas/8/estadistica-descriptiva-grafico.svg",
+        "alt": "Diagrama de barras y diagrama circular mostrando la distribución de datos de una encuesta escolar",
+        "caption": "Representaciones gráficas de datos estadísticos"
+      }
+    ],
+    "videos": [
+      {
+        "youtubeId": "BRbhFOG7dGY",
+        "titulo": "Media, Mediana y Moda - Estadística Descriptiva",
+        "urlDirecta": "https://www.youtube.com/watch?v=BRbhFOG7dGY"
+      }
+    ],
+    "audio": {
+      "src": "/audio/temas/8/estadistica-descriptiva.mp3",
+      "titulo": "Explicación auditiva: Estadística Descriptiva",
+      "duracionSegundos": 260
+    }
+  },
+  "quiz": {
+    "preguntas": [
+      {
+        "id": "ed-q1",
+        "enunciado": "¿Cuál es la media de los datos: 4, 6, 8, 10, 12?",
+        "opciones": [
+          { "id": "a", "texto": "6" },
+          { "id": "b", "texto": "8" },
+          { "id": "c", "texto": "10" },
+          { "id": "d", "texto": "7" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "Media $= (4+6+8+10+12)/5 = 40/5 = 8$."
+      },
+      {
+        "id": "ed-q2",
+        "enunciado": "En el conjunto {3, 5, 5, 7, 9}, ¿cuál es la moda?",
+        "opciones": [
+          { "id": "a", "texto": "3" },
+          { "id": "b", "texto": "5" },
+          { "id": "c", "texto": "7" },
+          { "id": "d", "texto": "9" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "La moda es el valor más frecuente: el 5 aparece 2 veces."
+      },
+      {
+        "id": "ed-q3",
+        "enunciado": "¿Cuál es la mediana de: 2, 4, 7, 9, 11?",
+        "opciones": [
+          { "id": "a", "texto": "4" },
+          { "id": "b", "texto": "7" },
+          { "id": "c", "texto": "9" },
+          { "id": "d", "texto": "6.6" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "Con 5 datos ordenados, la mediana es el valor central: 7."
+      }
+    ]
+  },
+  "keywords": ["estadística", "media", "mediana", "moda", "datos", "promedio", "dispersión"]
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "estadistica-inferencial",
+  "titulo": "Estadística Inferencial",
+  "area": "estadistica",
+  "gradoId": "10",
+  "contenido": {
+    "explicacion": "La estadística inferencial permite sacar conclusiones sobre una población a partir de una muestra. A diferencia de la descriptiva, busca generalizar resultados.\n\n**Conceptos clave:**\n- **Población** ($N$): conjunto completo de elementos de estudio\n- **Muestra** ($n$): subconjunto representativo de la población\n\n**Varianza muestral:**\n$$s^2 = \\frac{\\sum_{i=1}^{n}(x_i - \\bar{x})^2}{n - 1}$$\n\n**Desviación estándar:**\n$$s = \\sqrt{s^2}$$\n\n**Distribución normal:** la curva de campana de Gauss donde:\n- El $68\\%$ de los datos está a $\\pm 1$ desviación estándar de la media\n- El $95\\%$ está a $\\pm 2$ desviaciones estándar\n- El $99.7\\%$ está a $\\pm 3$ desviaciones estándar\n\nEsta regla se conoce como la regla empírica o regla $68$-$95$-$99.7$.",
+    "imagenes": [
+      {
+        "src": "/images/temas/10/estadistica-inferencial-normal.svg",
+        "alt": "Curva de distribución normal (campana de Gauss) con las áreas 68%, 95% y 99.7% señaladas",
+        "caption": "Distribución normal y regla empírica 68-95-99.7"
+      }
+    ],
+    "videos": [
+      {
+        "youtubeId": "CRSqGRs0MyI",
+        "titulo": "Estadística Inferencial - Conceptos básicos",
+        "urlDirecta": "https://www.youtube.com/watch?v=CRSqGRs0MyI"
+      }
+    ],
+    "audio": {
+      "src": "/audio/temas/10/estadistica-inferencial.mp3",
+      "titulo": "Explicación auditiva: Estadística Inferencial",
+      "duracionSegundos": 290
+    }
+  },
+  "quiz": {
+    "preguntas": [
+      {
+        "id": "ei-q1",
+        "enunciado": "¿Qué porcentaje de datos está dentro de 1 desviación estándar de la media en una distribución normal?",
+        "opciones": [
+          { "id": "a", "texto": "50%" },
+          { "id": "b", "texto": "68%" },
+          { "id": "c", "texto": "95%" },
+          { "id": "d", "texto": "99.7%" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "La regla empírica indica que el 68% está a ±1 desviación estándar."
+      },
+      {
+        "id": "ei-q2",
+        "enunciado": "¿Por qué se divide entre $n-1$ en la varianza muestral?",
+        "opciones": [
+          { "id": "a", "texto": "Para simplificar el cálculo" },
+          { "id": "b", "texto": "Para corregir el sesgo del estimador" },
+          { "id": "c", "texto": "Porque un dato se pierde" },
+          { "id": "d", "texto": "Por convención sin razón estadística" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "Se usa $n-1$ (corrección de Bessel) para un estimador insesgado."
+      },
+      {
+        "id": "ei-q3",
+        "enunciado": "La estadística inferencial se diferencia de la descriptiva porque:",
+        "opciones": [
+          { "id": "a", "texto": "Solo usa gráficos" },
+          { "id": "b", "texto": "Generaliza conclusiones de la muestra a la población" },
+          { "id": "c", "texto": "No usa fórmulas matemáticas" },
+          { "id": "d", "texto": "Solo trabaja con poblaciones pequeñas" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "La inferencial generaliza de la muestra a la población completa."
+      }
+    ]
+  },
+  "keywords": ["estadística inferencial", "muestra", "población", "varianza", "desviación estándar", "distribución normal"]
+}

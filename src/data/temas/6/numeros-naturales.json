@@ -1,0 +1,69 @@
+{
+  "slug": "numeros-naturales",
+  "titulo": "Números Naturales",
+  "area": "aritmetica",
+  "gradoId": "6",
+  "contenido": {
+    "explicacion": "Los números naturales son el conjunto $\\mathbb{N} = \\{1, 2, 3, 4, \\ldots\\}$ que utilizamos para contar elementos. Son la base fundamental de la aritmética y las matemáticas.\n\nPropiedades fundamentales de los números naturales:\n- **Cerradura en la suma**: Si $a, b \\in \\mathbb{N}$, entonces $a + b \\in \\mathbb{N}$\n- **Cerradura en la multiplicación**: Si $a, b \\in \\mathbb{N}$, entonces $a \\times b \\in \\mathbb{N}$\n\n$$a + b = b + a \\quad \\text{(propiedad conmutativa de la suma)}$$\n\n$$a \\times (b + c) = a \\times b + a \\times c \\quad \\text{(propiedad distributiva)}$$\n\nLos números naturales se representan en la recta numérica como puntos equidistantes a la derecha del cero.",
+    "imagenes": [
+      {
+        "src": "/images/temas/6/numeros-naturales-recta.svg",
+        "alt": "Recta numérica mostrando los números naturales del 0 al 10 con puntos equidistantes",
+        "caption": "Representación de números naturales en la recta numérica"
+      }
+    ],
+    "videos": [
+      {
+        "youtubeId": "5UjQqOhSRZo",
+        "titulo": "Los Números Naturales - Explicación completa",
+        "urlDirecta": "https://www.youtube.com/watch?v=5UjQqOhSRZo"
+      }
+    ],
+    "audio": {
+      "src": "/audio/temas/6/numeros-naturales.mp3",
+      "titulo": "Explicación auditiva: Números Naturales",
+      "duracionSegundos": 180
+    }
+  },
+  "quiz": {
+    "preguntas": [
+      {
+        "id": "nn-q1",
+        "enunciado": "¿Cuál de los siguientes conjuntos representa correctamente a los números naturales?",
+        "opciones": [
+          { "id": "a", "texto": "{0, 1, 2, 3, ...}" },
+          { "id": "b", "texto": "{1, 2, 3, 4, ...}" },
+          { "id": "c", "texto": "{-1, 0, 1, 2, ...}" },
+          { "id": "d", "texto": "{0.5, 1, 1.5, 2, ...}" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "Los números naturales comienzan en 1 y no incluyen el cero ni números negativos."
+      },
+      {
+        "id": "nn-q2",
+        "enunciado": "Si $a = 7$ y $b = 3$, ¿cuál propiedad garantiza que $a + b = b + a$?",
+        "opciones": [
+          { "id": "a", "texto": "Propiedad asociativa" },
+          { "id": "b", "texto": "Propiedad conmutativa" },
+          { "id": "c", "texto": "Propiedad distributiva" },
+          { "id": "d", "texto": "Propiedad del elemento neutro" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "La conmutativa establece que el orden de los sumandos no altera la suma."
+      },
+      {
+        "id": "nn-q3",
+        "enunciado": "¿Cuál es el resultado de aplicar la propiedad distributiva en $3 \\times (4 + 5)$?",
+        "opciones": [
+          { "id": "a", "texto": "$3 \\times 4 + 3 \\times 5 = 27$" },
+          { "id": "b", "texto": "$3 + 4 \\times 3 + 5 = 20$" },
+          { "id": "c", "texto": "$3 \\times 4 \\times 5 = 60$" },
+          { "id": "d", "texto": "$(3 + 4) \\times (3 + 5) = 56$" }
+        ],
+        "respuestaCorrecta": "a",
+        "explicacion": "Distributiva: $a(b+c) = ab + ac$, así $3(4+5) = 12+15 = 27$."
+      }
+    ]
+  },
+  "keywords": ["naturales", "contar", "aritmética", "conjunto N", "propiedades", "recta numérica"]
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "integrales",
+  "titulo": "Integrales",
+  "area": "calculo",
+  "gradoId": "11",
+  "contenido": {
+    "explicacion": "La integral es la operación inversa de la derivada. Permite calcular áreas bajo curvas, volúmenes y acumulaciones.\n\n**Integral indefinida (antiderivada):**\n$$\\int x^n \\, dx = \\frac{x^{n+1}}{n+1} + C \\quad (n \\neq -1)$$\n\n**Propiedades:**\n$$\\int [f(x) + g(x)] \\, dx = \\int f(x) \\, dx + \\int g(x) \\, dx$$\n$$\\int k \\cdot f(x) \\, dx = k \\int f(x) \\, dx$$\n\n**Integral definida** (área bajo la curva entre $a$ y $b$):\n$$\\int_a^b f(x) \\, dx = F(b) - F(a)$$\n\ndonde $F(x)$ es una antiderivada de $f(x)$. Este resultado es el **Teorema Fundamental del Cálculo**.\n\nLas integrales modelan el desplazamiento a partir de la velocidad, el trabajo realizado por una fuerza variable y el cálculo de áreas irregulares.",
+    "imagenes": [
+      {
+        "src": "/images/temas/11/integrales-area.svg",
+        "alt": "Gráfica de una función positiva con el área sombreada bajo la curva entre los límites a y b representando la integral definida",
+        "caption": "La integral definida como área bajo la curva"
+      }
+    ],
+    "videos": [
+      {
+        "youtubeId": "PoKCcSrlqM4",
+        "titulo": "Integrales - Concepto y reglas básicas",
+        "urlDirecta": "https://www.youtube.com/watch?v=PoKCcSrlqM4"
+      }
+    ],
+    "audio": {
+      "src": "/audio/temas/11/integrales.mp3",
+      "titulo": "Explicación auditiva: Integrales",
+      "duracionSegundos": 360
+    }
+  },
+  "quiz": {
+    "preguntas": [
+      {
+        "id": "ig-q1",
+        "enunciado": "¿Cuál es $\\int 4x^3 \\, dx$?",
+        "opciones": [
+          { "id": "a", "texto": "$x^4 + C$" },
+          { "id": "b", "texto": "$12x^2 + C$" },
+          { "id": "c", "texto": "$4x^4 + C$" },
+          { "id": "d", "texto": "$x^3 + C$" }
+        ],
+        "respuestaCorrecta": "a",
+        "explicacion": "$\\int 4x^3 dx = 4 \\cdot \\frac{x^4}{4} + C = x^4 + C$."
+      },
+      {
+        "id": "ig-q2",
+        "enunciado": "El Teorema Fundamental del Cálculo establece que $\\int_a^b f(x) dx$ es igual a:",
+        "opciones": [
+          { "id": "a", "texto": "$f(b) - f(a)$" },
+          { "id": "b", "texto": "$F(b) - F(a)$ donde $F' = f$" },
+          { "id": "c", "texto": "$f'(b) - f'(a)$" },
+          { "id": "d", "texto": "$F(a) - F(b)$" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "Se evalúa la antiderivada $F$ en los límites: $F(b) - F(a)$."
+      },
+      {
+        "id": "ig-q3",
+        "enunciado": "¿Cuál es $\\int_0^2 3x^2 \\, dx$?",
+        "opciones": [
+          { "id": "a", "texto": "6" },
+          { "id": "b", "texto": "8" },
+          { "id": "c", "texto": "12" },
+          { "id": "d", "texto": "4" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "$\\int_0^2 3x^2 dx = [x^3]_0^2 = 8 - 0 = 8$."
+      }
+    ]
+  },
+  "keywords": ["integrales", "cálculo integral", "antiderivada", "área bajo la curva", "teorema fundamental", "primitiva"]
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "geometria-analitica",
+  "titulo": "Geometría Analítica",
+  "area": "geometria",
+  "gradoId": "9",
+  "contenido": {
+    "explicacion": "La geometría analítica combina álgebra y geometría usando el plano cartesiano. Permite estudiar figuras geométricas mediante ecuaciones y coordenadas.\n\n**Distancia entre dos puntos** $P_1(x_1, y_1)$ y $P_2(x_2, y_2)$:\n$$d = \\sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$\n\n**Punto medio** de un segmento:\n$$M = \\left(\\frac{x_1 + x_2}{2}, \\frac{y_1 + y_2}{2}\\right)$$\n\n**Ecuación de la circunferencia** con centro $(h, k)$ y radio $r$:\n$$(x - h)^2 + (y - k)^2 = r^2$$\n\nLa geometría analítica es fundamental para la ingeniería, la física y la computación gráfica, ya que permite calcular posiciones y trayectorias con precisión.",
+    "imagenes": [
+      {
+        "src": "/images/temas/9/geometria-analitica-distancia.svg",
+        "alt": "Plano cartesiano mostrando dos puntos conectados por un segmento con la fórmula de distancia aplicada",
+        "caption": "Distancia entre dos puntos en el plano cartesiano"
+      }
+    ],
+    "videos": [
+      {
+        "youtubeId": "jvQYgMlfthA",
+        "titulo": "Geometría Analítica - Distancia y punto medio",
+        "urlDirecta": "https://www.youtube.com/watch?v=jvQYgMlfthA"
+      }
+    ],
+    "audio": {
+      "src": "/audio/temas/9/geometria-analitica.mp3",
+      "titulo": "Explicación auditiva: Geometría Analítica",
+      "duracionSegundos": 280
+    }
+  },
+  "quiz": {
+    "preguntas": [
+      {
+        "id": "ga-q1",
+        "enunciado": "¿Cuál es la distancia entre los puntos $(1, 2)$ y $(4, 6)$?",
+        "opciones": [
+          { "id": "a", "texto": "5" },
+          { "id": "b", "texto": "7" },
+          { "id": "c", "texto": "25" },
+          { "id": "d", "texto": "3" }
+        ],
+        "respuestaCorrecta": "a",
+        "explicacion": "$d = \\sqrt{(4-1)^2 + (6-2)^2} = \\sqrt{9+16} = \\sqrt{25} = 5$."
+      },
+      {
+        "id": "ga-q2",
+        "enunciado": "¿Cuál es el punto medio entre $(2, 8)$ y $(6, 4)$?",
+        "opciones": [
+          { "id": "a", "texto": "$(4, 6)$" },
+          { "id": "b", "texto": "$(3, 5)$" },
+          { "id": "c", "texto": "$(8, 12)$" },
+          { "id": "d", "texto": "$(4, 12)$" }
+        ],
+        "respuestaCorrecta": "a",
+        "explicacion": "$M = ((2+6)/2, (8+4)/2) = (4, 6)$."
+      },
+      {
+        "id": "ga-q3",
+        "enunciado": "La ecuación $(x-3)^2 + (y+1)^2 = 16$ representa una circunferencia con centro en:",
+        "opciones": [
+          { "id": "a", "texto": "$(3, 1)$" },
+          { "id": "b", "texto": "$(3, -1)$" },
+          { "id": "c", "texto": "$(-3, 1)$" },
+          { "id": "d", "texto": "$(-3, -1)$" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "De $(x-h)^2+(y-k)^2=r^2$: $h=3$, $k=-1$. Centro $(3,-1)$."
+      }
+    ]
+  },
+  "keywords": ["geometría analítica", "distancia", "punto medio", "circunferencia", "plano cartesiano", "coordenadas"]
+}

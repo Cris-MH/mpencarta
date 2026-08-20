@@ -1,0 +1,69 @@
+{
+  "slug": "operaciones-basicas",
+  "titulo": "Operaciones Básicas",
+  "area": "aritmetica",
+  "gradoId": "6",
+  "contenido": {
+    "explicacion": "Las operaciones básicas de la aritmética son suma, resta, multiplicación y división. Estas cuatro operaciones fundamentales permiten resolver problemas matemáticos cotidianos.\n\nLa suma combina dos cantidades:\n$$a + b = c \\quad \\text{donde } c \\text{ es la suma}$$\n\nLa multiplicación es una suma repetida:\n$$a \\times n = \\underbrace{a + a + \\cdots + a}_{n \\text{ veces}}$$\n\nLa división es la operación inversa de la multiplicación. Si $a \\div b = c$, entonces $b \\times c = a$. La jerarquía de operaciones establece que primero se resuelven multiplicaciones y divisiones, luego sumas y restas.",
+    "imagenes": [
+      {
+        "src": "/images/temas/6/operaciones-basicas-jerarquia.svg",
+        "alt": "Diagrama de jerarquía de operaciones matemáticas mostrando el orden de evaluación",
+        "caption": "Jerarquía de operaciones: paréntesis, potencias, multiplicación/división, suma/resta"
+      }
+    ],
+    "videos": [
+      {
+        "youtubeId": "wScDBKFsqMI",
+        "titulo": "Operaciones Básicas con Números Naturales",
+        "urlDirecta": "https://www.youtube.com/watch?v=wScDBKFsqMI"
+      }
+    ],
+    "audio": {
+      "src": "/audio/temas/6/operaciones-basicas.mp3",
+      "titulo": "Explicación auditiva: Operaciones Básicas",
+      "duracionSegundos": 210
+    }
+  },
+  "quiz": {
+    "preguntas": [
+      {
+        "id": "ob-q1",
+        "enunciado": "¿Cuál es el resultado de $8 + 3 \\times 2$?",
+        "opciones": [
+          { "id": "a", "texto": "22" },
+          { "id": "b", "texto": "14" },
+          { "id": "c", "texto": "16" },
+          { "id": "d", "texto": "19" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "Por jerarquía, primero $3 \\times 2 = 6$, luego $8 + 6 = 14$."
+      },
+      {
+        "id": "ob-q2",
+        "enunciado": "¿Cuál es el cociente de $144 \\div 12$?",
+        "opciones": [
+          { "id": "a", "texto": "10" },
+          { "id": "b", "texto": "11" },
+          { "id": "c", "texto": "12" },
+          { "id": "d", "texto": "13" }
+        ],
+        "respuestaCorrecta": "c",
+        "explicacion": "Dividimos $144 \\div 12 = 12$ porque $12 \\times 12 = 144$."
+      },
+      {
+        "id": "ob-q3",
+        "enunciado": "¿Cuál operación es la inversa de la multiplicación?",
+        "opciones": [
+          { "id": "a", "texto": "La suma" },
+          { "id": "b", "texto": "La resta" },
+          { "id": "c", "texto": "La división" },
+          { "id": "d", "texto": "La potenciación" }
+        ],
+        "respuestaCorrecta": "c",
+        "explicacion": "La división deshace la multiplicación: si $a \\times b = c$ entonces $c \\div b = a$."
+      }
+    ]
+  },
+  "keywords": ["suma", "resta", "multiplicación", "división", "jerarquía", "operaciones"]
+}

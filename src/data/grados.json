@@ -1,0 +1,32 @@
+[
+  {
+    "id": "6",
+    "nombre": "Grado 6°",
+    "temas": ["numeros-naturales", "operaciones-basicas", "geometria-basica"]
+  },
+  {
+    "id": "7",
+    "nombre": "Grado 7°",
+    "temas": ["numeros-enteros", "fracciones", "geometria-plana"]
+  },
+  {
+    "id": "8",
+    "nombre": "Grado 8°",
+    "temas": ["expresiones-algebraicas", "ecuaciones-lineales", "estadistica-descriptiva"]
+  },
+  {
+    "id": "9",
+    "nombre": "Grado 9°",
+    "temas": ["funciones-lineales", "sistemas-ecuaciones", "geometria-analitica"]
+  },
+  {
+    "id": "10",
+    "nombre": "Grado 10°",
+    "temas": ["trigonometria", "funciones-cuadraticas", "estadistica-inferencial"]
+  },
+  {
+    "id": "11",
+    "nombre": "Grado 11°",
+    "temas": ["limites", "derivadas", "integrales"]
+  }
+]

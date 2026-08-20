@@ -1,0 +1,69 @@
+{
+  "slug": "trigonometria",
+  "titulo": "Trigonometría",
+  "area": "trigonometria",
+  "gradoId": "10",
+  "contenido": {
+    "explicacion": "La trigonometría estudia las relaciones entre los ángulos y los lados de los triángulos. Las razones trigonométricas fundamentales para un triángulo rectángulo son:\n\n$$\\sin(\\theta) = \\frac{\\text{cateto opuesto}}{\\text{hipotenusa}}$$\n\n$$\\cos(\\theta) = \\frac{\\text{cateto adyacente}}{\\text{hipotenusa}}$$\n\n$$\\tan(\\theta) = \\frac{\\text{cateto opuesto}}{\\text{cateto adyacente}} = \\frac{\\sin(\\theta)}{\\cos(\\theta)}$$\n\nIdentidad pitagórica fundamental:\n$$\\sin^2(\\theta) + \\cos^2(\\theta) = 1$$\n\nÁngulos notables y sus valores:\n- $\\sin(30°) = \\frac{1}{2}$, $\\cos(30°) = \\frac{\\sqrt{3}}{2}$\n- $\\sin(45°) = \\frac{\\sqrt{2}}{2}$, $\\cos(45°) = \\frac{\\sqrt{2}}{2}$\n- $\\sin(60°) = \\frac{\\sqrt{3}}{2}$, $\\cos(60°) = \\frac{1}{2}$",
+    "imagenes": [
+      {
+        "src": "/images/temas/10/trigonometria-triangulo.svg",
+        "alt": "Triángulo rectángulo con ángulo theta señalado, cateto opuesto, cateto adyacente e hipotenusa rotulados",
+        "caption": "Razones trigonométricas en un triángulo rectángulo"
+      }
+    ],
+    "videos": [
+      {
+        "youtubeId": "Bkcbuc2YMzU",
+        "titulo": "Razones Trigonométricas - Seno, Coseno y Tangente",
+        "urlDirecta": "https://www.youtube.com/watch?v=Bkcbuc2YMzU"
+      }
+    ],
+    "audio": {
+      "src": "/audio/temas/10/trigonometria.mp3",
+      "titulo": "Explicación auditiva: Trigonometría",
+      "duracionSegundos": 320
+    }
+  },
+  "quiz": {
+    "preguntas": [
+      {
+        "id": "tr-q1",
+        "enunciado": "En un triángulo rectángulo con hipotenusa 10 y cateto opuesto 6, ¿cuál es $\\sin(\\theta)$?",
+        "opciones": [
+          { "id": "a", "texto": "$0.6$" },
+          { "id": "b", "texto": "$0.8$" },
+          { "id": "c", "texto": "$1.67$" },
+          { "id": "d", "texto": "$0.75$" }
+        ],
+        "respuestaCorrecta": "a",
+        "explicacion": "$\\sin(\\theta) = \\text{opuesto}/\\text{hipotenusa} = 6/10 = 0.6$."
+      },
+      {
+        "id": "tr-q2",
+        "enunciado": "¿Cuál es el valor de $\\cos(60°)$?",
+        "opciones": [
+          { "id": "a", "texto": "$\\frac{\\sqrt{3}}{2}$" },
+          { "id": "b", "texto": "$\\frac{1}{2}$" },
+          { "id": "c", "texto": "$\\frac{\\sqrt{2}}{2}$" },
+          { "id": "d", "texto": "$1$" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "El coseno de 60° es $1/2$, un valor notable de la trigonometría."
+      },
+      {
+        "id": "tr-q3",
+        "enunciado": "La identidad $\\sin^2(\\theta) + \\cos^2(\\theta) = 1$ se llama:",
+        "opciones": [
+          { "id": "a", "texto": "Identidad de Euler" },
+          { "id": "b", "texto": "Identidad pitagórica" },
+          { "id": "c", "texto": "Ley de senos" },
+          { "id": "d", "texto": "Ley de cosenos" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "Se llama identidad pitagórica por derivarse del teorema de Pitágoras."
+      }
+    ]
+  },
+  "keywords": ["trigonometría", "seno", "coseno", "tangente", "ángulos", "triángulo rectángulo", "identidades"]
+}

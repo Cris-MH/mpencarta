@@ -1,0 +1,69 @@
+{
+  "slug": "funciones-cuadraticas",
+  "titulo": "Funciones Cuadráticas",
+  "area": "algebra",
+  "gradoId": "10",
+  "contenido": {
+    "explicacion": "Una función cuadrática tiene la forma general:\n$$f(x) = ax^2 + bx + c \\quad \\text{con } a \\neq 0$$\n\nSu gráfica es una parábola que abre hacia arriba si $a > 0$ o hacia abajo si $a < 0$.\n\n**Vértice de la parábola:**\n$$V = \\left(-\\frac{b}{2a},\\; f\\left(-\\frac{b}{2a}\\right)\\right)$$\n\n**Fórmula cuadrática** para encontrar las raíces (donde la parábola cruza el eje $x$):\n$$x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$$\n\n**Discriminante** $\\Delta = b^2 - 4ac$:\n- Si $\\Delta > 0$: dos raíces reales distintas\n- Si $\\Delta = 0$: una raíz doble\n- Si $\\Delta < 0$: no hay raíces reales\n\nLa función cuadrática modela fenómenos como el lanzamiento de proyectiles, ganancias económicas y diseño de puentes.",
+    "imagenes": [
+      {
+        "src": "/images/temas/10/funciones-cuadraticas-parabola.svg",
+        "alt": "Parábola en el plano cartesiano con vértice, eje de simetría y raíces señalados",
+        "caption": "Elementos de una función cuadrática: vértice, eje de simetría y raíces"
+      }
+    ],
+    "videos": [
+      {
+        "youtubeId": "RTbgNdsS3LY",
+        "titulo": "Función Cuadrática - Gráfica y propiedades",
+        "urlDirecta": "https://www.youtube.com/watch?v=RTbgNdsS3LY"
+      }
+    ],
+    "audio": {
+      "src": "/audio/temas/10/funciones-cuadraticas.mp3",
+      "titulo": "Explicación auditiva: Funciones Cuadráticas",
+      "duracionSegundos": 300
+    }
+  },
+  "quiz": {
+    "preguntas": [
+      {
+        "id": "fc-q1",
+        "enunciado": "¿Cuáles son las raíces de $x^2 - 5x + 6 = 0$?",
+        "opciones": [
+          { "id": "a", "texto": "$x = 2$ y $x = 3$" },
+          { "id": "b", "texto": "$x = 1$ y $x = 6$" },
+          { "id": "c", "texto": "$x = -2$ y $x = -3$" },
+          { "id": "d", "texto": "$x = 5$ y $x = 1$" }
+        ],
+        "respuestaCorrecta": "a",
+        "explicacion": "Factorizando: $(x-2)(x-3)=0$, entonces $x=2$ o $x=3$."
+      },
+      {
+        "id": "fc-q2",
+        "enunciado": "Si el discriminante de una cuadrática es negativo, la parábola:",
+        "opciones": [
+          { "id": "a", "texto": "Corta al eje $x$ en dos puntos" },
+          { "id": "b", "texto": "Es tangente al eje $x$" },
+          { "id": "c", "texto": "No corta al eje $x$" },
+          { "id": "d", "texto": "Es una línea recta" }
+        ],
+        "respuestaCorrecta": "c",
+        "explicacion": "Discriminante negativo significa que no hay raíces reales."
+      },
+      {
+        "id": "fc-q3",
+        "enunciado": "¿Cuál es el vértice de $f(x) = x^2 - 4x + 3$?",
+        "opciones": [
+          { "id": "a", "texto": "$(2, -1)$" },
+          { "id": "b", "texto": "$(2, 1)$" },
+          { "id": "c", "texto": "$(-2, 15)$" },
+          { "id": "d", "texto": "$(4, 3)$" }
+        ],
+        "respuestaCorrecta": "a",
+        "explicacion": "$x_v = -(-4)/(2 \\cdot 1) = 2$; $f(2) = 4-8+3 = -1$."
+      }
+    ]
+  },
+  "keywords": ["cuadrática", "parábola", "vértice", "raíces", "discriminante", "fórmula cuadrática"]
+}

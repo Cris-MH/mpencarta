@@ -1,0 +1,69 @@
+{
+  "slug": "numeros-enteros",
+  "titulo": "Números Enteros",
+  "area": "aritmetica",
+  "gradoId": "7",
+  "contenido": {
+    "explicacion": "Los números enteros forman el conjunto $\\mathbb{Z} = \\{\\ldots, -3, -2, -1, 0, 1, 2, 3, \\ldots\\}$, que incluye los números positivos, negativos y el cero.\n\nEl valor absoluto de un entero es su distancia al cero en la recta numérica:\n$$|a| = \\begin{cases} a & \\text{si } a \\geq 0 \\\\ -a & \\text{si } a < 0 \\end{cases}$$\n\nReglas de signos para la multiplicación:\n$$( + ) \\times ( + ) = ( + )$$\n$$( - ) \\times ( - ) = ( + )$$\n$$( + ) \\times ( - ) = ( - )$$\n\nLos enteros permiten representar situaciones como temperaturas bajo cero, deudas y altitudes bajo el nivel del mar.",
+    "imagenes": [
+      {
+        "src": "/images/temas/7/numeros-enteros-recta.svg",
+        "alt": "Recta numérica mostrando números enteros del -5 al 5 con el cero en el centro",
+        "caption": "Los números enteros en la recta numérica"
+      }
+    ],
+    "videos": [
+      {
+        "youtubeId": "uELz2cqoEn8",
+        "titulo": "Números Enteros - Operaciones y propiedades",
+        "urlDirecta": "https://www.youtube.com/watch?v=uELz2cqoEn8"
+      }
+    ],
+    "audio": {
+      "src": "/audio/temas/7/numeros-enteros.mp3",
+      "titulo": "Explicación auditiva: Números Enteros",
+      "duracionSegundos": 200
+    }
+  },
+  "quiz": {
+    "preguntas": [
+      {
+        "id": "ne-q1",
+        "enunciado": "¿Cuál es el resultado de $(-5) \\times (-3)$?",
+        "opciones": [
+          { "id": "a", "texto": "-15" },
+          { "id": "b", "texto": "15" },
+          { "id": "c", "texto": "-8" },
+          { "id": "d", "texto": "8" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "Negativo por negativo es positivo: $(-5)(-3) = 15$."
+      },
+      {
+        "id": "ne-q2",
+        "enunciado": "¿Cuál es el valor absoluto de $-12$?",
+        "opciones": [
+          { "id": "a", "texto": "-12" },
+          { "id": "b", "texto": "0" },
+          { "id": "c", "texto": "12" },
+          { "id": "d", "texto": "-1" }
+        ],
+        "respuestaCorrecta": "c",
+        "explicacion": "El valor absoluto mide distancia al cero: $|-12| = 12$."
+      },
+      {
+        "id": "ne-q3",
+        "enunciado": "¿Cuál número es menor: $-7$ o $-3$?",
+        "opciones": [
+          { "id": "a", "texto": "$-3$" },
+          { "id": "b", "texto": "$-7$" },
+          { "id": "c", "texto": "Son iguales" },
+          { "id": "d", "texto": "No se pueden comparar" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "En la recta numérica $-7$ está más a la izquierda, por tanto es menor."
+      }
+    ]
+  },
+  "keywords": ["enteros", "negativos", "valor absoluto", "ley de signos", "conjunto Z"]
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "geometria-basica",
+  "titulo": "Geometría Básica",
+  "area": "geometria",
+  "gradoId": "6",
+  "contenido": {
+    "explicacion": "La geometría básica estudia las figuras planas y sus propiedades fundamentales. Los elementos básicos son el punto, la recta y el plano.\n\nEl perímetro de un rectángulo se calcula como:\n$$P = 2(l + a)$$\ndonde $l$ es el largo y $a$ es el ancho.\n\nEl área de un rectángulo es:\n$$A = l \\times a$$\n\nPara un triángulo, el área se calcula como:\n$$A = \\frac{b \\times h}{2}$$\ndonde $b$ es la base y $h$ es la altura. Estas fórmulas permiten resolver problemas de medición de superficies y contornos en la vida cotidiana.",
+    "imagenes": [
+      {
+        "src": "/images/temas/6/geometria-basica-figuras.svg",
+        "alt": "Figuras geométricas básicas: triángulo, cuadrado, rectángulo y círculo con sus elementos señalados",
+        "caption": "Figuras geométricas planas fundamentales"
+      }
+    ],
+    "videos": [
+      {
+        "youtubeId": "YsA5PwQMP7E",
+        "titulo": "Geometría Básica - Perímetro y Área",
+        "urlDirecta": "https://www.youtube.com/watch?v=YsA5PwQMP7E"
+      }
+    ],
+    "audio": {
+      "src": "/audio/temas/6/geometria-basica.mp3",
+      "titulo": "Explicación auditiva: Geometría Básica",
+      "duracionSegundos": 195
+    }
+  },
+  "quiz": {
+    "preguntas": [
+      {
+        "id": "gb-q1",
+        "enunciado": "¿Cuál es el perímetro de un rectángulo con largo 8 cm y ancho 5 cm?",
+        "opciones": [
+          { "id": "a", "texto": "26 cm" },
+          { "id": "b", "texto": "40 cm" },
+          { "id": "c", "texto": "13 cm" },
+          { "id": "d", "texto": "30 cm" }
+        ],
+        "respuestaCorrecta": "a",
+        "explicacion": "Perímetro $= 2(8 + 5) = 2(13) = 26$ cm."
+      },
+      {
+        "id": "gb-q2",
+        "enunciado": "¿Cuál es el área de un triángulo con base 10 cm y altura 6 cm?",
+        "opciones": [
+          { "id": "a", "texto": "60 cm²" },
+          { "id": "b", "texto": "30 cm²" },
+          { "id": "c", "texto": "16 cm²" },
+          { "id": "d", "texto": "40 cm²" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "Área del triángulo $= \\frac{10 \\times 6}{2} = 30$ cm²."
+      },
+      {
+        "id": "gb-q3",
+        "enunciado": "¿Cuántos lados tiene un hexágono?",
+        "opciones": [
+          { "id": "a", "texto": "5" },
+          { "id": "b", "texto": "6" },
+          { "id": "c", "texto": "7" },
+          { "id": "d", "texto": "8" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "El prefijo 'hexa' significa seis, por lo tanto tiene 6 lados."
+      }
+    ]
+  },
+  "keywords": ["geometría", "perímetro", "área", "triángulo", "rectángulo", "figuras planas"]
+}

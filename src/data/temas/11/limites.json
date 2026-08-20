@@ -1,0 +1,69 @@
+{
+  "slug": "limites",
+  "titulo": "Límites",
+  "area": "calculo",
+  "gradoId": "11",
+  "contenido": {
+    "explicacion": "El concepto de límite es la base del cálculo diferencial e integral. El límite describe el comportamiento de una función cuando la variable se acerca a un valor determinado.\n\n$$\\lim_{x \\to a} f(x) = L$$\n\nsignifica que $f(x)$ se acerca a $L$ cuando $x$ se acerca a $a$.\n\n**Propiedades de los límites:**\n$$\\lim_{x \\to a} [f(x) + g(x)] = \\lim_{x \\to a} f(x) + \\lim_{x \\to a} g(x)$$\n$$\\lim_{x \\to a} [c \\cdot f(x)] = c \\cdot \\lim_{x \\to a} f(x)$$\n$$\\lim_{x \\to a} [f(x) \\cdot g(x)] = \\lim_{x \\to a} f(x) \\cdot \\lim_{x \\to a} g(x)$$\n\n**Límites notables:**\n$$\\lim_{x \\to 0} \\frac{\\sin(x)}{x} = 1$$\n\nCuando la sustitución directa produce $\\frac{0}{0}$ (indeterminación), se deben aplicar técnicas como factorización, racionalización o la regla de L'Hôpital.",
+    "imagenes": [
+      {
+        "src": "/images/temas/11/limites-grafica.svg",
+        "alt": "Gráfica de una función con una discontinuidad, mostrando los límites laterales y el concepto de aproximación",
+        "caption": "Concepto de límite: la función se aproxima a L cuando x tiende a a"
+      }
+    ],
+    "videos": [
+      {
+        "youtubeId": "VSqOZRM8Vy0",
+        "titulo": "Límites - Concepto y propiedades",
+        "urlDirecta": "https://www.youtube.com/watch?v=VSqOZRM8Vy0"
+      }
+    ],
+    "audio": {
+      "src": "/audio/temas/11/limites.mp3",
+      "titulo": "Explicación auditiva: Límites",
+      "duracionSegundos": 330
+    }
+  },
+  "quiz": {
+    "preguntas": [
+      {
+        "id": "lm-q1",
+        "enunciado": "¿Cuál es $\\lim_{x \\to 2} (3x + 1)$?",
+        "opciones": [
+          { "id": "a", "texto": "5" },
+          { "id": "b", "texto": "7" },
+          { "id": "c", "texto": "6" },
+          { "id": "d", "texto": "9" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "Sustitución directa: $3(2) + 1 = 7$."
+      },
+      {
+        "id": "lm-q2",
+        "enunciado": "¿Cuál es $\\lim_{x \\to 0} \\frac{\\sin(x)}{x}$?",
+        "opciones": [
+          { "id": "a", "texto": "0" },
+          { "id": "b", "texto": "1" },
+          { "id": "c", "texto": "Infinito" },
+          { "id": "d", "texto": "No existe" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "Es un límite notable fundamental: $\\sin(x)/x \\to 1$ cuando $x \\to 0$."
+      },
+      {
+        "id": "lm-q3",
+        "enunciado": "Si al evaluar un límite se obtiene $\\frac{0}{0}$, esto indica:",
+        "opciones": [
+          { "id": "a", "texto": "El límite es cero" },
+          { "id": "b", "texto": "El límite no existe" },
+          { "id": "c", "texto": "Es una indeterminación que requiere más análisis" },
+          { "id": "d", "texto": "El límite es infinito" }
+        ],
+        "respuestaCorrecta": "c",
+        "explicacion": "$0/0$ es una forma indeterminada; se necesita factorizar o L'Hôpital."
+      }
+    ]
+  },
+  "keywords": ["límites", "cálculo", "indeterminación", "continuidad", "aproximación", "L'Hôpital"]
+}

@@ -1,0 +1,148 @@
+{
+  "items": [
+    {
+      "slug": "numeros-naturales",
+      "titulo": "Números Naturales",
+      "gradoId": "6",
+      "gradoNombre": "Grado 6°",
+      "keywords": ["naturales", "contar", "aritmética", "conjunto N", "propiedades", "recta numérica"],
+      "area": "aritmetica"
+    },
+    {
+      "slug": "operaciones-basicas",
+      "titulo": "Operaciones Básicas",
+      "gradoId": "6",
+      "gradoNombre": "Grado 6°",
+      "keywords": ["suma", "resta", "multiplicación", "división", "jerarquía", "operaciones"],
+      "area": "aritmetica"
+    },
+    {
+      "slug": "geometria-basica",
+      "titulo": "Geometría Básica",
+      "gradoId": "6",
+      "gradoNombre": "Grado 6°",
+      "keywords": ["geometría", "perímetro", "área", "triángulo", "rectángulo", "figuras planas"],
+      "area": "geometria"
+    },
+    {
+      "slug": "numeros-enteros",
+      "titulo": "Números Enteros",
+      "gradoId": "7",
+      "gradoNombre": "Grado 7°",
+      "keywords": ["enteros", "negativos", "valor absoluto", "ley de signos", "conjunto Z"],
+      "area": "aritmetica"
+    },
+    {
+      "slug": "fracciones",
+      "titulo": "Fracciones",
+      "gradoId": "7",
+      "gradoNombre": "Grado 7°",
+      "keywords": ["fracciones", "numerador", "denominador", "equivalentes", "suma de fracciones", "multiplicación"],
+      "area": "aritmetica"
+    },
+    {
+      "slug": "geometria-plana",
+      "titulo": "Geometría Plana",
+      "gradoId": "7",
+      "gradoNombre": "Grado 7°",
+      "keywords": ["ángulos", "triángulos", "Pitágoras", "geometría plana", "clasificación", "hipotenusa"],
+      "area": "geometria"
+    },
+    {
+      "slug": "expresiones-algebraicas",
+      "titulo": "Expresiones Algebraicas",
+      "gradoId": "8",
+      "gradoNombre": "Grado 8°",
+      "keywords": ["álgebra", "polinomios", "monomios", "productos notables", "factorización", "binomio"],
+      "area": "algebra"
+    },
+    {
+      "slug": "ecuaciones-lineales",
+      "titulo": "Ecuaciones Lineales",
+      "gradoId": "8",
+      "gradoNombre": "Grado 8°",
+      "keywords": ["ecuaciones", "lineal", "primer grado", "despejar", "incógnita", "resolver"],
+      "area": "algebra"
+    },
+    {
+      "slug": "estadistica-descriptiva",
+      "titulo": "Estadística Descriptiva",
+      "gradoId": "8",
+      "gradoNombre": "Grado 8°",
+      "keywords": ["estadística", "media", "mediana", "moda", "datos", "promedio", "dispersión"],
+      "area": "estadistica"
+    },
+    {
+      "slug": "funciones-lineales",
+      "titulo": "Funciones Lineales",
+      "gradoId": "9",
+      "gradoNombre": "Grado 9°",
+      "keywords": ["función lineal", "pendiente", "intercepto", "recta", "creciente", "decreciente", "gráfica"],
+      "area": "algebra"
+    },
+    {
+      "slug": "sistemas-ecuaciones",
+      "titulo": "Sistemas de Ecuaciones",
+      "gradoId": "9",
+      "gradoNombre": "Grado 9°",
+      "keywords": ["sistemas", "ecuaciones simultáneas", "sustitución", "eliminación", "igualación", "solución"],
+      "area": "algebra"
+    },
+    {
+      "slug": "geometria-analitica",
+      "titulo": "Geometría Analítica",
+      "gradoId": "9",
+      "gradoNombre": "Grado 9°",
+      "keywords": ["geometría analítica", "distancia", "punto medio", "circunferencia", "plano cartesiano", "coordenadas"],
+      "area": "geometria"
+    },
+    {
+      "slug": "trigonometria",
+      "titulo": "Trigonometría",
+      "gradoId": "10",
+      "gradoNombre": "Grado 10°",
+      "keywords": ["trigonometría", "seno", "coseno", "tangente", "ángulos", "triángulo rectángulo", "identidades"],
+      "area": "trigonometria"
+    },
+    {
+      "slug": "funciones-cuadraticas",
+      "titulo": "Funciones Cuadráticas",
+      "gradoId": "10",
+      "gradoNombre": "Grado 10°",
+      "keywords": ["cuadrática", "parábola", "vértice", "raíces", "discriminante", "fórmula cuadrática"],
+      "area": "algebra"
+    },
+    {
+      "slug": "estadistica-inferencial",
+      "titulo": "Estadística Inferencial",
+      "gradoId": "10",
+      "gradoNombre": "Grado 10°",
+      "keywords": ["estadística inferencial", "muestra", "población", "varianza", "desviación estándar", "distribución normal"],
+      "area": "estadistica"
+    },
+    {
+      "slug": "limites",
+      "titulo": "Límites",
+      "gradoId": "11",
+      "gradoNombre": "Grado 11°",
+      "keywords": ["límites", "cálculo", "indeterminación", "continuidad", "aproximación", "L'Hôpital"],
+      "area": "calculo"
+    },
+    {
+      "slug": "derivadas",
+      "titulo": "Derivadas",
+      "gradoId": "11",
+      "gradoNombre": "Grado 11°",
+      "keywords": ["derivadas", "cálculo diferencial", "tasa de cambio", "tangente", "regla de la potencia", "regla de la cadena"],
+      "area": "calculo"
+    },
+    {
+      "slug": "integrales",
+      "titulo": "Integrales",
+      "gradoId": "11",
+      "gradoNombre": "Grado 11°",
+      "keywords": ["integrales", "cálculo integral", "antiderivada", "área bajo la curva", "teorema fundamental", "primitiva"],
+      "area": "calculo"
+    }
+  ]
+}

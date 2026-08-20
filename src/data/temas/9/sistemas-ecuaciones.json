@@ -1,0 +1,69 @@
+{
+  "slug": "sistemas-ecuaciones",
+  "titulo": "Sistemas de Ecuaciones",
+  "area": "algebra",
+  "gradoId": "9",
+  "contenido": {
+    "explicacion": "Un sistema de ecuaciones lineales es un conjunto de dos o más ecuaciones con las mismas incógnitas. Un sistema $2 \\times 2$ tiene la forma:\n$$\\begin{cases} a_1x + b_1y = c_1 \\\\ a_2x + b_2y = c_2 \\end{cases}$$\n\n**Método de sustitución:** Se despeja una variable de una ecuación y se reemplaza en la otra.\n\n**Método de igualación:** Se despeja la misma variable en ambas ecuaciones y se igualan.\n\n**Método de eliminación (reducción):** Se suman o restan las ecuaciones para eliminar una variable.\n\nClasificación de sistemas:\n- **Compatible determinado**: una única solución (las rectas se cortan)\n- **Compatible indeterminado**: infinitas soluciones (rectas coincidentes)\n- **Incompatible**: sin solución (rectas paralelas, $\\frac{a_1}{a_2} = \\frac{b_1}{b_2} \\neq \\frac{c_1}{c_2}$)",
+    "imagenes": [
+      {
+        "src": "/images/temas/9/sistemas-ecuaciones-grafica.svg",
+        "alt": "Plano cartesiano con dos rectas que se intersecan en un punto, señalando la solución del sistema",
+        "caption": "Solución gráfica de un sistema de ecuaciones: punto de intersección"
+      }
+    ],
+    "videos": [
+      {
+        "youtubeId": "PaLA9XoFMCQ",
+        "titulo": "Sistemas de Ecuaciones - Métodos de solución",
+        "urlDirecta": "https://www.youtube.com/watch?v=PaLA9XoFMCQ"
+      }
+    ],
+    "audio": {
+      "src": "/audio/temas/9/sistemas-ecuaciones.mp3",
+      "titulo": "Explicación auditiva: Sistemas de Ecuaciones",
+      "duracionSegundos": 300
+    }
+  },
+  "quiz": {
+    "preguntas": [
+      {
+        "id": "se-q1",
+        "enunciado": "¿Cuál es la solución del sistema $x + y = 7$ y $x - y = 3$?",
+        "opciones": [
+          { "id": "a", "texto": "$x = 5, y = 2$" },
+          { "id": "b", "texto": "$x = 4, y = 3$" },
+          { "id": "c", "texto": "$x = 3, y = 4$" },
+          { "id": "d", "texto": "$x = 6, y = 1$" }
+        ],
+        "respuestaCorrecta": "a",
+        "explicacion": "Sumando: $2x = 10$, $x = 5$. Sustituyendo: $y = 7 - 5 = 2$."
+      },
+      {
+        "id": "se-q2",
+        "enunciado": "Dos rectas paralelas forman un sistema:",
+        "opciones": [
+          { "id": "a", "texto": "Compatible determinado" },
+          { "id": "b", "texto": "Compatible indeterminado" },
+          { "id": "c", "texto": "Incompatible" },
+          { "id": "d", "texto": "Dependiente" }
+        ],
+        "respuestaCorrecta": "c",
+        "explicacion": "Rectas paralelas nunca se cruzan, por tanto no hay solución."
+      },
+      {
+        "id": "se-q3",
+        "enunciado": "¿Qué método consiste en despejar una variable y reemplazar en la otra ecuación?",
+        "opciones": [
+          { "id": "a", "texto": "Eliminación" },
+          { "id": "b", "texto": "Igualación" },
+          { "id": "c", "texto": "Sustitución" },
+          { "id": "d", "texto": "Gráfico" }
+        ],
+        "respuestaCorrecta": "c",
+        "explicacion": "El método de sustitución despeja y reemplaza en la otra ecuación."
+      }
+    ]
+  },
+  "keywords": ["sistemas", "ecuaciones simultáneas", "sustitución", "eliminación", "igualación", "solución"]
+}

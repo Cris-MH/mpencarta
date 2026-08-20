@@ -1,0 +1,69 @@
+{
+  "slug": "ecuaciones-lineales",
+  "titulo": "Ecuaciones Lineales",
+  "area": "algebra",
+  "gradoId": "8",
+  "contenido": {
+    "explicacion": "Una ecuación lineal es una igualdad con una incógnita de primer grado. Su forma general es:\n$$ax + b = 0 \\quad \\text{con } a \\neq 0$$\n\nPara resolver una ecuación lineal se aísla la variable $x$:\n$$ax + b = c$$\n$$ax = c - b$$\n$$x = \\frac{c - b}{a}$$\n\nPasos para resolver ecuaciones:\n1. Eliminar paréntesis aplicando la propiedad distributiva\n2. Agrupar términos semejantes a cada lado\n3. Transponer términos (cambiando de signo)\n4. Despejar la incógnita\n\nEjemplo: Resolver $3x + 5 = 20$\n$$3x = 20 - 5 = 15$$\n$$x = \\frac{15}{3} = 5$$",
+    "imagenes": [
+      {
+        "src": "/images/temas/8/ecuaciones-lineales-balanza.svg",
+        "alt": "Balanza en equilibrio representando una ecuación lineal con pesas y la incógnita x",
+        "caption": "Una ecuación es como una balanza: ambos lados deben ser iguales"
+      }
+    ],
+    "videos": [
+      {
+        "youtubeId": "px3JRKbVFKI",
+        "titulo": "Ecuaciones de Primer Grado - Paso a paso",
+        "urlDirecta": "https://www.youtube.com/watch?v=px3JRKbVFKI"
+      }
+    ],
+    "audio": {
+      "src": "/audio/temas/8/ecuaciones-lineales.mp3",
+      "titulo": "Explicación auditiva: Ecuaciones Lineales",
+      "duracionSegundos": 230
+    }
+  },
+  "quiz": {
+    "preguntas": [
+      {
+        "id": "el-q1",
+        "enunciado": "¿Cuál es el valor de $x$ en $2x + 8 = 20$?",
+        "opciones": [
+          { "id": "a", "texto": "$x = 4$" },
+          { "id": "b", "texto": "$x = 6$" },
+          { "id": "c", "texto": "$x = 8$" },
+          { "id": "d", "texto": "$x = 14$" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "$2x = 20 - 8 = 12$, entonces $x = 12 \\div 2 = 6$."
+      },
+      {
+        "id": "el-q2",
+        "enunciado": "¿Cuál es la solución de $5x - 3 = 2x + 9$?",
+        "opciones": [
+          { "id": "a", "texto": "$x = 2$" },
+          { "id": "b", "texto": "$x = 3$" },
+          { "id": "c", "texto": "$x = 4$" },
+          { "id": "d", "texto": "$x = 6$" }
+        ],
+        "respuestaCorrecta": "c",
+        "explicacion": "$5x - 2x = 9 + 3$, entonces $3x = 12$ y $x = 4$."
+      },
+      {
+        "id": "el-q3",
+        "enunciado": "Una ecuación lineal tiene grado:",
+        "opciones": [
+          { "id": "a", "texto": "0" },
+          { "id": "b", "texto": "1" },
+          { "id": "c", "texto": "2" },
+          { "id": "d", "texto": "3" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "Lineal significa de primer grado: la variable tiene exponente 1."
+      }
+    ]
+  },
+  "keywords": ["ecuaciones", "lineal", "primer grado", "despejar", "incógnita", "resolver"]
+}

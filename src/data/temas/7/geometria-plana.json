@@ -1,0 +1,69 @@
+{
+  "slug": "geometria-plana",
+  "titulo": "Geometría Plana",
+  "area": "geometria",
+  "gradoId": "7",
+  "contenido": {
+    "explicacion": "La geometría plana estudia las figuras bidimensionales, sus propiedades y relaciones. Los ángulos son fundamentales en esta rama.\n\nClasificación de ángulos según su medida:\n- Agudo: $0° < \\alpha < 90°$\n- Recto: $\\alpha = 90°$\n- Obtuso: $90° < \\alpha < 180°$\n\nLa suma de los ángulos internos de un triángulo siempre es:\n$$\\alpha + \\beta + \\gamma = 180°$$\n\nEl Teorema de Pitágoras para triángulos rectángulos:\n$$c^2 = a^2 + b^2$$\n\ndonde $c$ es la hipotenusa y $a$, $b$ son los catetos. Este teorema permite calcular distancias y es la base de muchos problemas geométricos.",
+    "imagenes": [
+      {
+        "src": "/images/temas/7/geometria-plana-angulos.svg",
+        "alt": "Tres ángulos clasificados: agudo (45°), recto (90°) y obtuso (120°) con sus arcos señalados",
+        "caption": "Clasificación de ángulos según su medida"
+      }
+    ],
+    "videos": [
+      {
+        "youtubeId": "IH6Nk2YSVvA",
+        "titulo": "Ángulos y Triángulos - Geometría plana",
+        "urlDirecta": "https://www.youtube.com/watch?v=IH6Nk2YSVvA"
+      }
+    ],
+    "audio": {
+      "src": "/audio/temas/7/geometria-plana.mp3",
+      "titulo": "Explicación auditiva: Geometría Plana",
+      "duracionSegundos": 220
+    }
+  },
+  "quiz": {
+    "preguntas": [
+      {
+        "id": "gp-q1",
+        "enunciado": "Si dos ángulos de un triángulo miden 60° y 80°, ¿cuánto mide el tercero?",
+        "opciones": [
+          { "id": "a", "texto": "40°" },
+          { "id": "b", "texto": "50°" },
+          { "id": "c", "texto": "60°" },
+          { "id": "d", "texto": "30°" }
+        ],
+        "respuestaCorrecta": "a",
+        "explicacion": "La suma de ángulos es 180°: $180° - 60° - 80° = 40°$."
+      },
+      {
+        "id": "gp-q2",
+        "enunciado": "En un triángulo rectángulo con catetos 3 y 4, ¿cuánto mide la hipotenusa?",
+        "opciones": [
+          { "id": "a", "texto": "6" },
+          { "id": "b", "texto": "5" },
+          { "id": "c", "texto": "7" },
+          { "id": "d", "texto": "12" }
+        ],
+        "respuestaCorrecta": "b",
+        "explicacion": "Pitágoras: $c = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5$."
+      },
+      {
+        "id": "gp-q3",
+        "enunciado": "Un ángulo de 135° se clasifica como:",
+        "opciones": [
+          { "id": "a", "texto": "Agudo" },
+          { "id": "b", "texto": "Recto" },
+          { "id": "c", "texto": "Obtuso" },
+          { "id": "d", "texto": "Llano" }
+        ],
+        "respuestaCorrecta": "c",
+        "explicacion": "Es obtuso porque está entre 90° y 180°."
+      }
+    ]
+  },
+  "keywords": ["ángulos", "triángulos", "Pitágoras", "geometría plana", "clasificación", "hipotenusa"]
+}
