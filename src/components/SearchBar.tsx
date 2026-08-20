@@ -5,6 +5,15 @@ import { useRouter } from "next/navigation";
 import { searchTopics } from "@/lib/search";
 import type { SearchResult } from "@/lib/types";
 
+const GRADE_COLORS: Record<string, string> = {
+  "6": "#2196F3",
+  "7": "#4CAF50",
+  "8": "#FF9800",
+  "9": "#9C27B0",
+  "10": "#009688",
+  "11": "#F44336",
+};
+
 export default function SearchBar() {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -76,13 +85,13 @@ export default function SearchBar() {
             setIsOpen(true);
           }
         }}
-        placeholder="Buscar temas..."
+        placeholder="🔍 Buscar temas..."
         aria-label="Buscar temas"
-        className="w-full h-10 bg-primary-600 rounded-lg border border-primary-500 px-3 text-white placeholder-primary-200 text-sm focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-primary-300 transition-colors"
+        className="w-full h-10 bg-primary-800/50 rounded-full border border-primary-400/30 px-4 text-white placeholder-primary-200 text-sm focus:outline-none focus:ring-2 focus:ring-secondary focus:border-secondary transition-colors"
       />
 
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-white rounded-lg shadow-lg border border-gray-200 z-50 max-h-80 overflow-y-auto">
+        <div className="absolute top-full left-0 right-0 mt-2 bg-white rounded-xl shadow-xl border border-gray-100 z-50 max-h-80 overflow-y-auto">
           {error && (
             <div className="p-4 text-center">
               <p className="text-red-600 text-sm mb-2">
@@ -111,13 +120,20 @@ export default function SearchBar() {
                 <li key={`${result.gradoId}-${result.temaSlug}`} role="option">
                   <button
                     onClick={() => handleResultClick(result)}
-                    className="w-full text-left px-4 py-3 hover:bg-gray-100 transition-colors border-b border-gray-100 last:border-b-0 min-h-[44px] flex flex-col"
+                    className="w-full text-left px-4 py-3 hover:bg-primary-50 transition-colors border-b border-gray-50 last:border-b-0 min-h-[44px] flex items-center gap-3"
                   >
-                    <span className="text-sm font-medium text-gray-900">
-                      {result.temaTitulo}
-                    </span>
-                    <span className="text-xs text-gray-500">
-                      {result.gradoNombre}
+                    <span
+                      className="w-2 h-8 rounded-full shrink-0"
+                      style={{ backgroundColor: GRADE_COLORS[result.gradoId] || "#6A0DAD" }}
+                      aria-hidden="true"
+                    />
+                    <span className="flex flex-col">
+                      <span className="text-sm font-medium text-gray-900">
+                        {result.temaTitulo}
+                      </span>
+                      <span className="text-xs text-gray-500">
+                        {result.gradoNombre}
+                      </span>
                     </span>
                   </button>
                 </li>

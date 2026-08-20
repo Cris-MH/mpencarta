@@ -46,9 +46,11 @@ export default function AudioPlayer({ audio }: AudioPlayerProps) {
     setIsPlaying(false);
   };
 
+  const progress = duration > 0 ? (currentTime / duration) * 100 : 0;
+
   if (hasError) {
     return (
-      <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+      <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
         <p className="text-sm font-medium text-gray-700">{audio.titulo}</p>
         <p className="mt-2 text-sm text-error">Audio no disponible</p>
       </div>
@@ -56,22 +58,30 @@ export default function AudioPlayer({ audio }: AudioPlayerProps) {
   }
 
   return (
-    <div className="rounded-lg border border-gray-200 bg-white p-4 shadow-sm">
-      <p className="mb-3 text-sm font-medium text-gray-700">{audio.titulo}</p>
+    <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+      <p className="mb-4 text-sm font-semibold text-gray-700">{audio.titulo}</p>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-4">
         <button
           type="button"
           onClick={isPlaying ? handlePause : handlePlay}
-          className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full bg-primary-500 text-white transition-colors hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+          className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full bg-gradient-to-r from-primary-600 to-secondary text-white transition-all hover:shadow-lg hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
           aria-label={isPlaying ? "Pausar audio" : "Reproducir audio"}
         >
           <span className="text-lg">{isPlaying ? "⏸" : "▶"}</span>
         </button>
 
-        <span className="text-sm text-gray-600">
-          {formatTime(currentTime)} / {formatTime(duration)}
-        </span>
+        <div className="flex-1 flex flex-col gap-1">
+          <div className="h-2 w-full bg-gray-200 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-gradient-to-r from-primary-500 to-secondary rounded-full transition-all duration-200"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+          <span className="text-xs text-gray-500">
+            {formatTime(currentTime)} / {formatTime(duration)}
+          </span>
+        </div>
       </div>
 
       <audio

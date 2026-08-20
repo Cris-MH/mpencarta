@@ -26,10 +26,7 @@ export default function QuizSection({ quiz }: QuizSectionProps) {
   };
 
   return (
-    <section className="mt-8">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">
-        Quiz de Evaluación
-      </h2>
+    <section className="mt-4">
       <p className="text-gray-600 mb-6">
         Responde las siguientes preguntas para evaluar tu comprensión del tema.
       </p>
@@ -47,16 +44,18 @@ export default function QuizSection({ quiz }: QuizSectionProps) {
       </div>
 
       {allAnswered && (
-        <div className="mt-6 p-4 bg-primary-50 border border-primary-200 rounded-xl text-center">
-          <p className="text-lg font-bold text-primary-800">
+        <div className="mt-6 p-6 bg-gradient-to-r from-primary-50 to-secondary/10 border border-primary-200 rounded-2xl text-center">
+          <p className="text-2xl font-bold text-primary-800">
+            {correctCount === totalQuestions ? "🎉 " : ""}
             Puntaje: {correctCount}/{totalQuestions}
+            {correctCount === totalQuestions ? " 🎉" : ""}
           </p>
-          <p className="text-sm text-primary-600 mt-1">
+          <p className="text-sm text-primary-600 mt-2">
             {correctCount === totalQuestions
-              ? "¡Excelente! Respondiste todas correctamente."
+              ? "¡Excelente! Respondiste todas correctamente. ¡Felicitaciones!"
               : correctCount >= totalQuestions / 2
-              ? "¡Buen trabajo! Sigue practicando."
-              : "Revisa el contenido e intenta de nuevo."}
+              ? "¡Buen trabajo! Sigue practicando para mejorar."
+              : "Revisa el contenido e intenta de nuevo. ¡Tú puedes!"}
           </p>
         </div>
       )}

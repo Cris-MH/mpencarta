@@ -33,7 +33,7 @@ export default function VideoPlayer({ video }: VideoPlayerProps) {
 
   return (
     <div ref={containerRef} className="w-full min-w-[280px]">
-      <div className="relative w-full aspect-video bg-gray-100 rounded-lg overflow-hidden">
+      <div className="relative w-full aspect-video bg-gray-100 rounded-xl overflow-hidden border border-gray-200 shadow-sm">
         {!hasValidYoutubeId || hasError ? (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-600">
             <p className="text-center px-4">Video no disponible</p>
@@ -59,7 +59,7 @@ export default function VideoPlayer({ video }: VideoPlayerProps) {
         href={video.urlDirecta}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-1 mt-2 text-sm text-blue-600 hover:text-blue-800 hover:underline"
+        className="inline-flex items-center gap-1 mt-3 text-sm text-secondary-dark hover:text-secondary hover:underline font-medium"
       >
         Ver en YouTube ↗
       </a>

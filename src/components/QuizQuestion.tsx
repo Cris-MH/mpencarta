@@ -12,19 +12,19 @@ export default function QuizQuestion({
 
   const getOptionClasses = (opcionId: string): string => {
     const base =
-      "w-full min-h-[44px] px-4 py-3 text-left border-2 rounded-lg transition-colors";
+      "w-full min-h-[44px] px-4 py-3 text-left border-2 rounded-xl transition-all duration-200";
 
     if (!answered) {
-      return `${base} border-gray-300 hover:border-primary-400 hover:bg-primary-50 cursor-pointer`;
+      return `${base} border-gray-200 hover:border-primary-400 hover:bg-primary-50 hover:shadow-sm cursor-pointer`;
     }
 
     // After answering - show feedback
     if (opcionId === pregunta.respuestaCorrecta) {
-      return `${base} border-green-500 bg-green-100 cursor-default`;
+      return `${base} border-green-500 bg-green-50 cursor-default`;
     }
 
     if (opcionId === selectedOptionId && !isCorrect) {
-      return `${base} border-red-500 bg-red-100 cursor-default`;
+      return `${base} border-red-500 bg-red-50 cursor-default`;
     }
 
     return `${base} border-gray-200 bg-gray-50 cursor-default opacity-60`;
@@ -36,7 +36,7 @@ export default function QuizQuestion({
   };
 
   return (
-    <div className="mb-6 p-4 border border-gray-200 rounded-xl bg-white">
+    <div className="mb-6 p-5 border border-gray-100 rounded-2xl bg-white shadow-sm">
       <p className="font-medium text-gray-800 mb-4">{pregunta.enunciado}</p>
 
       <div className="space-y-2">
@@ -55,16 +55,21 @@ export default function QuizQuestion({
 
       {answered && (
         <div
-          className={`mt-4 p-3 rounded-lg text-sm ${
+          className={`mt-4 p-3 rounded-xl text-sm flex items-start gap-2 ${
             isCorrect
               ? "bg-green-50 text-green-800 border border-green-200"
               : "bg-red-50 text-red-800 border border-red-200"
           }`}
         >
-          <p className="font-semibold mb-1">
-            {isCorrect ? "✓ ¡Correcto!" : "✗ Incorrecto"}
-          </p>
-          <p>{pregunta.explicacion}</p>
+          <span className="text-lg shrink-0" aria-hidden="true">
+            {isCorrect ? "✅" : "❌"}
+          </span>
+          <div>
+            <p className="font-semibold mb-1">
+              {isCorrect ? "¡Correcto!" : "Incorrecto"}
+            </p>
+            <p>{pregunta.explicacion}</p>
+          </div>
         </div>
       )}
     </div>
