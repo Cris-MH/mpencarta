@@ -63,7 +63,7 @@ export default function AudioPlayer({ audio }: AudioPlayerProps) {
         <button
           type="button"
           onClick={isPlaying ? handlePause : handlePlay}
-          className="flex min-h-touch min-w-touch items-center justify-center rounded-full bg-primary-500 text-white transition-colors hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
+          className="flex min-h-[44px] min-w-[44px] items-center justify-center rounded-full bg-primary-500 text-white transition-colors hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
           aria-label={isPlaying ? "Pausar audio" : "Reproducir audio"}
         >
           <span className="text-lg">{isPlaying ? "⏸" : "▶"}</span>
