@@ -121,10 +121,10 @@ export default function Home() {
             <span className="chip-btn__icon">{soundOn ? "🔊" : "🔇"}</span>
             <span className="chip-btn__label">Sonido</span>
           </button>
-          <button className="chip-btn" type="button" onClick={handleHelp}>
-            <span className="chip-btn__icon">❓</span>
-            <span className="chip-btn__label">Ayuda</span>
-          </button>
+          <a href="/documentacion" className="chip-btn" style={{ textDecoration: "none" }}>
+            <span className="chip-btn__icon">📋</span>
+            <span className="chip-btn__label">Proyecto</span>
+          </a>
           <button
             className="chip-btn chip-btn--exit"
             type="button"
