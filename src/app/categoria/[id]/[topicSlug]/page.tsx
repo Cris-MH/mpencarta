@@ -1500,7 +1500,7 @@ export default function ArticuloPage() {
         <section className="cta-banner" aria-label="Poner a prueba lo aprendido">
           <span className="cta-banner__text">¿Listo para practicar? Pon a prueba lo que aprendiste sobre {topic.title}</span>
           <button className="cta-banner__btn" type="button" onClick={() => router.push(`/categoria/${catId}/${topicSlug}/juegos`)}>
-            Ir a Juegos 🎉
+            Quiz interactivo 🎉
           </button>
         </section>
       </>

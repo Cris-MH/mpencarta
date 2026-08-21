@@ -189,7 +189,7 @@ export default function JuegosPage() {
   // If no category/topic found, show fallback
   if (!category) {
     return (
-      <main className="console" role="application" aria-label="Juegos — ChalkApp">
+      <main className="console" role="application" aria-label="Quiz interactivo — ChalkApp">
         <header className="titlebar">
           <div className="titlebar__brand">
             <Link href="/" className="chip-btn chip-btn--back" style={{ textDecoration: "none" }}>
@@ -214,7 +214,7 @@ export default function JuegosPage() {
   if (!gamesContent) {
     const topicTitle = topic?.title || topicSlug;
     return (
-      <main className="console" role="application" aria-label={`Juegos — ${topicTitle} — ChalkApp`}>
+      <main className="console" role="application" aria-label={`Quiz interactivo — ${topicTitle} — ChalkApp`}>
         <header className="titlebar">
           <div className="titlebar__brand">
             <Link href={articlePath} className="chip-btn chip-btn--back" style={{ textDecoration: "none" }}>
@@ -228,22 +228,22 @@ export default function JuegosPage() {
               <span aria-hidden="true">›</span>
               <Link href={articlePath}>{topicTitle}</Link>
               <span aria-hidden="true">›</span>
-              <span className="breadcrumb__current">Juegos</span>
+              <span className="breadcrumb__current">Quiz interactivo</span>
             </nav>
           </div>
         </header>
         <div className="games-stage">
-          <section className={`art-hero${heroVariant}`} aria-label="Juegos">
+          <section className={`art-hero${heroVariant}`} aria-label="Quiz interactivo">
             <div className="art-hero__icon" aria-hidden="true">🎮</div>
             <div className="art-hero__text">
               <span className="art-hero__badge">{category.icon} {category.label}</span>
-              <h2 className="art-hero__title">Juegos — {topicTitle}</h2>
+              <h2 className="art-hero__title">Quiz interactivo — {topicTitle}</h2>
             </div>
           </section>
           <div className="empty-state">
             <span className="empty-state__icon" aria-hidden="true">🎮</span>
-            <p className="empty-state__title">Juegos próximamente para este tema</p>
-            <p className="empty-state__text">Estamos preparando ejercicios y juegos interactivos. ¡Vuelve pronto!</p>
+            <p className="empty-state__title">Quiz interactivo próximamente para este tema</p>
+            <p className="empty-state__text">Estamos preparando ejercicios y quizzes interactivos. ¡Vuelve pronto!</p>
           </div>
         </div>
         <footer className="console-footer">Creado por Salomé Murcia Muñoz</footer>
@@ -255,7 +255,7 @@ export default function JuegosPage() {
   const topicTitle = topic?.title || topicSlug;
 
   return (
-    <main className="console" role="application" aria-label={`Juegos — ${topicTitle} — ChalkApp`}>
+    <main className="console" role="application" aria-label={`Quiz interactivo — ${topicTitle} — ChalkApp`}>
       {/* Titlebar */}
       <header className="titlebar">
         <div className="titlebar__brand">
@@ -270,7 +270,7 @@ export default function JuegosPage() {
             <span aria-hidden="true">›</span>
             <Link href={articlePath}>{topicTitle}</Link>
             <span aria-hidden="true">›</span>
-            <span className="breadcrumb__current">Juegos</span>
+            <span className="breadcrumb__current">Quiz interactivo</span>
           </nav>
         </div>
       </header>
@@ -278,11 +278,11 @@ export default function JuegosPage() {
       {/* Game Stage */}
       <div className="games-stage">
         {/* Hero Banner */}
-        <section className={`art-hero${heroVariant}`} aria-label="Juegos">
+        <section className={`art-hero${heroVariant}`} aria-label="Quiz interactivo">
           <div className="art-hero__icon" aria-hidden="true">🎮</div>
           <div className="art-hero__text">
             <span className="art-hero__badge">{category.icon} {category.label}</span>
-            <h2 className="art-hero__title">Juegos — {topicTitle}</h2>
+            <h2 className="art-hero__title">Quiz interactivo — {topicTitle}</h2>
             <p className="art-hero__intro">Pon a prueba lo que aprendiste con preguntas y ejercicios interactivos.</p>
           </div>
         </section>
