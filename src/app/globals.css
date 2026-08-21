@@ -987,17 +987,17 @@ html, body {
   z-index: 5;
 }
 .mascot-art__bubble {
-  max-width: 220px;
+  max-width: 180px;
   background: var(--color-paper);
   border: var(--line) solid var(--color-navy);
   border-radius: var(--radius-md);
-  padding: 12px 14px;
+  padding: 10px 12px;
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.3;
   box-shadow: var(--shadow-pop-sm);
-  text-align: left;
+  text-align: right;
 }
 .mascot-art__figure {
   width: 96px;
