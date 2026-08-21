@@ -963,7 +963,7 @@ html, body {
   font-weight: 700;
   font-size: 15px;
   padding: 12px 22px;
-  background: var(--color-paper);
+  background: var(--color-yellow);
   border: var(--line) solid var(--color-navy);
   border-radius: 999px;
   color: var(--color-navy);
@@ -971,9 +971,15 @@ html, body {
   box-shadow: var(--shadow-pop-sm);
   cursor: pointer;
   transition: transform 0.12s ease, box-shadow 0.12s ease;
+  animation: pulse-cta 1.8s ease-in-out infinite;
 }
-.cta-banner__btn:hover { transform: translateY(-2px); }
-.cta-banner__btn:active { transform: translateY(3px); box-shadow: 0 2px 0 rgba(27,58,75,0.9); }
+.cta-banner__btn:hover { transform: translateY(-2px) scale(1.05); animation: none; }
+.cta-banner__btn:active { transform: translateY(3px); box-shadow: 0 2px 0 rgba(27,58,75,0.9); animation: none; }
+
+@keyframes pulse-cta {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
 
 /* ---- Sabio narrador (versión artículo: fijo, más pequeño) ---- */
 .mascot-art {
