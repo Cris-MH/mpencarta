@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 const CATEGORIES = [
@@ -22,14 +22,110 @@ const MASCOT_TIPS = [
   "¡El cálculo y la geometría son mis temas favoritos! ¿Cuál es el tuyo?",
 ];
 
+interface SearchResult {
+  catId: string;
+  catLabel: string;
+  catIcon: string;
+  topicSlug: string;
+  topicTitle: string;
+  topicIcon: string;
+}
+
+const TOPICS_INDEX: SearchResult[] = [
+  // Aritmética
+  { catId: "aritmetica", catLabel: "Aritmética", catIcon: "🔢", topicSlug: "numeros-naturales", topicTitle: "Números Naturales", topicIcon: "1️⃣" },
+  { catId: "aritmetica", catLabel: "Aritmética", catIcon: "🔢", topicSlug: "operaciones-basicas", topicTitle: "Operaciones Básicas", topicIcon: "➕" },
+  { catId: "aritmetica", catLabel: "Aritmética", catIcon: "🔢", topicSlug: "numeros-enteros", topicTitle: "Números Enteros", topicIcon: "➖" },
+  { catId: "aritmetica", catLabel: "Aritmética", catIcon: "🔢", topicSlug: "fracciones", topicTitle: "Fracciones", topicIcon: "½" },
+  { catId: "aritmetica", catLabel: "Aritmética", catIcon: "🔢", topicSlug: "potencias-y-raices", topicTitle: "Potencias y Raíces", topicIcon: "²" },
+  { catId: "aritmetica", catLabel: "Aritmética", catIcon: "🔢", topicSlug: "divisibilidad", topicTitle: "Divisibilidad", topicIcon: "÷" },
+  // Álgebra
+  { catId: "algebra", catLabel: "Álgebra", catIcon: "𝑥", topicSlug: "expresiones-algebraicas", topicTitle: "Expresiones Algebraicas", topicIcon: "📝" },
+  { catId: "algebra", catLabel: "Álgebra", catIcon: "𝑥", topicSlug: "ecuaciones-lineales", topicTitle: "Ecuaciones Lineales", topicIcon: "⚖️" },
+  { catId: "algebra", catLabel: "Álgebra", catIcon: "𝑥", topicSlug: "sistemas-de-ecuaciones", topicTitle: "Sistemas de Ecuaciones", topicIcon: "🔗" },
+  { catId: "algebra", catLabel: "Álgebra", catIcon: "𝑥", topicSlug: "productos-notables", topicTitle: "Productos Notables", topicIcon: "✖️" },
+  { catId: "algebra", catLabel: "Álgebra", catIcon: "𝑥", topicSlug: "factorizacion", topicTitle: "Factorización", topicIcon: "🧩" },
+  { catId: "algebra", catLabel: "Álgebra", catIcon: "𝑥", topicSlug: "funciones", topicTitle: "Funciones", topicIcon: "📈" },
+  // Geometría
+  { catId: "geometria", catLabel: "Geometría", catIcon: "📐", topicSlug: "triangulos", topicTitle: "Triángulos", topicIcon: "🔺" },
+  { catId: "geometria", catLabel: "Geometría", catIcon: "📐", topicSlug: "circunferencia-y-circulo", topicTitle: "Circunferencia y Círculo", topicIcon: "⭕" },
+  { catId: "geometria", catLabel: "Geometría", catIcon: "📐", topicSlug: "poligonos", topicTitle: "Polígonos", topicIcon: "⬡" },
+  { catId: "geometria", catLabel: "Geometría", catIcon: "📐", topicSlug: "perimetro-y-area", topicTitle: "Perímetro y Área", topicIcon: "📏" },
+  { catId: "geometria", catLabel: "Geometría", catIcon: "📐", topicSlug: "volumen", topicTitle: "Volumen", topicIcon: "📦" },
+  { catId: "geometria", catLabel: "Geometría", catIcon: "📐", topicSlug: "geometria-analitica", topicTitle: "Geometría Analítica", topicIcon: "📍" },
+  // Trigonometría
+  { catId: "trigonometria", catLabel: "Trigonometría", catIcon: "📈", topicSlug: "razones-trigonometricas", topicTitle: "Razones Trigonométricas", topicIcon: "📊" },
+  { catId: "trigonometria", catLabel: "Trigonometría", catIcon: "📈", topicSlug: "circulo-unitario", topicTitle: "Círculo Unitario", topicIcon: "🎯" },
+  { catId: "trigonometria", catLabel: "Trigonometría", catIcon: "📈", topicSlug: "identidades", topicTitle: "Identidades", topicIcon: "🔄" },
+  { catId: "trigonometria", catLabel: "Trigonometría", catIcon: "📈", topicSlug: "ley-de-senos-y-cosenos", topicTitle: "Ley de Senos y Cosenos", topicIcon: "⚖️" },
+  { catId: "trigonometria", catLabel: "Trigonometría", catIcon: "📈", topicSlug: "funciones-trigonometricas", topicTitle: "Funciones Trigonométricas", topicIcon: "〰️" },
+  { catId: "trigonometria", catLabel: "Trigonometría", catIcon: "📈", topicSlug: "aplicaciones-trigonometria", topicTitle: "Aplicaciones", topicIcon: "🏗️" },
+  // Cálculo
+  { catId: "calculo", catLabel: "Cálculo", catIcon: "∫", topicSlug: "limites", topicTitle: "Límites", topicIcon: "🎯" },
+  { catId: "calculo", catLabel: "Cálculo", catIcon: "∫", topicSlug: "derivadas", topicTitle: "Derivadas", topicIcon: "📉" },
+  { catId: "calculo", catLabel: "Cálculo", catIcon: "∫", topicSlug: "reglas-de-derivacion", topicTitle: "Reglas de Derivación", topicIcon: "📋" },
+  { catId: "calculo", catLabel: "Cálculo", catIcon: "∫", topicSlug: "integrales", topicTitle: "Integrales", topicIcon: "∫" },
+  { catId: "calculo", catLabel: "Cálculo", catIcon: "∫", topicSlug: "aplicaciones-calculo", topicTitle: "Aplicaciones", topicIcon: "📊" },
+  { catId: "calculo", catLabel: "Cálculo", catIcon: "∫", topicSlug: "teorema-fundamental-calculo", topicTitle: "Teorema Fundamental", topicIcon: "⭐" },
+  // Estadística
+  { catId: "estadistica", catLabel: "Estadística", catIcon: "📊", topicSlug: "medidas-tendencia-central", topicTitle: "Medidas de Tendencia Central", topicIcon: "📏" },
+  { catId: "estadistica", catLabel: "Estadística", catIcon: "📊", topicSlug: "medidas-de-dispersion", topicTitle: "Medidas de Dispersión", topicIcon: "↔️" },
+  { catId: "estadistica", catLabel: "Estadística", catIcon: "📊", topicSlug: "graficos-estadisticos", topicTitle: "Gráficos Estadísticos", topicIcon: "📈" },
+  { catId: "estadistica", catLabel: "Estadística", catIcon: "📊", topicSlug: "distribucion-normal", topicTitle: "Distribución Normal", topicIcon: "🔔" },
+  { catId: "estadistica", catLabel: "Estadística", catIcon: "📊", topicSlug: "muestreo", topicTitle: "Muestreo", topicIcon: "🎣" },
+  { catId: "estadistica", catLabel: "Estadística", catIcon: "📊", topicSlug: "regresion", topicTitle: "Regresión", topicIcon: "📐" },
+  // Probabilidad
+  { catId: "probabilidad", catLabel: "Probabilidad", catIcon: "🎲", topicSlug: "eventos-espacio-muestral", topicTitle: "Eventos y Espacio Muestral", topicIcon: "🎯" },
+  { catId: "probabilidad", catLabel: "Probabilidad", catIcon: "🎲", topicSlug: "probabilidad-clasica", topicTitle: "Probabilidad Clásica", topicIcon: "🎲" },
+  { catId: "probabilidad", catLabel: "Probabilidad", catIcon: "🎲", topicSlug: "probabilidad-condicional", topicTitle: "Probabilidad Condicional", topicIcon: "🔗" },
+  { catId: "probabilidad", catLabel: "Probabilidad", catIcon: "🎲", topicSlug: "combinatoria", topicTitle: "Combinatoria", topicIcon: "🔢" },
+  { catId: "probabilidad", catLabel: "Probabilidad", catIcon: "🎲", topicSlug: "distribuciones", topicTitle: "Distribuciones", topicIcon: "📊" },
+  { catId: "probabilidad", catLabel: "Probabilidad", catIcon: "🎲", topicSlug: "teorema-de-bayes", topicTitle: "Teorema de Bayes", topicIcon: "🧠" },
+  // M. Discreta
+  { catId: "discreta", catLabel: "M. Discreta", catIcon: "🔗", topicSlug: "teoria-de-conjuntos", topicTitle: "Teoría de Conjuntos", topicIcon: "⊂" },
+  { catId: "discreta", catLabel: "M. Discreta", catIcon: "🔗", topicSlug: "logica-proposicional", topicTitle: "Lógica Proposicional", topicIcon: "∧" },
+  { catId: "discreta", catLabel: "M. Discreta", catIcon: "🔗", topicSlug: "grafos", topicTitle: "Grafos", topicIcon: "🕸️" },
+  { catId: "discreta", catLabel: "M. Discreta", catIcon: "🔗", topicSlug: "arboles", topicTitle: "Árboles", topicIcon: "🌳" },
+  { catId: "discreta", catLabel: "M. Discreta", catIcon: "🔗", topicSlug: "relaciones", topicTitle: "Relaciones", topicIcon: "↔️" },
+  { catId: "discreta", catLabel: "M. Discreta", catIcon: "🔗", topicSlug: "algoritmos-basicos", topicTitle: "Algoritmos Básicos", topicIcon: "⚡" },
+  // T. Números
+  { catId: "numeros", catLabel: "T. Números", catIcon: "∞", topicSlug: "numeros-primos", topicTitle: "Números Primos", topicIcon: "🔑" },
+  { catId: "numeros", catLabel: "T. Números", catIcon: "∞", topicSlug: "divisibilidad-numeros", topicTitle: "Divisibilidad", topicIcon: "➗" },
+  { catId: "numeros", catLabel: "T. Números", catIcon: "∞", topicSlug: "congruencias", topicTitle: "Congruencias", topicIcon: "≡" },
+  { catId: "numeros", catLabel: "T. Números", catIcon: "∞", topicSlug: "sucesiones-famosas", topicTitle: "Sucesiones Famosas", topicIcon: "🌀" },
+  { catId: "numeros", catLabel: "T. Números", catIcon: "∞", topicSlug: "teorema-fundamental-aritmetica", topicTitle: "Teorema Fundamental", topicIcon: "⭐" },
+  { catId: "numeros", catLabel: "T. Números", catIcon: "∞", topicSlug: "numeros-perfectos", topicTitle: "Números Perfectos", topicIcon: "💎" },
+];
+
+function searchAllTopics(query: string): SearchResult[] {
+  const q = query.toLowerCase().trim();
+  if (q.length < 2) return [];
+
+  const results: SearchResult[] = [];
+  for (const topic of TOPICS_INDEX) {
+    if (
+      topic.topicTitle.toLowerCase().includes(q) ||
+      topic.catLabel.toLowerCase().includes(q)
+    ) {
+      results.push(topic);
+    }
+    if (results.length >= 8) break;
+  }
+  return results;
+}
+
 export default function Home() {
   const router = useRouter();
   const [soundOn, setSoundOn] = useState(true);
   const [toastMessage, setToastMessage] = useState("");
   const [toastVisible, setToastVisible] = useState(false);
   const [mascotMessage, setMascotMessage] = useState(MASCOT_TIPS[0]);
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+  const [showResults, setShowResults] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const toastTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
+  const searchContainerRef = useRef<HTMLDivElement>(null);
 
   const showToast = useCallback((message: string) => {
     setToastMessage(message);
@@ -85,11 +181,18 @@ export default function Home() {
         return;
       }
       playClick();
-      showToast(`Buscando "${value}"…`);
-      setMascotMessage(`Estoy buscando "${value}" en todos los libros del estante 📚`);
-      // TODO: navigate to search results
+      const results = searchAllTopics(value);
+      if (results.length > 0) {
+        setShowResults(false);
+        setSearchQuery("");
+        router.push(`/categoria/${results[0].catId}/${results[0].topicSlug}`);
+      } else {
+        setMascotMessage(`No encontré nada sobre "${value}" 🤔 ¡Prueba con otra palabra!`);
+        showToast(`Sin resultados para "${value}"`);
+        setShowResults(false);
+      }
     },
-    [playClick, showToast]
+    [playClick, showToast, router]
   );
 
   const handleMascotClick = useCallback(() => {
@@ -97,6 +200,41 @@ export default function Home() {
     const tip = MASCOT_TIPS[Math.floor(Math.random() * MASCOT_TIPS.length)];
     setMascotMessage(tip);
   }, [playClick]);
+
+  const handleSearchChange = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const value = e.target.value;
+      setSearchQuery(value);
+      const results = searchAllTopics(value);
+      setSearchResults(results);
+      setShowResults(value.trim().length >= 2);
+    },
+    []
+  );
+
+  const handleResultClick = useCallback(
+    (result: SearchResult) => {
+      playClick();
+      setShowResults(false);
+      setSearchQuery("");
+      router.push(`/categoria/${result.catId}/${result.topicSlug}`);
+    },
+    [playClick, router]
+  );
+
+  // Click outside to close results
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (
+        searchContainerRef.current &&
+        !searchContainerRef.current.contains(e.target as Node)
+      ) {
+        setShowResults(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <main className="console" role="application" aria-label="ChalkApp, pantalla principal">
@@ -162,23 +300,58 @@ export default function Home() {
         </section>
 
         {/* Barra de búsqueda */}
-        <form className="searchbar" onSubmit={handleSearch}>
-          <label htmlFor="search-input" className="searchbar__label">
-            Buscar un tema
-          </label>
-          <div className="searchbar__field">
-            <input
-              type="text"
-              id="search-input"
-              ref={searchInputRef}
-              placeholder='Escribe algo, como "ecuaciones" o "triángulos"…'
-              autoComplete="off"
-            />
-            <button type="submit" className="searchbar__btn" aria-label="Buscar">
-              <span>🔍</span>
-            </button>
-          </div>
-        </form>
+        <div className="searchbar-wrapper" ref={searchContainerRef}>
+          <form className="searchbar" onSubmit={handleSearch}>
+            <label htmlFor="search-input" className="searchbar__label">
+              Buscar un tema
+            </label>
+            <div className="searchbar__field">
+              <input
+                type="text"
+                id="search-input"
+                ref={searchInputRef}
+                value={searchQuery}
+                onChange={handleSearchChange}
+                placeholder='Escribe algo, como "ecuaciones" o "triángulos"…'
+                autoComplete="off"
+              />
+              <button type="submit" className="searchbar__btn" aria-label="Buscar">
+                <span>🔍</span>
+              </button>
+            </div>
+          </form>
+
+          {/* Search results dropdown */}
+          {showResults && (
+            <div className="search-results" role="listbox" aria-label="Resultados de búsqueda">
+              {searchResults.length > 0 ? (
+                searchResults.map((result) => (
+                  <button
+                    key={`${result.catId}-${result.topicSlug}`}
+                    type="button"
+                    className="search-results__item"
+                    role="option"
+                    onClick={() => handleResultClick(result)}
+                  >
+                    <span className="search-results__icon" aria-hidden="true">
+                      {result.topicIcon}
+                    </span>
+                    <span className="search-results__text">
+                      <span className="search-results__title">{result.topicTitle}</span>
+                      <span className="search-results__cat">
+                        {result.catIcon} {result.catLabel}
+                      </span>
+                    </span>
+                  </button>
+                ))
+              ) : (
+                <div className="search-results__empty">
+                  🦉 No encontré resultados. ¡Prueba con otra palabra!
+                </div>
+              )}
+            </div>
+          )}
+        </div>
 
         {/* Mascota guía */}
         <div className="mascot">
