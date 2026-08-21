@@ -1052,3 +1052,182 @@ html, body {
 @media (prefers-reduced-motion: reduce) {
   .mascot-art__figure { animation: none; }
 }
+
+
+/* =========================================================
+   JUEGOS PAGE — Games/practice page styles
+   ========================================================= */
+.games-stage {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.quiz-card {
+  background: var(--color-paper);
+  border: var(--line) solid var(--color-navy);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-pop-sm);
+}
+
+.quiz-card__question {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--color-navy);
+  margin: 0 0 16px;
+}
+
+.quiz-card__options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.quiz-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: var(--color-cream);
+  border: 3px solid var(--color-navy);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-navy);
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+  box-shadow: 0 3px 0 rgba(27,58,75,0.9);
+}
+.quiz-option:hover { transform: translateY(-2px); box-shadow: 0 5px 0 rgba(27,58,75,0.9); }
+.quiz-option:active { transform: translateY(2px); box-shadow: 0 1px 0 rgba(27,58,75,0.9); }
+.quiz-option--correct { background: #c8f7c8; border-color: var(--color-green); }
+.quiz-option--incorrect { background: #ffd0d0; border-color: #d32f2f; }
+.quiz-option--disabled { pointer-events: none; opacity: 0.7; }
+
+.quiz-explanation {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: var(--color-cream);
+  border-left: 4px solid var(--color-navy);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-navy-soft);
+}
+
+.quiz-next-btn {
+  margin-top: 16px;
+  padding: 12px 24px;
+  background: var(--color-blue);
+  border: 3px solid var(--color-navy);
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-navy);
+  cursor: pointer;
+  box-shadow: var(--shadow-pop-sm);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.quiz-next-btn:hover { transform: translateY(-2px); }
+.quiz-next-btn:active { transform: translateY(3px); box-shadow: 0 2px 0 rgba(27,58,75,0.9); }
+
+/* Formula exercise */
+.formula-exercise {
+  background: var(--color-paper);
+  border: var(--line) solid var(--color-navy);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-pop-sm);
+  text-align: center;
+}
+
+.formula-exercise__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--color-navy);
+  margin: 0 0 16px;
+}
+
+.formula-exercise__display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 24px;
+  color: var(--color-navy);
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.formula-exercise__input {
+  width: 140px;
+  padding: 8px 12px;
+  border: 3px solid var(--color-navy);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  color: var(--color-navy);
+}
+.formula-exercise__input:focus { outline: none; border-color: var(--color-blue); }
+
+/* Score panel */
+.score-panel {
+  background: var(--color-paper);
+  border: var(--line-thick) solid var(--color-navy);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  text-align: center;
+  box-shadow: var(--shadow-pop);
+}
+
+.score-panel__stars {
+  font-size: 42px;
+  margin-bottom: 12px;
+}
+
+.score-panel__score {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 28px;
+  color: var(--color-navy);
+  margin: 0 0 8px;
+}
+
+.score-panel__message {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-navy-soft);
+  margin: 0 0 20px;
+}
+
+.score-panel__actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Games page responsive */
+@media (max-width: 560px) {
+  .games-stage { padding: 18px; }
+  .formula-exercise__display { font-size: 18px; }
+  .formula-exercise__input { width: 110px; font-size: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .quiz-option, .quiz-next-btn { transition: none; }
+}
