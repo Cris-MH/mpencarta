@@ -59,7 +59,7 @@ const CATEGORIES: Category[] = [
             { icon: "♾️", label: "Cantidad", value: "Infinitos" },
           ],
           explanation: `Los números naturales forman el conjunto:\n\nℕ = {0, 1, 2, 3, 4, 5, ...}\n\n(Algunos autores excluyen el 0 y escriben ℕ = {1, 2, 3, ...})\n\nPropiedades fundamentales:\n• Cada número natural tiene un sucesor: si n ∈ ℕ, entonces n + 1 ∈ ℕ\n• No existe un número natural máximo (el conjunto es infinito)\n• Es un conjunto cerrado para la suma y la multiplicación (la suma o producto de dos naturales siempre es natural)\n• NO es cerrado para la resta ni la división (3 − 5 no es natural, 7 ÷ 2 no es natural)\n\nAxiomas de Peano (definen formalmente a ℕ):\n1. 0 es un número natural\n2. Todo número natural n tiene un sucesor S(n)\n3. No existe un natural cuyo sucesor sea 0\n4. Si S(n) = S(m), entonces n = m\n5. Principio de inducción: si un conjunto contiene a 0 y contiene al sucesor de cada uno de sus elementos, entonces contiene a todos los naturales\n\nEjemplo — Verificar que ℕ no es cerrado para la resta:\n5 − 3 = 2 ✓ (es natural)\n3 − 5 = −2 ✗ (no es natural)\n\nPor eso se inventaron los números enteros.`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "hd5qnZfGO1c",
           videoTitle: "Números Naturales — Definición y Propiedades",
           facts: [
             "El concepto de número natural es tan antiguo como la humanidad: se han encontrado huesos con marcas de conteo de hace 40,000 años.",
