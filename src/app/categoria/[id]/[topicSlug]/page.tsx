@@ -79,7 +79,7 @@ const CATEGORIES: Category[] = [
             { icon: "📐", label: "Propiedades", value: "Conmutativa, asociativa" },
           ],
           explanation: `Las cuatro operaciones fundamentales:\n\n1. Suma (adición): a + b = c\n• Propiedad conmutativa: a + b = b + a\n• Propiedad asociativa: (a + b) + c = a + (b + c)\n• Elemento neutro: a + 0 = a\n\n2. Resta (sustracción): a − b = c\n• Operación inversa de la suma\n• NO es conmutativa: 5 − 3 ≠ 3 − 5\n• NO es asociativa\n\n3. Multiplicación: a × b = c\n• Propiedad conmutativa: a × b = b × a\n• Propiedad asociativa: (a × b) × c = a × (b × c)\n• Elemento neutro: a × 1 = a\n• Distributiva: a × (b + c) = a × b + a × c\n\n4. División: a ÷ b = c (con b ≠ 0)\n• Operación inversa de la multiplicación\n• NO es conmutativa: 6 ÷ 3 ≠ 3 ÷ 6\n• División por cero: ¡PROHIBIDA! No está definida\n\nJerarquía de operaciones (PEMDAS):\n1° Paréntesis\n2° Exponentes\n3° Multiplicación y División (izquierda a derecha)\n4° Suma y Resta (izquierda a derecha)\n\nEjemplo: 2 + 3 × 4 = 2 + 12 = 14 (NO es 20)`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "4pB_ki1EmNc",
           videoTitle: "Operaciones Básicas — Suma, Resta, Multiplicación y División",
           facts: [
             "El signo + apareció por primera vez en un libro alemán de 1489, antes se escribía la palabra latina 'et' (y).",
@@ -99,7 +99,7 @@ const CATEGORIES: Category[] = [
             { icon: "0️⃣", label: "Neutro", value: "0" },
           ],
           explanation: `El conjunto de los números enteros:\n\nℤ = {..., −3, −2, −1, 0, 1, 2, 3, ...}\n\nIncluye:\n• Enteros positivos: ℤ⁺ = {1, 2, 3, ...} (son los naturales sin el 0)\n• Cero: 0\n• Enteros negativos: ℤ⁻ = {..., −3, −2, −1}\n\nReglas de signos para multiplicación y división:\n• (+)(+) = + Ejemplo: 3 × 4 = 12\n• (−)(−) = + Ejemplo: (−3)(−4) = 12\n• (+)(−) = − Ejemplo: 3 × (−4) = −12\n• (−)(+) = − Ejemplo: (−3) × 4 = −12\n\nRegla nemotécnica: signos iguales dan positivo, signos diferentes dan negativo.\n\nValor absoluto:\n|a| = distancia de a al cero en la recta numérica\n|5| = 5, |−5| = 5, |0| = 0\n\nOrden en los enteros:\n... < −3 < −2 < −1 < 0 < 1 < 2 < 3 < ...\n\nEjemplo — Suma con signos diferentes:\n(−8) + 5 = −3 (se restan los valores absolutos y se usa el signo del mayor)\n7 + (−10) = −3 (|−10| > |7|, resultado negativo)`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "dayfz0ff1Mc",
           videoTitle: "Números Enteros — Positivos, Negativos y Operaciones",
           facts: [
             "Los matemáticos europeos rechazaron los números negativos hasta el siglo XVII, llamándolos 'números absurdos' o 'ficticios'.",
@@ -119,7 +119,7 @@ const CATEGORIES: Category[] = [
             { icon: "🔄", label: "Tipos", value: "Propia / Impropia" },
           ],
           explanation: `Una fracción tiene la forma:\n\na/b donde b ≠ 0\n\n• a = numerador (cuántas partes tomamos)\n• b = denominador (en cuántas partes se dividió el entero)\n\nTipos de fracciones:\n• Propia: numerador < denominador (3/7 — vale menos que 1)\n• Impropia: numerador ≥ denominador (9/4 — vale más que 1)\n• Mixta: parte entera + fracción propia (2 ¼ = 9/4)\n\nFracciones equivalentes:\na/b = (a×k)/(b×k) para cualquier k ≠ 0\nEjemplo: 2/3 = 4/6 = 6/9 = 8/12\n\nOperaciones con fracciones:\n• Suma/Resta (mismo denominador): a/c ± b/c = (a ± b)/c\n• Suma/Resta (diferente denominador): buscar MCM\n  2/3 + 1/4 = 8/12 + 3/12 = 11/12\n• Multiplicación: (a/b) × (c/d) = (a×c)/(b×d)\n  2/3 × 4/5 = 8/15\n• División: (a/b) ÷ (c/d) = (a/b) × (d/c) = (a×d)/(b×c)\n  3/4 ÷ 2/5 = 3/4 × 5/2 = 15/8\n\nSimplificación: dividir numerador y denominador por su MCD\n12/18 → MCD(12,18) = 6 → 12/18 = 2/3`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "7Xvlv3SCA4c",
           videoTitle: "Fracciones — Tipos, Operaciones y Simplificación",
           facts: [
             "Los egipcios solo usaban fracciones con numerador 1 (fracciones unitarias). Para expresar 2/5 escribían 1/3 + 1/15.",
@@ -139,7 +139,7 @@ const CATEGORIES: Category[] = [
             { icon: "🔗", label: "Relación", value: "Inversas" },
           ],
           explanation: `Potencia:\naⁿ = a × a × a × ... × a  (n veces)\n\nDonde:\n• a = base\n• n = exponente\n\nPropiedades de potencias:\n• aᵐ × aⁿ = aᵐ⁺ⁿ\n• aᵐ ÷ aⁿ = aᵐ⁻ⁿ\n• (aᵐ)ⁿ = aᵐˣⁿ\n• (a × b)ⁿ = aⁿ × bⁿ\n• a⁰ = 1 (para a ≠ 0)\n• a⁻ⁿ = 1/aⁿ\n\nRaíz n-ésima:\nⁿ√a = b  significa que  bⁿ = a\n\nRelación potencia-raíz:\nⁿ√a = a^(1/n)\n\nPropiedades de raíces:\n• ⁿ√(a × b) = ⁿ√a × ⁿ√b\n• ⁿ√(a/b) = ⁿ√a / ⁿ√b\n• ᵐ√(ⁿ√a) = ᵐˣⁿ√a\n\nEjemplo — Simplificar:\n√48 = √(16 × 3) = √16 × √3 = 4√3\n\nEjemplo — Exponentes negativos:\n2⁻³ = 1/2³ = 1/8 = 0.125\n\nNotación científica (usa potencias de 10):\n3,200,000 = 3.2 × 10⁶\n0.00045 = 4.5 × 10⁻⁴`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "ebohMkJZDMg",
           videoTitle: "Potencias y Raíces — Propiedades y Ejemplos",
           facts: [
             "El símbolo √ viene de una 'r' estilizada por 'radix' (raíz en latín), y fue introducido por el matemático alemán Christoph Rudolff en 1525.",
@@ -159,7 +159,7 @@ const CATEGORIES: Category[] = [
             { icon: "🔗", label: "MCM", value: "Múltiplo común menor" },
           ],
           explanation: `Definición: a divide a b (a | b) si existe un entero k tal que b = a × k.\nEjemplo: 3 | 12 porque 12 = 3 × 4\n\nCriterios de divisibilidad:\n• Por 2: el último dígito es par (0, 2, 4, 6, 8)\n• Por 3: la suma de sus dígitos es divisible por 3\n• Por 4: los dos últimos dígitos forman un número divisible por 4\n• Por 5: termina en 0 o 5\n• Por 6: es divisible por 2 Y por 3\n• Por 9: la suma de sus dígitos es divisible por 9\n• Por 10: termina en 0\n\nMCD (Máximo Común Divisor):\nEl mayor número que divide a ambos.\nMétodo: descomposición en primos → tomar factores comunes con menor exponente\n\nMCD(12, 18):\n12 = 2² × 3\n18 = 2 × 3²\nMCD = 2¹ × 3¹ = 6\n\nMCM (Mínimo Común Múltiplo):\nEl menor múltiplo compartido.\nMétodo: tomar TODOS los factores con mayor exponente\n\nMCM(12, 18):\nMCM = 2² × 3² = 36\n\nRelación importante:\nMCD(a,b) × MCM(a,b) = a × b`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "JO_SRpmojdM",
           videoTitle: "Divisibilidad — Criterios, MCD y MCM",
           facts: [
             "El algoritmo de Euclides para hallar el MCD tiene más de 2300 años y sigue siendo uno de los algoritmos más eficientes que existen.",
@@ -193,7 +193,7 @@ const CATEGORIES: Category[] = [
             { icon: "🔤", label: "Variables", value: "x, y, z..." },
           ],
           explanation: `Una expresión algebraica combina constantes, variables y operaciones (+, −, ×, ÷, potencias).\n\nTerminología:\n• Término: cada sumando de la expresión (ej: 3x², −5xy, 7)\n• Coeficiente: el número que multiplica a las variables (en 3x², el coeficiente es 3)\n• Grado de un término: suma de los exponentes de sus variables (en 5x²y³, grado = 2+3 = 5)\n• Grado del polinomio: el mayor grado entre sus términos\n\nClasificación por número de términos:\n• Monomio: un solo término → 3x²\n• Binomio: dos términos → x² + 5x\n• Trinomio: tres términos → x² + 5x − 3\n• Polinomio: dos o más términos\n\nTérminos semejantes: tienen las mismas variables con los mismos exponentes.\n• 3x² y 7x² son semejantes → se pueden sumar: 10x²\n• 3x² y 3x³ NO son semejantes (diferente exponente)\n\nOperaciones básicas:\nSuma/Resta: solo se combinan términos semejantes\n(3x² + 2x − 1) + (x² − 5x + 4) = 4x² − 3x + 3\n\nMultiplicación: se usa la propiedad distributiva\n2x(x + 3) = 2x² + 6x\n(x + 2)(x + 3) = x² + 3x + 2x + 6 = x² + 5x + 6`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "UJiUu8-fYgI",
           videoTitle: "Expresiones Algebraicas — Clasificación y Operaciones",
           facts: [
             "La palabra 'álgebra' viene del árabe 'al-jabr' del libro de Al-Juarismi del año 820, que significa 'restauración' o 'recomposición'.",
@@ -213,7 +213,7 @@ const CATEGORIES: Category[] = [
             { icon: "📈", label: "Gráfica", value: "Línea recta" },
           ],
           explanation: `Forma general de una ecuación lineal:\n\nax + b = 0  (con a ≠ 0)\n\nSolución: x = −b/a\n\nPasos para resolver una ecuación lineal:\n1. Eliminar paréntesis (propiedad distributiva)\n2. Agrupar términos con x a un lado y constantes al otro\n3. Reducir términos semejantes\n4. Despejar x dividiendo por su coeficiente\n\nEjemplo resuelto:\n3(x − 2) + 4 = 2x + 5\n\nPaso 1: 3x − 6 + 4 = 2x + 5\nPaso 2: 3x − 2 = 2x + 5\nPaso 3: 3x − 2x = 5 + 2\nPaso 4: x = 7\n\nVerificación: 3(7−2) + 4 = 15 + 4 = 19 ✓ y 2(7) + 5 = 14 + 5 = 19 ✓\n\nCasos especiales:\n• Sin solución (inconsistente): 2x + 3 = 2x + 7 → 3 = 7 (¡falso!)\n• Infinitas soluciones (identidad): 2(x+1) = 2x + 2 → siempre verdadero\n\nEcuación de la recta:\ny = mx + b\n• m = pendiente (inclinación)\n• b = ordenada al origen (donde cruza el eje y)`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "8rT0DZbYGEs",
           videoTitle: "Ecuaciones Lineales — Cómo Resolverlas Paso a Paso",
           facts: [
             "Los antiguos egipcios ya resolvían ecuaciones lineales hace 3800 años, como consta en el Papiro de Rhind.",
@@ -233,7 +233,7 @@ const CATEGORIES: Category[] = [
             { icon: "📐", label: "Forma", value: "2×2, 3×3..." },
           ],
           explanation: `Sistema de 2 ecuaciones con 2 incógnitas:\n\na₁x + b₁y = c₁\na₂x + b₂y = c₂\n\nMétodos de resolución:\n\n1. Sustitución:\n• Despejar una variable de una ecuación\n• Sustituir en la otra\n\n2. Eliminación (reducción):\n• Multiplicar ecuaciones para igualar coeficientes\n• Sumar o restar para eliminar una variable\n\n3. Igualación:\n• Despejar la misma variable en ambas ecuaciones\n• Igualar las expresiones\n\nEjemplo — Método de eliminación:\n2x + 3y = 12\nx − y = 1\n\nMultiplico la 2ª por 3: 3x − 3y = 3\nSumo con la 1ª: 5x = 15 → x = 3\nSustituyo: 3 − y = 1 → y = 2\n\nSolución: (3, 2)\n\nClasificación:\n• Compatible determinado: una solución (rectas que se cortan)\n• Compatible indeterminado: infinitas soluciones (rectas coincidentes)\n• Incompatible: sin solución (rectas paralelas)`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "L0QuX9RpEoM",
           videoTitle: "Sistemas de Ecuaciones — Sustitución, Eliminación e Igualación",
           facts: [
             "Los chinos resolvían sistemas de ecuaciones con un método equivalente a la eliminación de Gauss ¡2000 años antes que Gauss!",
@@ -253,7 +253,7 @@ const CATEGORIES: Category[] = [
             { icon: "🔄", label: "Inverso", value: "Factorización" },
           ],
           explanation: `Principales productos notables:\n\n1. Cuadrado de un binomio (suma):\n(a + b)² = a² + 2ab + b²\nEjemplo: (x + 3)² = x² + 6x + 9\n\n2. Cuadrado de un binomio (diferencia):\n(a − b)² = a² − 2ab + b²\nEjemplo: (2x − 5)² = 4x² − 20x + 25\n\n3. Diferencia de cuadrados (suma por diferencia):\n(a + b)(a − b) = a² − b²\nEjemplo: (x + 4)(x − 4) = x² − 16\n\n4. Cubo de un binomio (suma):\n(a + b)³ = a³ + 3a²b + 3ab² + b³\nEjemplo: (x + 2)³ = x³ + 6x² + 12x + 8\n\n5. Cubo de un binomio (diferencia):\n(a − b)³ = a³ − 3a²b + 3ab² − b³\n\nError común:\n• (a + b)² ≠ a² + b² ← ¡FALTA el término 2ab!\n• Correcto: (a + b)² = a² + 2ab + b²\n\nTriángulo de Pascal (para potencias mayores):\n(a+b)⁰ → 1\n(a+b)¹ → 1 1\n(a+b)² → 1 2 1\n(a+b)³ → 1 3 3 1\n(a+b)⁴ → 1 4 6 4 1`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "pOeyG4ZQor4",
           videoTitle: "Productos Notables — Las 5 Fórmulas Esenciales",
           facts: [
             "El error de creer que (a+b)² = a² + b² es tan común que los profesores lo llaman 'la falacia del estudiante de primer año'.",
@@ -273,7 +273,7 @@ const CATEGORIES: Category[] = [
             { icon: "🎯", label: "Uso", value: "Hallar raíces" },
           ],
           explanation: `Factorizar = escribir como producto de factores\n\nMétodos principales:\n\n1. Factor común:\nab + ac = a(b + c)\nEjemplo: 6x³ + 9x² = 3x²(2x + 3)\n\n2. Diferencia de cuadrados:\na² − b² = (a + b)(a − b)\nEjemplo: x² − 25 = (x + 5)(x − 5)\n\n3. Trinomio cuadrado perfecto:\na² + 2ab + b² = (a + b)²\nEjemplo: x² + 10x + 25 = (x + 5)²\n\n4. Trinomio de la forma x² + bx + c:\nBuscar dos números que sumen b y multipliquen c\nEjemplo: x² + 7x + 12 = (x + 3)(x + 4)\n(porque 3 + 4 = 7 y 3 × 4 = 12)\n\n5. Trinomio de la forma ax² + bx + c:\nMétodo del producto-suma o fórmula general\nEjemplo: 2x² + 5x + 3 = (2x + 3)(x + 1)\n\n6. Suma/diferencia de cubos:\na³ + b³ = (a + b)(a² − ab + b²)\na³ − b³ = (a − b)(a² + ab + b²)\n\nEjemplo completo:\nFactorizar 3x³ − 12x\n= 3x(x² − 4)          ← factor común\n= 3x(x + 2)(x − 2)    ← diferencia de cuadrados`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "sSfO1CsKJ4g",
           videoTitle: "Factorización — Todos los Métodos con Ejemplos",
           facts: [
             "Factorizar números grandes es tan difícil que toda la seguridad de Internet (RSA) se basa en esa dificultad: un número de 300 dígitos puede tomar millones de años.",
@@ -293,7 +293,7 @@ const CATEGORIES: Category[] = [
             { icon: "🎯", label: "Rango", value: "Valores de f(x)" },
           ],
           explanation: `Definición formal:\nUna función f: A → B asigna a cada elemento x ∈ A exactamente un elemento f(x) ∈ B.\n\n• Dominio: conjunto de valores válidos de entrada (x)\n• Rango (imagen): conjunto de valores de salida f(x)\n• Criterio: la regla que transforma x en f(x)\n\nPrueba de la línea vertical:\nUna gráfica representa una función si toda línea vertical la corta en A LO SUMO un punto.\n\nTipos de funciones:\n• Lineal: f(x) = mx + b (línea recta)\n• Cuadrática: f(x) = ax² + bx + c (parábola)\n• Cúbica: f(x) = ax³ + ... \n• Raíz: f(x) = √x\n• Valor absoluto: f(x) = |x|\n• Exponencial: f(x) = aˣ\n• Logarítmica: f(x) = log_a(x)\n\nEjemplo — Evaluar f(x) = 2x² − 3x + 1:\nf(2) = 2(4) − 3(2) + 1 = 8 − 6 + 1 = 3\nf(−1) = 2(1) − 3(−1) + 1 = 2 + 3 + 1 = 6\n\nDominio:\n• Polinomios: todos los reales ℝ\n• Fracciones: excluir donde el denominador = 0\n• Raíces pares: el radicando debe ser ≥ 0\n• Logaritmos: el argumento debe ser > 0`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "Ll7xfe3HoZE",
           videoTitle: "Funciones — Dominio, Rango y Tipos",
           facts: [
             "El concepto de función fue introducido por Leibniz en 1694 y formalizado por Dirichlet en 1837 con la definición que usamos hoy.",
