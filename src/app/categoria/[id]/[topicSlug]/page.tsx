@@ -327,7 +327,7 @@ const CATEGORIES: Category[] = [
             { icon: "⭐", label: "Pitágoras", value: "a²+b²=c²" },
           ],
           explanation: `Un triángulo tiene 3 lados, 3 vértices y 3 ángulos que siempre suman 180°.\n\nClasificación por lados:\n• Equilátero: 3 lados iguales (y 3 ángulos de 60°)\n• Isósceles: 2 lados iguales\n• Escaleno: 3 lados diferentes\n\nClasificación por ángulos:\n• Acutángulo: todos los ángulos < 90°\n• Rectángulo: un ángulo = 90°\n• Obtusángulo: un ángulo > 90°\n\nTeorema de Pitágoras (solo para triángulos rectángulos):\na² + b² = c²\n\nDonde c es la hipotenusa (lado opuesto al ángulo recto) y a, b son los catetos.\n\nEjemplo: Si los catetos miden 3 y 4:\nc² = 3² + 4² = 9 + 16 = 25\nc = √25 = 5\n\nÁrea del triángulo:\nA = (base × altura) / 2\n\nFórmula de Herón (cuando se conocen los 3 lados a, b, c):\ns = (a + b + c) / 2 (semiperímetro)\nA = √[s(s−a)(s−b)(s−c)]\n\nDesigualdad triangular:\nLa suma de dos lados siempre debe ser mayor que el tercer lado:\na + b > c, a + c > b, b + c > a`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "I9S1kBXLkBo",
           videoTitle: "Triángulos — Clasificación, Pitágoras y Área",
           facts: [
             "El Teorema de Pitágoras se conocía en Babilonia 1000 años antes de Pitágoras. Hay una tablilla de arcilla (Plimpton 322) que lista ternas pitagóricas del 1800 a.C.",
@@ -347,7 +347,7 @@ const CATEGORIES: Category[] = [
             { icon: "📐", label: "Área", value: "πr²" },
           ],
           explanation: `Definiciones:\n• Circunferencia: conjunto de puntos a distancia r del centro (es una línea curva)\n• Círculo: la región interior incluyendo la circunferencia (es una superficie)\n• Radio (r): distancia del centro a cualquier punto de la circunferencia\n• Diámetro (d): d = 2r (cuerda que pasa por el centro)\n\nFórmulas fundamentales:\n• Perímetro (longitud de la circunferencia): C = 2πr = πd\n• Área del círculo: A = πr²\n\nElementos de la circunferencia:\n• Cuerda: segmento que une dos puntos de la circunferencia\n• Secante: recta que corta la circunferencia en dos puntos\n• Tangente: recta que toca la circunferencia en exactamente un punto\n• Arco: porción de la circunferencia entre dos puntos\n• Sector circular: "rebanada de pizza" (región entre dos radios y un arco)\n\nEjemplo — Calcular perímetro y área con r = 5 cm:\nC = 2π(5) = 10π ≈ 31.42 cm\nA = π(5²) = 25π ≈ 78.54 cm²\n\nEcuación de la circunferencia (centro (h,k), radio r):\n(x − h)² + (y − k)² = r²\n\nÁngulo central vs ángulo inscrito:\nEl ángulo inscrito es SIEMPRE la mitad del ángulo central que abarca el mismo arco.`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "OW1JrAHmmdU",
           videoTitle: "Circunferencia y Círculo — Fórmulas y Propiedades",
           facts: [
             "π tiene infinitos decimales sin patrón repetitivo. El récord actual es más de 100 billones de dígitos calculados, y nunca se ha encontrado una secuencia predecible.",
@@ -367,7 +367,7 @@ const CATEGORIES: Category[] = [
             { icon: "📊", label: "Diagonales", value: "n(n−3)/2" },
           ],
           explanation: `Un polígono es una figura plana cerrada formada por n segmentos rectos (lados), con n ≥ 3.\n\nNombres según número de lados:\n• 3: triángulo    • 7: heptágono\n• 4: cuadrilátero • 8: octágono\n• 5: pentágono    • 9: nonágono\n• 6: hexágono     • 10: decágono\n\nPolígono regular: todos los lados y ángulos son iguales.\n\nFórmulas importantes:\n• Suma de ángulos interiores: S = (n − 2) × 180°\n• Cada ángulo interior (regular): α = (n − 2) × 180° / n\n• Suma de ángulos exteriores: siempre 360°\n• Número de diagonales: D = n(n − 3) / 2\n\nEjemplo — Hexágono regular (n = 6):\nSuma ángulos = (6−2) × 180° = 720°\nCada ángulo = 720° / 6 = 120°\nDiagonales = 6(6−3) / 2 = 9\n\nClasificación:\n• Convexo: todos los ángulos interiores < 180° (no tiene "entrantes")\n• Cóncavo: al menos un ángulo interior > 180°\n\nTeselaciones: solo 3 polígonos regulares teselan el plano (cubren sin huecos ni superposiciones): triángulo equilátero, cuadrado y hexágono regular.`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "p2Wpj5uxhHM",
           videoTitle: "Polígonos — Clasificación, Ángulos y Diagonales",
           facts: [
             "Las abejas construyen celdas hexagonales porque el hexágono regular es la forma que maximiza el área con el mínimo perímetro al teselar un plano.",
@@ -387,7 +387,7 @@ const CATEGORIES: Category[] = [
             { icon: "🔢", label: "Unidades", value: "m vs m²" },
           ],
           explanation: `Perímetro = suma de todos los lados\nÁrea = medida de la superficie interior\n\nFórmulas de área por figura:\n\n• Cuadrado (lado a): A = a²\n• Rectángulo (base b, altura h): A = b × h\n• Triángulo: A = (b × h) / 2\n• Paralelogramo: A = b × h\n• Trapecio (bases B y b, altura h): A = (B + b) × h / 2\n• Rombo (diagonales D y d): A = (D × d) / 2\n• Círculo (radio r): A = πr²\n\nPerímetros:\n• Cuadrado: P = 4a\n• Rectángulo: P = 2(b + h)\n• Triángulo: P = a + b + c (suma de lados)\n• Circunferencia: P = 2πr\n\nEjemplo — Área de un trapecio:\nBases: B = 10 cm, b = 6 cm, altura h = 4 cm\nA = (10 + 6) × 4 / 2 = 16 × 4 / 2 = 32 cm²\n\nUnidades:\n• Perímetro se mide en unidades lineales: cm, m, km\n• Área se mide en unidades cuadradas: cm², m², km²\n\nConversiones de área:\n1 m² = 10,000 cm²\n1 km² = 1,000,000 m²\n1 hectárea = 10,000 m²`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "wYNvY_bOGdc",
           videoTitle: "Perímetro y Área — Todas las Fórmulas con Ejemplos",
           facts: [
             "Una cancha de fútbol mide entre 6,400 y 8,250 m² — eso es más o menos una hectárea, igual que un campo de cultivo mediano.",
@@ -407,7 +407,7 @@ const CATEGORIES: Category[] = [
             { icon: "💧", label: "Equivalencia", value: "1L = 1000cm³" },
           ],
           explanation: `Volumen = espacio tridimensional ocupado por un cuerpo.\n\nFórmulas de volumen:\n\n• Cubo (arista a): V = a³\n• Prisma rectangular (largo l, ancho w, alto h): V = l × w × h\n• Prisma (cualquiera): V = Área de la base × altura\n• Cilindro (radio r, altura h): V = πr²h\n• Esfera (radio r): V = (4/3)πr³\n• Cono (radio r, altura h): V = (1/3)πr²h\n• Pirámide: V = (1/3) × Área de la base × altura\n\nRelación cono/cilindro/esfera con mismo radio r y altura h = 2r:\n• Cono: (1/3)πr²(2r) = (2/3)πr³\n• Cilindro: πr²(2r) = 2πr³\n• Esfera: (4/3)πr³\n\nEjemplo — Volumen de un cilindro:\nRadio = 3 cm, altura = 10 cm\nV = π(3²)(10) = 90π ≈ 282.74 cm³\n\nConversiones importantes:\n• 1 litro = 1,000 cm³ = 1 dm³\n• 1 m³ = 1,000 litros\n• 1 ml = 1 cm³`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "1IO8oZkrkXI",
           videoTitle: "Volumen — Fórmulas de Cuerpos Geométricos 3D",
           facts: [
             "Arquímedes descubrió cómo medir el volumen de objetos irregulares metiéndolos en agua. Según la leyenda, gritó '¡Eureka!' y salió corriendo desnudo.",
@@ -427,7 +427,7 @@ const CATEGORIES: Category[] = [
             { icon: "📐", label: "Pendiente", value: "m = Δy/Δx" },
           ],
           explanation: `El plano cartesiano tiene dos ejes perpendiculares (x horizontal, y vertical) que se cruzan en el origen (0,0).\n\nDistancia entre dos puntos A(x₁,y₁) y B(x₂,y₂):\nd = √[(x₂ − x₁)² + (y₂ − y₁)²]\n\nPunto medio de un segmento:\nM = ((x₁ + x₂)/2, (y₁ + y₂)/2)\n\nPendiente de una recta:\nm = (y₂ − y₁) / (x₂ − x₁) = Δy / Δx\n\nFormas de la ecuación de la recta:\n• Pendiente-ordenada: y = mx + b\n• Punto-pendiente: y − y₁ = m(x − x₁)\n• General: Ax + By + C = 0\n\nRectas paralelas: m₁ = m₂ (misma pendiente)\nRectas perpendiculares: m₁ × m₂ = −1\n\nEjemplo — Hallar la ecuación de la recta que pasa por (2, 3) y (4, 7):\nm = (7 − 3)/(4 − 2) = 4/2 = 2\ny − 3 = 2(x − 2)\ny = 2x − 1\n\nDistancia de un punto P(x₀, y₀) a una recta Ax + By + C = 0:\nd = |Ax₀ + By₀ + C| / √(A² + B²)`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "RWwJ7NGpdQQ",
           videoTitle: "Geometría Analítica — Distancia, Pendiente y Ecuación de la Recta",
           facts: [
             "René Descartes inventó el plano cartesiano (que lleva su nombre) supuestamente mientras observaba una mosca en el techo desde su cama.",
@@ -461,7 +461,7 @@ const CATEGORIES: Category[] = [
             { icon: "📐", label: "tan θ", value: "opuesto/adyacente" },
           ],
           explanation: `En un triángulo rectángulo con un ángulo θ:\n\nLas 6 razones trigonométricas:\n• sen θ = cateto opuesto / hipotenusa (SOH)\n• cos θ = cateto adyacente / hipotenusa (CAH)\n• tan θ = cateto opuesto / cateto adyacente (TOA)\n\nRecíprocas:\n• csc θ = 1/sen θ = hipotenusa / opuesto\n• sec θ = 1/cos θ = hipotenusa / adyacente\n• cot θ = 1/tan θ = adyacente / opuesto\n\nNemotécnica SOH-CAH-TOA:\n• Seno = Opuesto / Hipotenusa\n• Coseno = Adyacente / Hipotenusa\n• Tangente = Opuesto / Adyacente\n\nÁngulos notables:\n      30°      45°      60°\nsen   1/2      √2/2     √3/2\ncos   √3/2     √2/2     1/2\ntan   √3/3     1        √3\n\nEjemplo: En un triángulo rectángulo con hipotenusa 10 y ángulo de 30°:\nCateto opuesto = 10 × sen 30° = 10 × 0.5 = 5\nCateto adyacente = 10 × cos 30° = 10 × (√3/2) ≈ 8.66\n\nIdentidad fundamental:\nsen²θ + cos²θ = 1`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "7pUi5lvLf7c",
           videoTitle: "Razones Trigonométricas — SOH CAH TOA",
           facts: [
             "La trigonometría fue inventada por los astrónomos babilonios y griegos para calcular distancias a estrellas sin poder medirlas directamente.",
@@ -481,7 +481,7 @@ const CATEGORIES: Category[] = [
             { icon: "🔄", label: "Vuelta", value: "360° = 2π rad" },
           ],
           explanation: `El círculo unitario tiene centro en (0,0) y radio 1.\n\nCada punto sobre el círculo tiene coordenadas:\nP(θ) = (cos θ, sen θ)\n\nEsto define seno y coseno para CUALQUIER ángulo θ:\n• cos θ = coordenada x del punto\n• sen θ = coordenada y del punto\n• tan θ = sen θ / cos θ = y/x\n\nConversión grados-radianes:\nRadianes = Grados × (π/180)\nGrados = Radianes × (180/π)\n\nÁngulos clave en el círculo unitario:\n• 0° (0): (1, 0)\n• 30° (π/6): (√3/2, 1/2)\n• 45° (π/4): (√2/2, √2/2)\n• 60° (π/3): (1/2, √3/2)\n• 90° (π/2): (0, 1)\n• 180° (π): (−1, 0)\n• 270° (3π/2): (0, −1)\n• 360° (2π): (1, 0)\n\nSignos por cuadrante:\n• I (0°-90°): sen +, cos +, tan +\n• II (90°-180°): sen +, cos −, tan −\n• III (180°-270°): sen −, cos −, tan +\n• IV (270°-360°): sen −, cos +, tan −\n\nEjemplo: cos(150°) = cos(180°−30°) = −cos 30° = −√3/2`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "CL_Kci6kJlA",
           videoTitle: "Círculo Unitario — Coordenadas y Ángulos Clave",
           facts: [
             "El radián es la unidad 'natural' de ángulo: un radián es el ángulo que abarca un arco de longitud igual al radio. Una vuelta completa = 2π radianes.",
@@ -501,7 +501,7 @@ const CATEGORIES: Category[] = [
             { icon: "➕", label: "Suma", value: "sen(α±β)" },
           ],
           explanation: `Identidades pitagóricas:\n• sen²θ + cos²θ = 1\n• 1 + tan²θ = sec²θ\n• 1 + cot²θ = csc²θ\n\nIdentidades de cociente:\n• tan θ = sen θ / cos θ\n• cot θ = cos θ / sen θ\n\nIdentidades de ángulo doble:\n• sen(2θ) = 2·sen θ·cos θ\n• cos(2θ) = cos²θ − sen²θ = 2cos²θ − 1 = 1 − 2sen²θ\n• tan(2θ) = 2tan θ / (1 − tan²θ)\n\nIdentidades de suma y diferencia:\n• sen(α + β) = sen α·cos β + cos α·sen β\n• sen(α − β) = sen α·cos β − cos α·sen β\n• cos(α + β) = cos α·cos β − sen α·sen β\n• cos(α − β) = cos α·cos β + sen α·sen β\n\nEjemplo — Simplificar:\n(1 − cos²θ) / sen θ\n= sen²θ / sen θ    (usando sen² + cos² = 1)\n= sen θ\n\nEjemplo — Calcular sen 75°:\nsen 75° = sen(45° + 30°)\n= sen 45°·cos 30° + cos 45°·sen 30°\n= (√2/2)(√3/2) + (√2/2)(1/2)\n= (√6 + √2) / 4`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "3FjBlgSSlok",
           videoTitle: "Identidades Trigonométricas — Pitagóricas, Doble Ángulo y Suma",
           facts: [
             "La identidad sen²θ + cos²θ = 1 es en realidad el Teorema de Pitágoras disfrazado: en el círculo unitario, x² + y² = 1.",
@@ -521,7 +521,7 @@ const CATEGORIES: Category[] = [
             { icon: "🎯", label: "Aplica a", value: "Todo triángulo" },
           ],
           explanation: `Ley de Senos:\na/sen A = b/sen B = c/sen C = 2R\n\nDonde R es el radio de la circunferencia circunscrita.\n\nSe usa cuando conocemos:\n• Dos ángulos y un lado (ALA o AAL)\n• Dos lados y el ángulo opuesto a uno de ellos (caso ambiguo)\n\nLey de Cosenos:\nc² = a² + b² − 2ab·cos C\n\nSe usa cuando conocemos:\n• Dos lados y el ángulo comprendido (LAL)\n• Los tres lados (LLL) — para hallar ángulos\n\nNota: cuando C = 90°, cos 90° = 0 y se reduce a Pitágoras: c² = a² + b²\n\nEjemplo — Ley de Cosenos:\nTriángulo con a = 5, b = 7, C = 60°\nc² = 25 + 49 − 2(5)(7)cos 60°\nc² = 74 − 70(0.5) = 74 − 35 = 39\nc = √39 ≈ 6.24\n\nEjemplo — Ley de Senos:\nTriángulo con A = 40°, B = 60°, a = 8\nC = 180° − 40° − 60° = 80°\nb/sen 60° = 8/sen 40°\nb = 8 × sen 60° / sen 40° = 8 × 0.866 / 0.643 ≈ 10.78\n\nCaso ambiguo (Ley de Senos):\nCuando se dan 2 lados y un ángulo no comprendido, pueden existir 0, 1 o 2 soluciones.`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "7PZheQ4yTgY",
           videoTitle: "Ley de Senos y Cosenos — Resolver Cualquier Triángulo",
           facts: [
             "La Ley de Cosenos fue conocida por Euclides (300 a.C.) pero en forma geométrica, no trigonométrica. La versión moderna es del siglo XV.",
@@ -541,7 +541,7 @@ const CATEGORIES: Category[] = [
             { icon: "〰️", label: "Forma", value: "y=A·sen(Bx+C)+D" },
           ],
           explanation: `Forma general:\ny = A·sen(Bx + C) + D\n\nParámetros:\n• A = amplitud (altura de la onda)\n• B = frecuencia angular → Período T = 2π/|B|\n• C = desfase (desplazamiento horizontal)\n• D = desplazamiento vertical\n\nCaracterísticas de y = sen x:\n• Dominio: todos los reales\n• Rango: [−1, 1]\n• Período: 2π (se repite cada 2π)\n• Cruza el origen: sen 0 = 0\n\nCaracterísticas de y = cos x:\n• Dominio: todos los reales\n• Rango: [−1, 1]\n• Período: 2π\n• Empieza en máximo: cos 0 = 1\n\nCaracterísticas de y = tan x:\n• Dominio: x ≠ π/2 + nπ (asíntotas verticales)\n• Rango: todos los reales (−∞, +∞)\n• Período: π\n\nEjemplo — y = 3sen(2x) + 1:\nAmplitud = 3\nPeríodo = 2π/2 = π\nDesplazamiento vertical = 1\nRango: [1−3, 1+3] = [−2, 4]\n\nRelación: cos x = sen(x + π/2) — el coseno es un seno desplazado.`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "8zVW0U2jn8U",
           videoTitle: "Funciones Trigonométricas — Gráficas y Transformaciones",
           facts: [
             "La voz humana es una combinación de funciones seno de diferentes frecuencias. Fourier demostró que CUALQUIER sonido se puede descomponer en senos.",
@@ -561,7 +561,7 @@ const CATEGORIES: Category[] = [
             { icon: "📍", label: "Navegación", value: "Rumbos y distancias" },
           ],
           explanation: `Conceptos clave para problemas aplicados:\n\nÁngulo de elevación: ángulo medido desde la horizontal HACIA ARRIBA\nÁngulo de depresión: ángulo medido desde la horizontal HACIA ABAJO\n\n(El ángulo de elevación desde A es igual al ángulo de depresión desde B, por ángulos alternos internos)\n\nEjemplo 1 — Altura de un edificio:\nDesde un punto a 50 m de la base, el ángulo de elevación a la azotea es 35°.\ntan 35° = h / 50\nh = 50 × tan 35° = 50 × 0.7002 ≈ 35.01 m\n\nEjemplo 2 — Distancia inaccesible:\nDesde dos puntos A y B separados 100 m, se mide el ángulo a un punto C:\nÁngulo A = 65°, Ángulo B = 48°, Ángulo C = 180° − 65° − 48° = 67°\nPor Ley de Senos: AC/sen 48° = 100/sen 67°\nAC = 100 × sen 48° / sen 67° ≈ 80.7 m\n\nEjemplo 3 — Navegación:\nUn barco navega 30 km al Norte y luego 20 km a N60°E.\n¿A qué distancia está del punto de partida?\nUsando Ley de Cosenos con ángulo incluido de 60°:\nd² = 30² + 20² − 2(30)(20)cos 120° = 900 + 400 + 600 = 1900\nd ≈ 43.6 km\n\nAplicaciones profesionales:\n• Topografía y agrimensura\n• Diseño de antenas y telecomunicaciones\n• Animación 3D y videojuegos\n• Astronomía y cálculo de distancias estelares`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "8zVW0U2jn8U",
           videoTitle: "Aplicaciones de Trigonometría — Problemas del Mundo Real",
           facts: [
             "Eratóstenes calculó la circunferencia de la Tierra en el 240 a.C. usando trigonometría básica y la sombra de un palo. ¡Se equivocó solo en un 2%!",
@@ -595,7 +595,7 @@ const CATEGORIES: Category[] = [
             { icon: "♾️", label: "Especial", value: "Límites al ∞" },
           ],
           explanation: `Definición intuitiva:\nlím(x→a) f(x) = L significa que f(x) se acerca a L cuando x se acerca a a.\n\nPropiedades de los límites:\n• lím [f(x) ± g(x)] = lím f(x) ± lím g(x)\n• lím [f(x) · g(x)] = lím f(x) · lím g(x)\n• lím [f(x) / g(x)] = lím f(x) / lím g(x) (si lím g(x) ≠ 0)\n• lím [c · f(x)] = c · lím f(x)\n\nFormas indeterminadas:\n0/0, ∞/∞, 0·∞, ∞−∞, 0⁰, 1^∞, ∞⁰\n\nTécnicas para resolver 0/0:\n• Factorización\n• Racionalización (multiplicar por conjugado)\n• Regla de L'Hôpital: lím f(x)/g(x) = lím f'(x)/g'(x)\n\nEjemplo — Factorización:\nlím(x→2) (x² − 4)/(x − 2)\n= lím(x→2) (x+2)(x−2)/(x−2)\n= lím(x→2) (x + 2) = 4\n\nLímite notable:\nlím(x→0) sen(x)/x = 1\n\nLímites al infinito:\nlím(x→∞) (3x² + 1)/(x² − 5) = 3/1 = 3\n(Se dividen los coeficientes del término de mayor grado)\n\nContinuidad: f es continua en a si lím(x→a) f(x) = f(a)`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "o2UTk8bsLS0",
           videoTitle: "Límites — Concepto, Técnicas y Ejemplos",
           facts: [
             "Los griegos ya usaban ideas de límites (método de exhaución de Arquímedes) pero sin formalizarlas. La definición rigurosa llegó con Cauchy y Weierstrass en el siglo XIX.",
@@ -615,7 +615,7 @@ const CATEGORIES: Category[] = [
             { icon: "🏎️", label: "Física", value: "Velocidad" },
           ],
           explanation: `Definición de derivada:\nf'(x) = lím(h→0) [f(x+h) − f(x)] / h\n\nInterpretaciones:\n• Geométrica: pendiente de la recta tangente en el punto\n• Física: velocidad instantánea (si f es posición)\n• General: tasa de cambio instantánea\n\nNotaciones equivalentes:\nf'(x) = dy/dx = df/dx = Df(x)\n\nDerivadas básicas:\n• d/dx [c] = 0\n• d/dx [x^n] = nx^(n−1)\n• d/dx [e^x] = e^x\n• d/dx [ln x] = 1/x\n• d/dx [sen x] = cos x\n• d/dx [cos x] = −sen x\n• d/dx [tan x] = sec²x\n\nEjemplo — Derivada desde la definición:\nf(x) = x², hallar f'(x):\nf'(x) = lím(h→0) [(x+h)² − x²] / h\n= lím(h→0) [x² + 2xh + h² − x²] / h\n= lím(h→0) [2xh + h²] / h\n= lím(h→0) (2x + h) = 2x\n\nAplicación — Velocidad:\nSi posición s(t) = 5t² + 3t, la velocidad es:\nv(t) = s'(t) = 10t + 3\nEn t = 2: v(2) = 23 m/s`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "uK4-s0ojHFg",
           videoTitle: "Derivadas — Definición, Interpretación y Cálculo",
           facts: [
             "Newton y Leibniz inventaron el cálculo independientemente en la década de 1670, lo que provocó una disputa de plagio que duró décadas entre matemáticos ingleses y alemanes.",
@@ -635,7 +635,7 @@ const CATEGORIES: Category[] = [
             { icon: "✖️", label: "Producto", value: "f'g + fg'" },
           ],
           explanation: `Reglas fundamentales de derivación:\n\n1. Regla de la potencia:\nd/dx [x^n] = n·x^(n−1)\nEjemplo: d/dx [x⁵] = 5x⁴\n\n2. Constante multiplicativa:\nd/dx [c·f(x)] = c·f'(x)\nEjemplo: d/dx [3x⁴] = 12x³\n\n3. Regla de la suma:\nd/dx [f ± g] = f' ± g'\n\n4. Regla del producto:\nd/dx [f·g] = f'·g + f·g'\nEjemplo: d/dx [x²·sen x] = 2x·sen x + x²·cos x\n\n5. Regla del cociente:\nd/dx [f/g] = (f'·g − f·g') / g²\nEjemplo: d/dx [x/(x+1)] = [(1)(x+1) − x(1)] / (x+1)² = 1/(x+1)²\n\n6. Regla de la cadena:\nd/dx [f(g(x))] = f'(g(x)) · g'(x)\nEjemplo: d/dx [sen(3x²)] = cos(3x²) · 6x\n\nEjemplo combinado:\nd/dx [(2x+1)⁵]\n= 5(2x+1)⁴ · 2 = 10(2x+1)⁴\n\nDerivación logarítmica (útil para funciones complicadas):\nSi y = f(x), tomar ln de ambos lados y derivar:\ny'/y = [ln f(x)]' → y' = f(x) · [ln f(x)]'`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "aVNa-J8iB5I",
           videoTitle: "Reglas de Derivación — Cadena, Producto y Cociente",
           facts: [
             "La regla de la cadena se usa millones de veces por segundo en inteligencia artificial: el algoritmo de backpropagation en redes neuronales es esencialmente la regla de la cadena aplicada repetidamente.",
@@ -655,7 +655,7 @@ const CATEGORIES: Category[] = [
             { icon: "📏", label: "Resultado", value: "Área bajo la curva" },
           ],
           explanation: `Integral indefinida (antiderivada):\n∫f(x)dx = F(x) + C, donde F'(x) = f(x)\n\nC es la constante de integración (hay infinitas antiderivadas).\n\nIntegrales básicas:\n• ∫x^n dx = x^(n+1)/(n+1) + C  (n ≠ −1)\n• ∫(1/x) dx = ln|x| + C\n• ∫e^x dx = e^x + C\n• ∫sen x dx = −cos x + C\n• ∫cos x dx = sen x + C\n• ∫sec²x dx = tan x + C\n\nIntegral definida:\n∫[a,b] f(x)dx = F(b) − F(a)\n\nRepresenta el área neta bajo la curva f(x) entre x = a y x = b.\n\nEjemplo — Integral indefinida:\n∫(3x² + 2x − 1)dx = x³ + x² − x + C\n\nEjemplo — Integral definida (área):\n∫[0,2] x² dx = [x³/3] de 0 a 2 = 8/3 − 0 = 8/3\n\nTécnicas de integración:\n• Sustitución: ∫f(g(x))·g'(x)dx → ∫f(u)du\n• Por partes: ∫u dv = uv − ∫v du\n• Fracciones parciales\n• Sustitución trigonométrica`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "E3ECQskKyrU",
           videoTitle: "Integrales — Indefinidas, Definidas y Técnicas",
           facts: [
             "El símbolo ∫ fue inventado por Leibniz en 1675 y es una S estilizada que significa 'summa' (suma en latín), porque la integral es una suma infinita de rectángulos infinitesimales.",
@@ -675,7 +675,7 @@ const CATEGORIES: Category[] = [
             { icon: "🔄", label: "Volumen rev.", value: "π∫[a,b] f²(x)dx" },
           ],
           explanation: `Aplicaciones del cálculo diferencial (derivadas):\n\nOptimización — encontrar máximos y mínimos:\n1. Encontrar f'(x) = 0 (puntos críticos)\n2. Usar f''(x) para clasificar:\n   • f''(x) < 0 → máximo local\n   • f''(x) > 0 → mínimo local\n\nEjemplo — Maximizar área:\nCon 100 m de cerca, ¿qué rectángulo tiene área máxima?\nPerímetro: 2x + 2y = 100 → y = 50 − x\nÁrea: A(x) = x(50 − x) = 50x − x²\nA'(x) = 50 − 2x = 0 → x = 25, y = 25 (¡un cuadrado!)\nÁrea máxima = 625 m²\n\nAplicaciones del cálculo integral:\n\nÁrea entre curvas:\nA = ∫[a,b] [f(x) − g(x)] dx  (f arriba, g abajo)\n\nVolumen de revolución (método del disco):\nV = π ∫[a,b] [f(x)]² dx\n\nVolumen (método de cascarones):\nV = 2π ∫[a,b] x·f(x) dx\n\nRecorrido (longitud de arco):\nL = ∫[a,b] √[1 + (f'(x))²] dx\n\nTrabajo en física:\nW = ∫[a,b] F(x) dx`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "Ll_qHUG6OWs",
           videoTitle: "Aplicaciones del Cálculo — Optimización y Volúmenes",
           facts: [
             "Las empresas usan cálculo para maximizar beneficios: la condición 'ingreso marginal = costo marginal' es simplemente igualar derivadas.",
@@ -695,7 +695,7 @@ const CATEGORIES: Category[] = [
             { icon: "⭐", label: "Importancia", value: "Fundamental" },
           ],
           explanation: `El Teorema Fundamental del Cálculo tiene dos partes:\n\nParte 1 (TFC-1):\nSi F(x) = ∫[a,x] f(t) dt, entonces F'(x) = f(x)\n\nEs decir: la derivada de la integral de f... es f misma. La integración y la derivación se cancelan.\n\nParte 2 (TFC-2):\n∫[a,b] f(x) dx = F(b) − F(a)\n\nDonde F es cualquier antiderivada de f (es decir, F' = f).\n\nEsto nos dice que para calcular una integral definida NO necesitamos hacer sumas de Riemann infinitas — basta encontrar una antiderivada y evaluar.\n\nEjemplo — TFC-2:\n∫[1,3] 2x dx = [x²] de 1 a 3 = 9 − 1 = 8\n\nVerificación con área:\nEs el área bajo y = 2x de x=1 a x=3.\nTrapecio con bases 2 y 6, altura 2:\nA = (2+6)×2/2 = 8 ✓\n\nEjemplo — TFC-1:\nSi F(x) = ∫[0,x] sen(t²) dt\nEntonces F'(x) = sen(x²)\n\nCon regla de la cadena:\nSi G(x) = ∫[0,x²] sen(t) dt\nEntonces G'(x) = sen(x²) · 2x\n\nImportancia histórica:\nAntes del TFC, calcular áreas requería sumar infinitos rectángulos (método de exhaución). El TFC transformó un problema infinito en un cálculo finito.`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "oMPscG3bkNM",
           videoTitle: "Teorema Fundamental del Cálculo — La Conexión Derivada-Integral",
           facts: [
             "Newton y Leibniz descubrieron el TFC independientemente en la década de 1670, pero James Gregory lo había intuido unos años antes sin publicarlo formalmente.",
@@ -729,7 +729,7 @@ const CATEGORIES: Category[] = [
             { icon: "🔝", label: "Moda", value: "Más frecuente" },
           ],
           explanation: `Medidas de tendencia central:\n\n1. Media aritmética (promedio):\nx̄ = (x₁ + x₂ + ... + xₙ) / n = Σxᵢ / n\n\nVentaja: usa todos los datos\nDesventaja: sensible a valores extremos (outliers)\n\n2. Mediana:\nEl valor central cuando los datos están ordenados.\n• Si n es impar: el dato en la posición (n+1)/2\n• Si n es par: promedio de los dos centrales\n\nVentaja: no se afecta por valores extremos\n\n3. Moda:\nEl valor que más se repite.\n• Puede no existir (todos diferentes)\n• Puede haber varias (bimodal, multimodal)\n\nEjemplo:\nDatos: {2, 3, 5, 5, 7, 8, 100}\nMedia = (2+3+5+5+7+8+100)/7 = 130/7 ≈ 18.6\nMediana = 5 (el dato central)\nModa = 5 (el más repetido)\n\n¡La media (18.6) no es representativa por culpa del 100!\nLa mediana (5) describe mejor el "centro" del grupo.\n\n¿Cuándo usar cada una?\n• Media: datos simétricos sin outliers (calificaciones de una clase)\n• Mediana: datos con valores extremos (salarios de un país)\n• Moda: datos categóricos (color favorito, talla más vendida)\n\nMedia ponderada:\nx̄ₚ = Σ(wᵢ · xᵢ) / Σwᵢ\nÚtil cuando los datos tienen diferente importancia.`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "0DA7Wtz1ddg",
           videoTitle: "Medidas de Tendencia Central — Media, Mediana y Moda",
           facts: [
             "El salario promedio de un país puede ser muy engañoso: si Bill Gates entra a un bar, el 'promedio' de riqueza del bar se dispara, pero nadie se vuelve rico. Por eso se prefiere la mediana.",
@@ -749,7 +749,7 @@ const CATEGORIES: Category[] = [
             { icon: "📏", label: "Desv. Est.", value: "σ" },
           ],
           explanation: `Medidas de dispersión — ¿qué tan dispersos están los datos?\n\n1. Rango:\nR = valor máximo − valor mínimo\nSimple pero ignora los datos intermedios.\n\n2. Varianza:\nσ² = Σ(xᵢ − x̄)² / n      (poblacional)\ns² = Σ(xᵢ − x̄)² / (n−1)   (muestral)\n\nMide el promedio de las desviaciones al cuadrado respecto a la media.\n\n3. Desviación estándar:\nσ = √(varianza)\n\nTiene las mismas unidades que los datos (la varianza está en unidades²).\n\n4. Coeficiente de variación:\nCV = (σ / x̄) × 100%\n\nPermite comparar dispersiones de datos con diferentes unidades.\n\nEjemplo:\nDatos: {4, 7, 8, 9, 12}\nMedia = 40/5 = 8\nDesviaciones: (−4, −1, 0, 1, 4)\nDesviaciones²: (16, 1, 0, 1, 16)\nVarianza = 34/5 = 6.8\nDesv. Est. = √6.8 ≈ 2.61\n\nInterpretación:\n• σ pequeña: datos concentrados cerca de la media\n• σ grande: datos muy dispersos\n\nRegla empírica (para datos normales):\n• ~68% de datos dentro de x̄ ± 1σ\n• ~95% dentro de x̄ ± 2σ\n• ~99.7% dentro de x̄ ± 3σ`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "BoUMgcA2MhA",
           videoTitle: "Medidas de Dispersión — Varianza y Desviación Estándar",
           facts: [
             "Se divide entre n−1 (en lugar de n) en la varianza muestral para corregir un sesgo: la muestra tiende a subestimar la variabilidad real. Esto se llama corrección de Bessel.",
@@ -769,7 +769,7 @@ const CATEGORIES: Category[] = [
             { icon: "🥧", label: "Circular", value: "Proporciones" },
           ],
           explanation: `Tipos de gráficos y cuándo usarlos:\n\n1. Gráfico de barras:\n• Compara categorías\n• Barras separadas (datos discretos/categóricos)\n• Ejemplo: votos por candidato, ventas por mes\n\n2. Histograma:\n• Distribución de frecuencias (datos continuos)\n• Barras pegadas (intervalos consecutivos)\n• Ejemplo: alturas de estudiantes, tiempos de espera\n\n3. Gráfico circular (pie chart):\n• Muestra proporciones del total (porcentajes)\n• Máximo 5-6 categorías para ser legible\n• Ejemplo: distribución del presupuesto\n\n4. Gráfico de líneas:\n• Muestra tendencias en el tiempo\n• Ideal para series temporales\n• Ejemplo: temperatura diaria, precio de acciones\n\n5. Diagrama de caja (box plot):\n• Muestra mediana, cuartiles y valores atípicos\n• Q1 (25%), Q2 (mediana), Q3 (75%)\n• Rango intercuartil: IQR = Q3 − Q1\n• Outliers: datos más allá de 1.5×IQR de Q1 o Q3\n\n6. Diagrama de dispersión:\n• Relación entre dos variables\n• Muestra correlación (positiva, negativa, nula)\n\nEjemplo — Interpretar un box plot:\nSi la caja está desplazada a la derecha con bigote largo a la izquierda → asimetría negativa (cola izquierda).`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "9G4HPNVA5w4",
           videoTitle: "Gráficos Estadísticos — Cuándo y Cómo Usarlos",
           facts: [
             "Florence Nightingale no solo fue enfermera: inventó el 'diagrama de rosa' (un gráfico polar) para convencer al gobierno británico de mejorar la sanidad militar.",
@@ -789,7 +789,7 @@ const CATEGORIES: Category[] = [
             { icon: "📊", label: "Estándar", value: "Z ~ N(0,1)" },
           ],
           explanation: `La distribución normal N(μ, σ²):\n\nFunción de densidad:\nf(x) = (1/(σ√(2π))) · e^(−(x−μ)²/(2σ²))\n\nPropiedades:\n• Simétrica respecto a la media μ\n• Media = Mediana = Moda = μ\n• Forma de campana\n• Determinada completamente por μ y σ\n• El área total bajo la curva = 1\n\nRegla 68-95-99.7:\n• 68.27% de datos en [μ−σ, μ+σ]\n• 95.45% de datos en [μ−2σ, μ+2σ]\n• 99.73% de datos en [μ−3σ, μ+3σ]\n\nDistribución normal estándar Z ~ N(0, 1):\nPara estandarizar: Z = (X − μ) / σ\n\nEjemplo:\nLas alturas de hombres adultos siguen N(175, 7²) cm.\n¿Qué % mide más de 189 cm?\n\nZ = (189 − 175) / 7 = 2\nP(Z > 2) ≈ 2.28%\n\nSolo ~2.3% de los hombres mide más de 189 cm.\n\nTeorema del Límite Central:\nSin importar la distribución original, la media de n muestras grandes se distribuye NORMALMENTE. ¡Por eso la normal aparece en todas partes!`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "phY8Z9-TXCY",
           videoTitle: "Distribución Normal — La Campana de Gauss",
           facts: [
             "Carl Friedrich Gauss usó la distribución normal para predecir la órbita del asteroide Ceres en 1801, encontrándolo exactamente donde calculó. Desde entonces se llama 'campana de Gauss'.",
@@ -809,7 +809,7 @@ const CATEGORIES: Category[] = [
             { icon: "🎯", label: "Clave", value: "Representatividad" },
           ],
           explanation: `Conceptos fundamentales:\n• Población: el grupo completo que queremos estudiar\n• Muestra: subconjunto seleccionado de la población\n• Parámetro: medida de la población (μ, σ)\n• Estadístico: medida de la muestra (x̄, s)\n\nTipos de muestreo probabilístico:\n\n1. Aleatorio simple:\nCada individuo tiene la misma probabilidad de ser elegido.\nEjemplo: numerar a todos y usar un generador aleatorio.\n\n2. Estratificado:\nDividir la población en grupos homogéneos (estratos) y muestrear de cada uno.\nEjemplo: 60% mujeres, 40% hombres → muestra proporcional.\n\n3. Sistemático:\nElegir cada k-ésimo elemento de una lista.\nEjemplo: de 1000 personas, elegir cada 10ª → n = 100.\n\n4. Por conglomerados:\nDividir en grupos (conglomerados) y elegir algunos al azar completos.\nEjemplo: elegir 5 escuelas al azar y encuestar a TODOS sus alumnos.\n\nTamaño de muestra:\nn = (Z² · p · q) / E²\nDonde Z = nivel de confianza, p = proporción estimada, E = error máximo.\n\nEjemplo: Para 95% de confianza, proporción desconocida (p=0.5), error 3%:\nn = (1.96² × 0.5 × 0.5) / 0.03² = 0.9604 / 0.0009 ≈ 1068 personas\n\nSesgos comunes:\n• Sesgo de selección: la muestra no es aleatoria\n• Sesgo de no respuesta: los que no contestan son diferentes\n• Sesgo del superviviente: solo vemos a los que "sobrevivieron"`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "4Nu0Lpo8nAM",
           videoTitle: "Muestreo — Tipos y Tamaño de Muestra",
           facts: [
             "En 1936, la revista Literary Digest predijo que Landon ganaría las elecciones de EE.UU. con una encuesta de 2.4 millones de personas — pero perdió. Su muestra estaba sesgada (solo encuestaron a suscriptores ricos).",
@@ -829,7 +829,7 @@ const CATEGORIES: Category[] = [
             { icon: "🎯", label: "Ajuste", value: "R² (0 a 1)" },
           ],
           explanation: `Regresión lineal simple:\nŷ = a + bx (recta de mejor ajuste)\n\nDonde:\n• b = pendiente = n·Σ(xy) − Σx·Σy / [n·Σx² − (Σx)²]\n• a = intercepto = ȳ − b·x̄\n\nMétodo de mínimos cuadrados:\nMinimiza la suma de los cuadrados de las diferencias entre valores reales y predichos:\nMinimizar Σ(yᵢ − ŷᵢ)²\n\nCoeficiente de correlación (r de Pearson):\nr = [n·Σxy − Σx·Σy] / √{[n·Σx² − (Σx)²][n·Σy² − (Σy)²]}\n\nInterpretación de r:\n• r = 1: correlación positiva perfecta\n• r = −1: correlación negativa perfecta\n• r = 0: no hay correlación lineal\n• |r| > 0.7: correlación fuerte\n• 0.3 < |r| < 0.7: correlación moderada\n\nCoeficiente de determinación R²:\nR² = r² → proporción de variabilidad explicada por el modelo\nR² = 0.85 significa que el modelo explica el 85% de la variación.\n\nEjemplo simplificado:\nDatos: (1,2), (2,4), (3,5), (4,4), (5,5)\nCalculando: b ≈ 0.6, a ≈ 2.2\nRecta: ŷ = 2.2 + 0.6x\nPredicción para x = 6: ŷ = 2.2 + 3.6 = 5.8\n\n¡Cuidado! Correlación NO implica causalidad.\nEl consumo de helados y los ahogamientos están correlacionados — pero el helado no causa ahogamientos (ambos se relacionan con el calor).`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "gfs5bp2j_bA",
           videoTitle: "Regresión Lineal — Correlación y Predicción",
           facts: [
             "Francis Galton inventó la regresión en 1886 al estudiar alturas de padres e hijos: los hijos de padres muy altos tendían a ser más bajos (regresaban a la media). De ahí el nombre 'regresión'.",
@@ -866,7 +866,7 @@ const CATEGORIES: Category[] = [
             { icon: "🎲", label: "Ejemplo", value: "Dado: 6 elementos" },
           ],
           explanation: `El espacio muestral (S o Ω) es el conjunto universal de un experimento aleatorio:\n\nS = {todos los resultados posibles}\n\nEjemplo — Lanzar un dado:\nS = {1, 2, 3, 4, 5, 6}\n\nTipos de eventos:\n• Evento simple: contiene un solo resultado. Ej: {3}\n• Evento compuesto: contiene más de un resultado. Ej: {2, 4, 6} (números pares)\n• Evento seguro: coincide con todo el espacio muestral S\n• Evento imposible: el conjunto vacío ∅\n• Eventos complementarios: A y A' donde A' = S - A\n• Eventos mutuamente excluyentes: A ∩ B = ∅ (no pueden ocurrir al mismo tiempo)\n\nEjemplo — Lanzar una moneda dos veces:\nS = {(cara, cara), (cara, sello), (sello, cara), (sello, sello)}\nEvento A = "al menos una cara" = {(C,C), (C,S), (S,C)}\nEvento complementario A' = "ninguna cara" = {(S,S)}`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "tQh29_Noo9w",
           videoTitle: "Eventos y Espacio Muestral — Probabilidad",
           facts: [
             "Un espacio muestral puede ser finito (dado), infinito numerable (lanzar una moneda hasta obtener cara) o infinito no numerable (elegir un punto al azar en una recta).",
@@ -912,7 +912,7 @@ const CATEGORIES: Category[] = [
             { icon: "🔗", label: "Relación", value: "Dependencia" },
           ],
           explanation: `La fórmula de probabilidad condicional es:\n\nP(A|B) = P(A ∩ B) / P(B)\n\nDonde:\n• P(A|B) = probabilidad de A dado que B ocurrió\n• P(A ∩ B) = probabilidad de que ambos ocurran\n• P(B) = probabilidad del evento condicionante (debe ser > 0)\n\nEventos independientes vs dependientes:\n• Independientes: P(A|B) = P(A) — saber que B ocurrió no cambia la probabilidad de A\n• Dependientes: P(A|B) ≠ P(A) — la ocurrencia de B afecta a A\n\nEjemplo — Urna con 5 bolas rojas y 3 azules (sin reposición):\nP(2ª roja | 1ª fue roja) = 4/7\nComo sacamos una roja primero, quedan 4 rojas de 7 bolas totales.\n\nEjemplo — Baraja española (40 cartas):\nP(Rey | carta de oros) = 1/10\nSi sabemos que la carta es de oros (10 cartas), solo 1 es rey.\n\nRegla de la multiplicación:\nP(A ∩ B) = P(A|B) · P(B) = P(B|A) · P(A)`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "pko0dqQidnI",
           videoTitle: "Probabilidad Condicional — Fórmula y Ejemplos",
           facts: [
             "La probabilidad condicional es la base de los filtros de spam: P(spam | contiene 'oferta gratis') es mucho mayor que P(spam) sin esa información.",
@@ -935,7 +935,7 @@ const CATEGORIES: Category[] = [
             { icon: "❗", label: "Factorial", value: "n!" },
           ],
           explanation: `Principio fundamental de conteo:\nSi una tarea se puede hacer en m formas y otra en n formas, ambas juntas se pueden hacer en m × n formas.\n\nFactorial:\nn! = n × (n-1) × (n-2) × ... × 2 × 1\nEjemplo: 5! = 5 × 4 × 3 × 2 × 1 = 120\nCaso especial: 0! = 1\n\nPermutaciones (el ORDEN importa):\nnPr = n! / (n-r)!\nEjemplo: ¿De cuántas formas puedo sentar a 3 personas de un grupo de 5 en una fila?\n5P3 = 5! / 2! = 120 / 2 = 60 formas\n\nCombinaciones (el ORDEN NO importa):\nnCr = n! / [r! × (n-r)!]\nEjemplo: ¿De cuántas formas puedo elegir un comité de 3 personas de un grupo de 5?\n5C3 = 5! / (3! × 2!) = 120 / 12 = 10 formas\n\nDiferencia clave:\n• Permutación: elegir presidente, vice y secretario (ABC ≠ BAC)\n• Combinación: elegir un equipo de 3 (ABC = BAC = CAB)`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "ec8TQjfQrGY",
           videoTitle: "Combinatoria — Permutaciones y Combinaciones",
           facts: [
             "El número de formas de ordenar una baraja de 52 cartas (52!) es tan grande que es prácticamente imposible que dos barajas hayan sido mezcladas en el mismo orden en toda la historia.",
@@ -958,7 +958,7 @@ const CATEGORIES: Category[] = [
             { icon: "⚡", label: "Poisson", value: "(λ)" },
           ],
           explanation: `Una variable aleatoria asigna un valor numérico a cada resultado del espacio muestral.\n\nDistribución Binomial — "éxito o fracaso":\nP(X = k) = C(n,k) · p^k · (1-p)^(n-k)\n\nDonde:\n• n = número de ensayos independientes\n• k = número de éxitos deseados\n• p = probabilidad de éxito en cada ensayo\n\nEjemplo: Lanzar una moneda 10 veces, ¿probabilidad de exactamente 7 caras?\nP(X=7) = C(10,7) · (0.5)^7 · (0.5)^3 = 120 · 0.0078 · 0.125 ≈ 0.117\n\nDistribución Normal (Campana de Gauss):\n• Simétrica respecto a la media μ\n• El 68% de los datos está a ±1σ de μ\n• El 95% está a ±2σ de μ\n• El 99.7% está a ±3σ de μ\n\nDistribución Poisson — "eventos raros en un intervalo":\nP(X = k) = (λ^k · e^(-λ)) / k!\n• λ = número promedio de eventos en el intervalo\n• Ejemplo: si llegan en promedio 3 clientes/hora, P(lleguen 5) = (3^5 · e^(-3)) / 5! ≈ 0.1008\n\n¿Cuándo usar cada una?\n• Binomial: número fijo de intentos con sí/no\n• Normal: datos continuos con distribución simétrica\n• Poisson: contar eventos raros en tiempo/espacio`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "R9YqN2hWpNU",
           videoTitle: "Distribuciones de Probabilidad — Binomial, Normal y Poisson",
           facts: [
             "La distribución normal aparece en todas partes: alturas humanas, errores de medición, calificaciones de exámenes e incluso el movimiento de partículas en un líquido (movimiento browniano).",
@@ -981,7 +981,7 @@ const CATEGORIES: Category[] = [
             { icon: "🧩", label: "Componentes", value: "Prior / Posterior" },
           ],
           explanation: `El Teorema de Bayes:\n\nP(A|B) = [P(B|A) · P(A)] / P(B)\n\nComponentes:\n• P(A) = probabilidad a priori (lo que creemos ANTES de la evidencia)\n• P(A|B) = probabilidad a posteriori (lo que creemos DESPUÉS de la evidencia)\n• P(B|A) = verosimilitud (qué tan probable es ver la evidencia si A es verdad)\n• P(B) = probabilidad total de la evidencia\n\nEjemplo médico — Prueba de una enfermedad:\n• La enfermedad afecta al 1% de la población: P(E) = 0.01\n• La prueba detecta correctamente al 99% de los enfermos: P(+|E) = 0.99\n• La prueba da falso positivo en el 5% de los sanos: P(+|¬E) = 0.05\n\nSi das positivo, ¿cuál es la probabilidad real de estar enfermo?\n\nP(E|+) = P(+|E) · P(E) / P(+)\nP(+) = P(+|E)·P(E) + P(+|¬E)·P(¬E) = 0.99·0.01 + 0.05·0.99 = 0.0099 + 0.0495 = 0.0594\n\nP(E|+) = 0.0099 / 0.0594 ≈ 0.167 = 16.7%\n\n¡Aunque diste positivo, solo hay un 16.7% de probabilidad de estar enfermo! Esto ocurre porque la enfermedad es rara (baja probabilidad a priori).\n\nAplicaciones:\n• Filtros de spam (¿es spam dado estas palabras?)\n• Diagnóstico médico\n• Inteligencia artificial y machine learning\n• Predicción meteorológica`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "bDfCURXoKkU",
           videoTitle: "Teorema de Bayes — Explicación y Ejemplo Médico",
           facts: [
             "El Teorema de Bayes fue descubierto por el reverendo Thomas Bayes en el siglo XVIII, pero su trabajo fue publicado póstumamente por su amigo Richard Price en 1763.",
@@ -1015,7 +1015,7 @@ const CATEGORIES: Category[] = [
             { icon: "∁", label: "Complemento", value: "A'" },
           ],
           explanation: `Un conjunto es una colección bien definida de objetos (elementos).\n\nNotación:\n• Pertenencia: x ∈ A (x pertenece a A)\n• No pertenencia: x ∉ A\n• Subconjunto: A ⊂ B (todo elemento de A está en B)\n• Conjunto vacío: ∅ (no tiene elementos)\n\nOperaciones:\n• Unión: A ∪ B = {x | x ∈ A o x ∈ B}\n• Intersección: A ∩ B = {x | x ∈ A y x ∈ B}\n• Diferencia: A − B = {x | x ∈ A y x ∉ B}\n• Complemento: A' = {x | x ∈ U y x ∉ A}\n• Producto cartesiano: A × B = {(a,b) | a ∈ A, b ∈ B}\n\nLeyes de De Morgan:\n• (A ∪ B)' = A' ∩ B'\n• (A ∩ B)' = A' ∪ B'\n\nDiagramas de Venn:\nRepresentación visual de conjuntos como círculos. La zona sombreada indica el resultado de la operación.\n\nCardinalidad (número de elementos):\n|A ∪ B| = |A| + |B| − |A ∩ B|\n\nEjemplo:\nA = {1,2,3,4,5}, B = {3,4,5,6,7}\nA ∪ B = {1,2,3,4,5,6,7}\nA ∩ B = {3,4,5}\nA − B = {1,2}\n|A ∪ B| = 5 + 5 − 3 = 7 ✓\n\nConjunto potencia: P(A) = todos los subconjuntos de A\nSi |A| = n, entonces |P(A)| = 2ⁿ`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "LbBlnemUaaY",
           videoTitle: "Teoría de Conjuntos — Operaciones y Diagramas de Venn",
           facts: [
             "Georg Cantor, creador de la teoría de conjuntos, demostró que hay infinitos 'más grandes' que otros: los reales son 'más infinitos' que los naturales.",
@@ -1035,7 +1035,7 @@ const CATEGORIES: Category[] = [
             { icon: "→", label: "Condicional", value: "Si...entonces" },
           ],
           explanation: `Una proposición es un enunciado que es verdadero (V) o falso (F), nunca ambos.\n\nConectivos lógicos:\n• Negación (¬p): invierte el valor de verdad\n• Conjunción (p ∧ q): verdadera solo si AMBAS son V\n• Disyunción (p ∨ q): verdadera si AL MENOS UNA es V\n• Condicional (p → q): falsa SOLO si p es V y q es F\n• Bicondicional (p ↔ q): verdadera si ambas tienen el MISMO valor\n\nTabla de verdad del condicional (p → q):\np  q  | p → q\nV  V  |   V\nV  F  |   F\nF  V  |   V\nF  F  |   V\n\nNota: "si p entonces q" solo es falso cuando la promesa se rompe (p verdadero, q falso).\n\nEquivalencias importantes:\n• p → q ≡ ¬p ∨ q\n• ¬(p ∧ q) ≡ ¬p ∨ ¬q (De Morgan)\n• ¬(p ∨ q) ≡ ¬p ∧ ¬q (De Morgan)\n• Contrapositiva: p → q ≡ ¬q → ¬p\n\nTautología: proposición siempre verdadera (p ∨ ¬p)\nContradicción: proposición siempre falsa (p ∧ ¬p)\n\nEjemplo en programación:\nif (edad >= 18 AND tieneID == true) → permitir acceso\nEsto es: p ∧ q → r`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "vKe0UKSpNQQ",
           videoTitle: "Lógica Proposicional — Conectivos y Tablas de Verdad",
           facts: [
             "George Boole creó el álgebra booleana en 1854: V=1, F=0, AND=multiplicación, OR=suma. ¡Es exactamente cómo funcionan las computadoras a nivel de circuitos!",
@@ -1055,7 +1055,7 @@ const CATEGORIES: Category[] = [
             { icon: "🗺️", label: "Aplicación", value: "Redes, rutas" },
           ],
           explanation: `Un grafo G = (V, E) consiste en:\n• V = conjunto de vértices (nodos)\n• E = conjunto de aristas (conexiones entre vértices)\n\nTipos de grafos:\n• No dirigido: las aristas no tienen dirección (amistad)\n• Dirigido (digrafo): las aristas tienen dirección (seguir en Instagram)\n• Ponderado: las aristas tienen un peso/costo (distancia entre ciudades)\n• Completo Kₙ: todos conectados con todos\n\nConceptos clave:\n• Grado de un vértice: número de aristas que inciden en él\n• Camino: secuencia de vértices conectados por aristas\n• Ciclo: camino que empieza y termina en el mismo vértice\n• Grafo conexo: existe camino entre cualquier par de vértices\n\nTeorema de Euler:\nUn grafo tiene un circuito euleriano (recorre TODAS las aristas sin repetir) si y solo si todos los vértices tienen grado par.\n\nAlgoritmos famosos:\n• BFS (búsqueda en amplitud): explora nivel por nivel\n• DFS (búsqueda en profundidad): explora rama por rama\n• Dijkstra: camino más corto en grafos ponderados\n\nEjemplo — Grado:\nEn un grafo con V = {A,B,C,D} y aristas AB, AC, BC, BD:\ngrado(A) = 2, grado(B) = 3, grado(C) = 2, grado(D) = 1\nSuma de grados = 8 = 2 × |E| = 2 × 4 ✓`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "vnNFiNVy9KM",
           videoTitle: "Teoría de Grafos — Nodos, Aristas y Algoritmos",
           facts: [
             "La teoría de grafos nació en 1736 cuando Euler resolvió el problema de los puentes de Königsberg: demostró que era imposible cruzar los 7 puentes exactamente una vez.",
@@ -1075,7 +1075,7 @@ const CATEGORIES: Category[] = [
             { icon: "💻", label: "Uso", value: "Datos jerárquicos" },
           ],
           explanation: `Un árbol es un grafo conexo acíclico.\n\nPropiedades de un árbol con n vértices:\n• Tiene exactamente n − 1 aristas\n• Existe un ÚNICO camino entre cualquier par de vértices\n• Eliminar una arista lo desconecta\n• Agregar una arista crea un ciclo\n\nTerminología:\n• Raíz: nodo superior (en árboles con raíz)\n• Padre: nodo inmediatamente superior\n• Hijo: nodo inmediatamente inferior\n• Hoja: nodo sin hijos\n• Profundidad: distancia desde la raíz\n• Altura: máxima profundidad del árbol\n\nÁrbol binario:\nCada nodo tiene como máximo 2 hijos (izquierdo y derecho).\n\nÁrbol binario de búsqueda (BST):\n• Hijo izquierdo < padre < hijo derecho\n• Búsqueda eficiente: O(log n) en promedio\n\nRecorridos de un árbol binario:\n• Preorden: raíz → izquierdo → derecho\n• Inorden: izquierdo → raíz → derecho (¡da orden ascendente en BST!)\n• Postorden: izquierdo → derecho → raíz\n\nÁrbol de expansión mínima (MST):\nSubgrafo que conecta todos los vértices con el menor costo total.\nAlgoritmos: Kruskal, Prim\n\nEjemplo — BST con valores 5, 3, 7, 1, 4:\n       5\n      / \\\n     3   7\n    / \\\n   1   4\nInorden: 1, 3, 4, 5, 7 (¡ordenado!)`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "XXYYlNkyQ5c",
           videoTitle: "Árboles — Estructura de Datos Jerárquica",
           facts: [
             "El sistema de archivos de tu computadora es un árbol: carpetas contienen carpetas que contienen archivos, sin ciclos.",
@@ -1095,7 +1095,7 @@ const CATEGORIES: Category[] = [
             { icon: "≤", label: "Orden", value: "Ref+Anti+Trans" },
           ],
           explanation: `Una relación R de A en B es un subconjunto del producto cartesiano A × B.\nSi (a, b) ∈ R, escribimos aRb.\n\nPropiedades de relaciones (en A × A):\n• Reflexiva: ∀a ∈ A, aRa\n• Simétrica: si aRb entonces bRa\n• Antisimétrica: si aRb y bRa, entonces a = b\n• Transitiva: si aRb y bRc, entonces aRc\n\nRelación de equivalencia (reflexiva + simétrica + transitiva):\nParticiona el conjunto en clases de equivalencia.\n\nEjemplo: "tener el mismo resto al dividir por 3"\n[0] = {0, 3, 6, 9, ...}\n[1] = {1, 4, 7, 10, ...}\n[2] = {2, 5, 8, 11, ...}\n\nRelación de orden parcial (reflexiva + antisimétrica + transitiva):\nOrganiza elementos en jerarquía (algunos incomparables).\n\nEjemplo: ≤ en los naturales es un orden total.\n"divide a" (|) en los naturales es un orden parcial: 2|6 y 3|6, pero 2 y 3 son incomparables.\n\nRelación de orden total: todo par de elementos es comparable.\n\nRepresentaciones:\n• Matriz de relación: matriz booleana n×n\n• Digrafo: grafo dirigido\n• Diagrama de Hasse: para órdenes parciales (sin flechas implícitas)`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "KZOilBq591c",
           videoTitle: "Relaciones — Equivalencia, Orden y Propiedades",
           facts: [
             "Las bases de datos 'relacionales' (SQL) se llaman así porque formalizan datos como relaciones matemáticas entre conjuntos (tablas).",
@@ -1115,7 +1115,7 @@ const CATEGORIES: Category[] = [
             { icon: "🔍", label: "Tipos", value: "Búsqueda, orden..." },
           ],
           explanation: `Propiedades de un algoritmo:\n• Finito: termina en un número finito de pasos\n• Definido: cada paso es preciso y no ambiguo\n• Entrada: recibe cero o más datos\n• Salida: produce al menos un resultado\n• Efectivo: cada paso es realizable\n\nComplejidad temporal (notación Big-O):\n• O(1): constante (acceder a un arreglo por índice)\n• O(log n): logarítmica (búsqueda binaria)\n• O(n): lineal (buscar en una lista)\n• O(n log n): cuasilineal (merge sort)\n• O(n²): cuadrática (bubble sort)\n• O(2ⁿ): exponencial (fuerza bruta)\n\nAlgoritmos de búsqueda:\n• Búsqueda lineal: revisar uno por uno → O(n)\n• Búsqueda binaria: dividir a la mitad → O(log n) (requiere datos ordenados)\n\nAlgoritmos de ordenamiento:\n• Bubble sort: comparar pares adyacentes → O(n²)\n• Merge sort: dividir, ordenar, fusionar → O(n log n)\n• Quick sort: pivote + partición → O(n log n) promedio\n\nEjemplo — Búsqueda binaria:\nBuscar 7 en [1, 3, 5, 7, 9, 11, 13]\n1. Medio = 7 → ¡encontrado! (solo 1 paso)\n\nSin búsqueda binaria tendríamos que revisar hasta 4 elementos.\n\nRecursión: un algoritmo que se llama a sí mismo.\nFactorial: n! = n × (n−1)!\nCaso base: 0! = 1`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "kcWwLcvb2-4",
           videoTitle: "Algoritmos Básicos — Búsqueda, Ordenamiento y Complejidad",
           facts: [
             "La palabra 'algoritmo' viene de Al-Juarismi, el mismo matemático persa del siglo IX que nos dio 'álgebra'. Su nombre latinizado es 'Algoritmi'.",
@@ -1149,7 +1149,7 @@ const CATEGORIES: Category[] = [
             { icon: "🔐", label: "Aplicación", value: "Criptografía" },
           ],
           explanation: `Un número primo p > 1 tiene exactamente dos divisores: 1 y p.\n\nPrimeros primos: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37...\n\nNota: 2 es el ÚNICO primo par. 1 NO es primo (por convención).\n\nCriba de Eratóstenes (encontrar primos hasta n):\n1. Escribir todos los números de 2 a n\n2. El primer número no tachado (2) es primo\n3. Tachar todos sus múltiplos\n4. Repetir con el siguiente no tachado\n5. Continuar hasta √n\n\nTeorema de Euclides: hay infinitos primos.\nDemostración (por contradicción):\nSupongamos que solo hay k primos: p₁, p₂, ..., pₖ\nConsideremos N = p₁·p₂·...·pₖ + 1\nN no es divisible por ningún pᵢ (resto 1)\nEntonces N es primo o tiene un factor primo nuevo → contradicción.\n\nTest de primalidad (básico):\nPara verificar si n es primo, probar divisores de 2 a √n.\nSi ninguno divide a n, entonces n es primo.\n\nEjemplo: ¿Es 97 primo?\n√97 ≈ 9.8 → probar 2, 3, 5, 7\n97/2, 97/3, 97/5, 97/7 → ninguno divide exactamente\n∴ 97 es primo ✓\n\nConjetura de Goldbach (no demostrada):\nTodo número par > 2 es suma de dos primos.\n4=2+2, 6=3+3, 8=3+5, 10=5+5, 12=5+7...`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "e1XtzmR-4jk",
           videoTitle: "Números Primos — Definición, Criba y Propiedades",
           facts: [
             "El mayor primo conocido (2024) es 2^136,279,841 − 1, un número con más de 41 millones de dígitos. Fue encontrado por el proyecto GIMPS.",
@@ -1169,7 +1169,7 @@ const CATEGORIES: Category[] = [
             { icon: "φ", label: "Euler", value: "φ(n)" },
           ],
           explanation: `a divide a b (a | b) si existe k ∈ ℤ tal que b = a·k.\n\nPropiedades de divisibilidad:\n• Si a | b y a | c, entonces a | (b ± c)\n• Si a | b, entonces a | (b·c) para todo c\n• Si a | b y b | c, entonces a | c (transitiva)\n• Si a | b y b | a, entonces a = ±b\n\nAlgoritmo de Euclides (MCD):\nMCD(a, b) = MCD(b, a mod b) hasta que b = 0\n\nEjemplo: MCD(252, 105)\n252 = 2 × 105 + 42\n105 = 2 × 42 + 21\n42 = 2 × 21 + 0\nMCD(252, 105) = 21\n\nIdentidad de Bézout:\nPara cualquier a, b existen enteros x, y tales que:\nax + by = MCD(a, b)\n\nFunción de Euler φ(n):\nCuenta cuántos números entre 1 y n son coprimos con n.\n• φ(p) = p − 1 (si p es primo)\n• φ(p·q) = (p−1)(q−1) (si p, q primos distintos)\n• φ(pᵏ) = pᵏ − pᵏ⁻¹\n\nEjemplo: φ(12) = |{1, 5, 7, 11}| = 4\n\nTeorema de Euler:\nSi MCD(a, n) = 1, entonces a^φ(n) ≡ 1 (mod n)\n\nEsto es la base del algoritmo RSA de criptografía.`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "JO_SRpmojdM",
           videoTitle: "Divisibilidad — Euclides, Bézout y Función de Euler",
           facts: [
             "El algoritmo de Euclides tiene más de 2300 años y sigue siendo uno de los algoritmos más rápidos para calcular el MCD. Se usa millones de veces por segundo en criptografía.",
@@ -1189,7 +1189,7 @@ const CATEGORIES: Category[] = [
             { icon: "🔐", label: "Aplicación", value: "RSA, hash" },
           ],
           explanation: `a ≡ b (mod n) significa que n | (a − b), es decir, a y b tienen el mismo residuo al dividir por n.\n\nEjemplo: 17 ≡ 2 (mod 5) porque 17 − 2 = 15, y 5 | 15.\n\nPropiedades (si a ≡ b y c ≡ d, mod n):\n• a + c ≡ b + d (mod n)\n• a − c ≡ b − d (mod n)\n• a × c ≡ b × d (mod n)\n• aᵏ ≡ bᵏ (mod n)\n\n¡Cuidado! NO se puede dividir directamente. Se usa el inverso modular.\n\nInverso modular:\na⁻¹ (mod n) existe si y solo si MCD(a, n) = 1\nSe encuentra con el algoritmo extendido de Euclides.\n\nPequeño Teorema de Fermat:\nSi p es primo y p ∤ a, entonces:\naᵖ⁻¹ ≡ 1 (mod p)\n\nEjemplo: 2⁶ ≡ 1 (mod 7) → 64 mod 7 = 1 ✓\n\nTeorema Chino del Resto:\nSi n₁, n₂ son coprimos, el sistema:\nx ≡ a₁ (mod n₁)\nx ≡ a₂ (mod n₂)\ntiene solución única módulo n₁·n₂.\n\nAplicación — Verificar ISBN:\nISBN-10: la suma ponderada de los 10 dígitos ≡ 0 (mod 11)\n\nAplicación — RSA:\nCifrar: c = mᵉ mod n\nDescifrar: m = cᵈ mod n`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "U4MTmLvvKQ4",
           videoTitle: "Congruencias y Aritmética Modular",
           facts: [
             "Gauss introdujo la notación ≡ (mod n) en 1801 en su obra 'Disquisitiones Arithmeticae', cuando tenía solo 24 años.",
@@ -1209,7 +1209,7 @@ const CATEGORIES: Category[] = [
             { icon: "📐", label: "Cuadrados", value: "1,4,9,16,25..." },
           ],
           explanation: `Sucesiones famosas:\n\n1. Fibonacci:\nF₁ = 1, F₂ = 1, Fₙ = Fₙ₋₁ + Fₙ₋₂\n1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144...\n\nPropiedad: Fₙ₊₁/Fₙ → φ ≈ 1.618 (proporción áurea)\n\n2. Números triangulares:\nTₙ = n(n+1)/2\n1, 3, 6, 10, 15, 21, 28, 36...\n(Suman 1+2+3+...+n)\n\n3. Números cuadrados:\nn²: 1, 4, 9, 16, 25, 36, 49...\n\n4. Números de Catalan:\nCₙ = C(2n,n)/(n+1)\n1, 1, 2, 5, 14, 42, 132...\n(Cuentan formas de parentizar, caminos en cuadrícula, etc.)\n\n5. Potencias de 2:\n1, 2, 4, 8, 16, 32, 64, 128, 256...\n(Fundamentales en informática)\n\nFórmula de Binet (Fibonacci exacto):\nFₙ = (φⁿ − ψⁿ) / √5\ndonde φ = (1+√5)/2 y ψ = (1−√5)/2\n\nEjemplo — Verificar que T₁₀ = 55:\nT₁₀ = 10 × 11 / 2 = 55 ✓\n\nSerie aritmética: aₙ = a₁ + (n−1)d, Sₙ = n(a₁ + aₙ)/2\nSerie geométrica: aₙ = a₁ · rⁿ⁻¹, Sₙ = a₁(1 − rⁿ)/(1 − r)`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "lXEe11Sfwgo",
           videoTitle: "Sucesiones Famosas — Fibonacci, Triangulares y Patrones",
           facts: [
             "Los pétalos de las flores siguen números de Fibonacci: los lirios tienen 3, los ranúnculos 5, las margaritas 21 o 34. Esto se debe al ángulo áureo de crecimiento.",
@@ -1229,7 +1229,7 @@ const CATEGORIES: Category[] = [
             { icon: "🏛️", label: "Autor", value: "Euclides (~300 a.C.)" },
           ],
           explanation: `Teorema Fundamental de la Aritmética:\n\nTodo entero n > 1 se puede escribir como:\nn = p₁^a₁ · p₂^a₂ · ... · pₖ^aₖ\n\ndonde p₁ < p₂ < ... < pₖ son primos y a₁, a₂, ..., aₖ son enteros positivos.\n\nAdemás, esta factorización es ÚNICA (salvo el orden de los factores).\n\nEjemplos:\n• 12 = 2² × 3\n• 60 = 2² × 3 × 5\n• 100 = 2² × 5²\n• 360 = 2³ × 3² × 5\n• 2310 = 2 × 3 × 5 × 7 × 11\n\nAplicaciones de la factorización:\n• MCD: tomar factores comunes con MENOR exponente\n• MCM: tomar TODOS los factores con MAYOR exponente\n• Contar divisores: si n = p₁^a₁ · p₂^a₂ · ... · pₖ^aₖ,\n  número de divisores = (a₁+1)(a₂+1)...(aₖ+1)\n\nEjemplo — Contar divisores de 60:\n60 = 2² × 3¹ × 5¹\nDivisores = (2+1)(1+1)(1+1) = 3×2×2 = 12\nSon: 1,2,3,4,5,6,10,12,15,20,30,60 ✓\n\n¿Por qué 1 NO es primo?\nSi 1 fuera primo, la factorización no sería única:\n6 = 2 × 3 = 1 × 2 × 3 = 1² × 2 × 3 = ...\nExcluir al 1 garantiza unicidad.\n\nMétodo de factorización (división sucesiva):\n252 ÷ 2 = 126\n126 ÷ 2 = 63\n63 ÷ 3 = 21\n21 ÷ 3 = 7\n7 ÷ 7 = 1\n∴ 252 = 2² × 3² × 7`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "hTYaHAK7laM",
           videoTitle: "Teorema Fundamental de la Aritmética — Factorización Única",
           facts: [
             "Euclides demostró este teorema hace más de 2300 años en el Libro VII de los Elementos, pero la primera demostración rigurosa moderna fue de Gauss en 1801.",
@@ -1249,7 +1249,7 @@ const CATEGORIES: Category[] = [
             { icon: "❓", label: "Misterio", value: "¿Existen impares?" },
           ],
           explanation: `Un número n es perfecto si:\nσ(n) − n = n, es decir, σ(n) = 2n\n\ndonde σ(n) es la suma de TODOS los divisores de n.\n\nEquivalente: la suma de divisores propios (sin incluir n) es igual a n.\n\nEjemplos:\n• 6: divisores propios = 1 + 2 + 3 = 6 ✓\n• 28: divisores propios = 1 + 2 + 4 + 7 + 14 = 28 ✓\n• 496: divisores propios = 1+2+4+8+16+31+62+124+248 = 496 ✓\n• 8128: el cuarto número perfecto\n\nTeorema de Euclides-Euler:\nUn número par es perfecto si y solo si tiene la forma:\nn = 2^(p−1) × (2^p − 1)\ndonde 2^p − 1 es primo (primo de Mersenne).\n\nPrimos de Mersenne: Mₚ = 2^p − 1\nM₂ = 3, M₃ = 7, M₅ = 31, M₇ = 127...\nNo todo 2^p − 1 es primo: M₁₁ = 2047 = 23 × 89\n\nNúmeros relacionados:\n• Deficientes: suma de divisores propios < n (ejemplo: 8, suma = 1+2+4 = 7 < 8)\n• Abundantes: suma de divisores propios > n (ejemplo: 12, suma = 1+2+3+4+6 = 16 > 12)\n• Amigos (amicables): cada uno es la suma de los divisores propios del otro\n  220 y 284: div(220) = 284, div(284) = 220\n\nPreguntas abiertas:\n• ¿Existen números perfectos impares? (Nadie ha encontrado uno ni demostrado que no existan)\n• ¿Hay infinitos números perfectos pares? (Depende de si hay infinitos primos de Mersenne)`,
-          videoId: "WeeEE8o1aqM",
+          videoId: "R3upH8atcps",
           videoTitle: "Números Perfectos — Definición y Conexión con Mersenne",
           facts: [
             "Los pitagóricos (500 a.C.) consideraban al 6 y al 28 como números sagrados por ser perfectos. San Agustín escribió que Dios creó el mundo en 6 días porque 6 es un número perfecto.",
